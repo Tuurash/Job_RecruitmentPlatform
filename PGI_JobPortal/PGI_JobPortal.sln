@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30804.86
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PGI_JobPortal", "PGI_JobPortal\PGI_JobPortal.csproj", "{D546B639-425D-446A-A105-57368464558C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D546B639-425D-446A-A105-57368464558C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D546B639-425D-446A-A105-57368464558C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D546B639-425D-446A-A105-57368464558C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D546B639-425D-446A-A105-57368464558C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F24A8FAB-6B65-42B8-8A9C-B2D8C507E7E4}
+	EndGlobalSection
+EndGlobal

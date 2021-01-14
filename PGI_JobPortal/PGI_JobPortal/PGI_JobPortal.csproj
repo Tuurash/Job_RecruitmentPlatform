@@ -1,0 +1,401 @@
+﻿<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{D546B639-425D-446A-A105-57368464558C}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>PGI_JobPortal</RootNamespace>
+    <AssemblyName>PGI_JobPortal</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="assets\css\animate.css" />
+    <Content Include="assets\css\bootstrap.min.css" />
+    <Content Include="assets\css\line-icons.css" />
+    <Content Include="assets\css\main.css" />
+    <Content Include="assets\css\owl.carousel.min.css" />
+    <Content Include="assets\css\owl.theme.default.css" />
+    <Content Include="assets\css\responsive.css" />
+    <Content Include="assets\css\slicknav.min.css" />
+    <Content Include="assets\fonts\LineIcons.svg" />
+    <Content Include="assets\img\about\company-logo.png" />
+    <Content Include="assets\img\about\img1.jpg" />
+    <Content Include="assets\img\app.png" />
+    <Content Include="assets\img\banner.jpg" />
+    <Content Include="assets\img\bg\app.png" />
+    <Content Include="assets\img\bg\bg-intro.jpg" />
+    <Content Include="assets\img\bg\dd.jpg" />
+    <Content Include="assets\img\features\img-1.jpg" />
+    <Content Include="assets\img\features\img-2.jpg" />
+    <Content Include="assets\img\features\img-3.jpg" />
+    <Content Include="assets\img\features\img-4.jpg" />
+    <Content Include="assets\img\features\img1.png" />
+    <Content Include="assets\img\features\img2.png" />
+    <Content Include="assets\img\features\img3.png" />
+    <Content Include="assets\img\features\img4.png" />
+    <Content Include="assets\img\features\img5.png" />
+    <Content Include="assets\img\features\img6.png" />
+    <Content Include="assets\img\jobs\avatar-1.jpg" />
+    <Content Include="assets\img\jobs\avatar-1.png" />
+    <Content Include="assets\img\jobs\avatar-2.png" />
+    <Content Include="assets\img\jobs\avatar-3.png" />
+    <Content Include="assets\img\jobs\avatar-4.png" />
+    <Content Include="assets\img\jobs\candidates.png" />
+    <Content Include="assets\img\jobs\img-1.jpg" />
+    <Content Include="assets\img\jobs\img-2.jpg" />
+    <Content Include="assets\img\jobs\img-2.png" />
+    <Content Include="assets\img\jobs\img-3.jpg" />
+    <Content Include="assets\img\jobs\img-3.png" />
+    <Content Include="assets\img\jobs\img-4.jpg" />
+    <Content Include="assets\img\jobs\img-5.jpg" />
+    <Content Include="assets\img\jobs\img-6.jpg" />
+    <Content Include="assets\img\jobs\img1.png" />
+    <Content Include="assets\img\jobs\img2.png" />
+    <Content Include="assets\img\jobs\img3.png" />
+    <Content Include="assets\img\jobs\img4.png" />
+    <Content Include="assets\img\logo-footer.png" />
+    <Content Include="assets\img\logo-mobile.png" />
+    <Content Include="assets\img\logo.png" />
+    <Content Include="assets\img\product\img1.png" />
+    <Content Include="assets\img\product\img2.png" />
+    <Content Include="assets\img\product\img3.png" />
+    <Content Include="assets\img\resume\img-1.png" />
+    <Content Include="assets\img\search.png" />
+    <Content Include="assets\img\testimonial\img1.png" />
+    <Content Include="assets\img\testimonial\img2.png" />
+    <Content Include="assets\img\testimonial\img3.png" />
+    <Content Include="assets\img\testimonial\img4.png" />
+    <Content Include="assets\img\testimonial\img5.png" />
+    <Content Include="assets\js\bootstrap.min.js" />
+    <Content Include="assets\js\jquery-min.js" />
+    <Content Include="assets\js\jquery.counterup.min.js" />
+    <Content Include="assets\js\jquery.slicknav.js" />
+    <Content Include="assets\js\main.js" />
+    <Content Include="assets\js\owl.carousel.min.js" />
+    <Content Include="assets\js\popper.min.js" />
+    <Content Include="assets\js\waypoints.min.js" />
+    <Content Include="assets\js\wow.js" />
+    <Content Include="Index.html" />
+    <Content Include="Theme\about.html" />
+    <Content Include="Theme\assets\css\animate.css" />
+    <Content Include="Theme\assets\css\bootstrap.min.css" />
+    <Content Include="Theme\assets\css\line-icons.css" />
+    <Content Include="Theme\assets\css\main.css" />
+    <Content Include="Theme\assets\css\owl.carousel.min.css" />
+    <Content Include="Theme\assets\css\owl.theme.default.css" />
+    <Content Include="Theme\assets\css\responsive.css" />
+    <Content Include="Theme\assets\css\slicknav.min.css" />
+    <Content Include="Theme\assets\fonts\LineIcons.svg" />
+    <Content Include="Theme\assets\img\about\company-logo.png" />
+    <Content Include="Theme\assets\img\about\img1.jpg" />
+    <Content Include="Theme\assets\img\app.png" />
+    <Content Include="Theme\assets\img\banner.jpg" />
+    <Content Include="Theme\assets\img\bg\app.png" />
+    <Content Include="Theme\assets\img\bg\bg-intro.jpg" />
+    <Content Include="Theme\assets\img\bg\dd.jpg" />
+    <Content Include="Theme\assets\img\features\img-1.jpg" />
+    <Content Include="Theme\assets\img\features\img-2.jpg" />
+    <Content Include="Theme\assets\img\features\img-3.jpg" />
+    <Content Include="Theme\assets\img\features\img-4.jpg" />
+    <Content Include="Theme\assets\img\features\img1.png" />
+    <Content Include="Theme\assets\img\features\img2.png" />
+    <Content Include="Theme\assets\img\features\img3.png" />
+    <Content Include="Theme\assets\img\features\img4.png" />
+    <Content Include="Theme\assets\img\features\img5.png" />
+    <Content Include="Theme\assets\img\features\img6.png" />
+    <Content Include="Theme\assets\img\jobs\avatar-1.jpg" />
+    <Content Include="Theme\assets\img\jobs\avatar-1.png" />
+    <Content Include="Theme\assets\img\jobs\avatar-2.png" />
+    <Content Include="Theme\assets\img\jobs\avatar-3.png" />
+    <Content Include="Theme\assets\img\jobs\avatar-4.png" />
+    <Content Include="Theme\assets\img\jobs\candidates.png" />
+    <Content Include="Theme\assets\img\jobs\img-1.jpg" />
+    <Content Include="Theme\assets\img\jobs\img-2.jpg" />
+    <Content Include="Theme\assets\img\jobs\img-2.png" />
+    <Content Include="Theme\assets\img\jobs\img-3.jpg" />
+    <Content Include="Theme\assets\img\jobs\img-3.png" />
+    <Content Include="Theme\assets\img\jobs\img-4.jpg" />
+    <Content Include="Theme\assets\img\jobs\img-5.jpg" />
+    <Content Include="Theme\assets\img\jobs\img-6.jpg" />
+    <Content Include="Theme\assets\img\jobs\img1.png" />
+    <Content Include="Theme\assets\img\jobs\img2.png" />
+    <Content Include="Theme\assets\img\jobs\img3.png" />
+    <Content Include="Theme\assets\img\jobs\img4.png" />
+    <Content Include="Theme\assets\img\logo-footer.png" />
+    <Content Include="Theme\assets\img\logo-mobile.png" />
+    <Content Include="Theme\assets\img\logo.png" />
+    <Content Include="Theme\assets\img\product\img1.png" />
+    <Content Include="Theme\assets\img\product\img2.png" />
+    <Content Include="Theme\assets\img\product\img3.png" />
+    <Content Include="Theme\assets\img\resume\img-1.png" />
+    <Content Include="Theme\assets\img\search.png" />
+    <Content Include="Theme\assets\img\testimonial\img1.png" />
+    <Content Include="Theme\assets\img\testimonial\img2.png" />
+    <Content Include="Theme\assets\img\testimonial\img3.png" />
+    <Content Include="Theme\assets\img\testimonial\img4.png" />
+    <Content Include="Theme\assets\img\testimonial\img5.png" />
+    <Content Include="Theme\assets\js\bootstrap.min.js" />
+    <Content Include="Theme\assets\js\jquery-min.js" />
+    <Content Include="Theme\assets\js\jquery.counterup.min.js" />
+    <Content Include="Theme\assets\js\jquery.slicknav.js" />
+    <Content Include="Theme\assets\js\main.js" />
+    <Content Include="Theme\assets\js\owl.carousel.min.js" />
+    <Content Include="Theme\assets\js\popper.min.js" />
+    <Content Include="Theme\assets\js\waypoints.min.js" />
+    <Content Include="Theme\assets\js\wow.js" />
+    <Content Include="Theme\contact.html" />
+    <Content Include="Theme\index.html" />
+    <Content Include="Theme\job-details.html" />
+    <Content Include="Theme\login.html" />
+    <Content Include="Views\assets\css\animate.css" />
+    <Content Include="Views\assets\css\bootstrap.min.css" />
+    <Content Include="Views\assets\css\line-icons.css" />
+    <Content Include="Views\assets\css\main.css" />
+    <Content Include="Views\assets\css\owl.carousel.min.css" />
+    <Content Include="Views\assets\css\owl.theme.default.css" />
+    <Content Include="Views\assets\css\responsive.css" />
+    <Content Include="Views\assets\css\slicknav.min.css" />
+    <Content Include="Views\assets\fonts\LineIcons.svg" />
+    <Content Include="Views\assets\img\about\company-logo.png" />
+    <Content Include="Views\assets\img\about\img1.jpg" />
+    <Content Include="Views\assets\img\app.png" />
+    <Content Include="Views\assets\img\banner.jpg" />
+    <Content Include="Views\assets\img\bg\app.png" />
+    <Content Include="Views\assets\img\bg\bg-intro.jpg" />
+    <Content Include="Views\assets\img\bg\dd.jpg" />
+    <Content Include="Views\assets\img\features\img-1.jpg" />
+    <Content Include="Views\assets\img\features\img-2.jpg" />
+    <Content Include="Views\assets\img\features\img-3.jpg" />
+    <Content Include="Views\assets\img\features\img-4.jpg" />
+    <Content Include="Views\assets\img\features\img1.png" />
+    <Content Include="Views\assets\img\features\img2.png" />
+    <Content Include="Views\assets\img\features\img3.png" />
+    <Content Include="Views\assets\img\features\img4.png" />
+    <Content Include="Views\assets\img\features\img5.png" />
+    <Content Include="Views\assets\img\features\img6.png" />
+    <Content Include="Views\assets\img\jobs\avatar-1.jpg" />
+    <Content Include="Views\assets\img\jobs\avatar-1.png" />
+    <Content Include="Views\assets\img\jobs\avatar-2.png" />
+    <Content Include="Views\assets\img\jobs\avatar-3.png" />
+    <Content Include="Views\assets\img\jobs\avatar-4.png" />
+    <Content Include="Views\assets\img\jobs\candidates.png" />
+    <Content Include="Views\assets\img\jobs\img-1.jpg" />
+    <Content Include="Views\assets\img\jobs\img-2.jpg" />
+    <Content Include="Views\assets\img\jobs\img-2.png" />
+    <Content Include="Views\assets\img\jobs\img-3.jpg" />
+    <Content Include="Views\assets\img\jobs\img-3.png" />
+    <Content Include="Views\assets\img\jobs\img-4.jpg" />
+    <Content Include="Views\assets\img\jobs\img-5.jpg" />
+    <Content Include="Views\assets\img\jobs\img-6.jpg" />
+    <Content Include="Views\assets\img\jobs\img1.png" />
+    <Content Include="Views\assets\img\jobs\img2.png" />
+    <Content Include="Views\assets\img\jobs\img3.png" />
+    <Content Include="Views\assets\img\jobs\img4.png" />
+    <Content Include="Views\assets\img\logo-footer.png" />
+    <Content Include="Views\assets\img\logo-mobile.png" />
+    <Content Include="Views\assets\img\logo.png" />
+    <Content Include="Views\assets\img\product\img1.png" />
+    <Content Include="Views\assets\img\product\img2.png" />
+    <Content Include="Views\assets\img\product\img3.png" />
+    <Content Include="Views\assets\img\resume\img-1.png" />
+    <Content Include="Views\assets\img\search.png" />
+    <Content Include="Views\assets\img\testimonial\img1.png" />
+    <Content Include="Views\assets\img\testimonial\img2.png" />
+    <Content Include="Views\assets\img\testimonial\img3.png" />
+    <Content Include="Views\assets\img\testimonial\img4.png" />
+    <Content Include="Views\assets\img\testimonial\img5.png" />
+    <Content Include="Views\assets\js\bootstrap.min.js" />
+    <Content Include="Views\assets\js\jquery-min.js" />
+    <Content Include="Views\assets\js\jquery.counterup.min.js" />
+    <Content Include="Views\assets\js\jquery.slicknav.js" />
+    <Content Include="Views\assets\js\main.js" />
+    <Content Include="Views\assets\js\owl.carousel.min.js" />
+    <Content Include="Views\assets\js\popper.min.js" />
+    <Content Include="Views\assets\js\waypoints.min.js" />
+    <Content Include="Views\assets\js\wow.js" />
+    <Content Include="Views\LoginPage.aspx" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Views\PGI_Master.Master.cs">
+      <DependentUpon>PGI_Master.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\PGI_Master.Master.designer.cs">
+      <DependentUpon>PGI_Master.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Views\LoginPage.aspx.cs">
+      <DependentUpon>LoginPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\LoginPage.aspx.designer.cs">
+      <DependentUpon>LoginPage.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="assets\css\.DS_Store" />
+    <Content Include="assets\css\font\summernote.eot" />
+    <Content Include="assets\css\font\summernote.ttf" />
+    <Content Include="assets\css\font\summernote.woff" />
+    <Content Include="assets\fonts\.DS_Store" />
+    <Content Include="assets\fonts\LineIcons.eot" />
+    <Content Include="assets\fonts\LineIcons.ttf" />
+    <Content Include="assets\fonts\LineIcons.woff" />
+    <Content Include="assets\img\.DS_Store" />
+    <Content Include="assets\img\about\.DS_Store" />
+    <Content Include="assets\img\bg\.DS_Store" />
+    <Content Include="assets\img\features\.DS_Store" />
+    <Content Include="assets\img\jobs\.DS_Store" />
+    <Content Include="assets\img\logo.psd" />
+    <Content Include="assets\img\product\.DS_Store" />
+    <Content Include="assets\img\resume\.DS_Store" />
+    <Content Include="assets\img\testimonial\.DS_Store" />
+    <Content Include="assets\js\.DS_Store" />
+    <None Include="packages.config" />
+    <Content Include="Theme\assets\css\.DS_Store" />
+    <Content Include="Theme\assets\css\font\summernote.eot" />
+    <Content Include="Theme\assets\css\font\summernote.ttf" />
+    <Content Include="Theme\assets\css\font\summernote.woff" />
+    <Content Include="Theme\assets\fonts\.DS_Store" />
+    <Content Include="Theme\assets\fonts\LineIcons.eot" />
+    <Content Include="Theme\assets\fonts\LineIcons.ttf" />
+    <Content Include="Theme\assets\fonts\LineIcons.woff" />
+    <Content Include="Theme\assets\img\.DS_Store" />
+    <Content Include="Theme\assets\img\about\.DS_Store" />
+    <Content Include="Theme\assets\img\bg\.DS_Store" />
+    <Content Include="Theme\assets\img\features\.DS_Store" />
+    <Content Include="Theme\assets\img\jobs\.DS_Store" />
+    <Content Include="Theme\assets\img\logo.psd" />
+    <Content Include="Theme\assets\img\product\.DS_Store" />
+    <Content Include="Theme\assets\img\resume\.DS_Store" />
+    <Content Include="Theme\assets\img\testimonial\.DS_Store" />
+    <Content Include="Theme\assets\js\.DS_Store" />
+    <Content Include="Views\assets\css\.DS_Store" />
+    <Content Include="Views\assets\css\font\summernote.eot" />
+    <Content Include="Views\assets\css\font\summernote.ttf" />
+    <Content Include="Views\assets\css\font\summernote.woff" />
+    <Content Include="Views\assets\fonts\.DS_Store" />
+    <Content Include="Views\assets\fonts\LineIcons.eot" />
+    <Content Include="Views\assets\fonts\LineIcons.ttf" />
+    <Content Include="Views\assets\fonts\LineIcons.woff" />
+    <Content Include="Views\assets\img\.DS_Store" />
+    <Content Include="Views\assets\img\about\.DS_Store" />
+    <Content Include="Views\assets\img\bg\.DS_Store" />
+    <Content Include="Views\assets\img\features\.DS_Store" />
+    <Content Include="Views\assets\img\jobs\.DS_Store" />
+    <Content Include="Views\assets\img\logo.psd" />
+    <Content Include="Views\assets\img\product\.DS_Store" />
+    <Content Include="Views\assets\img\resume\.DS_Store" />
+    <Content Include="Views\assets\img\testimonial\.DS_Store" />
+    <Content Include="Views\assets\js\.DS_Store" />
+    <Content Include="Views\PGI_Master.Master" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Gateway\" />
+    <Folder Include="Manager\" />
+    <Folder Include="Models\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>58350</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:58350/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
