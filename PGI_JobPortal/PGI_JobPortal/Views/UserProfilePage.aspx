@@ -17,7 +17,8 @@
                 <div class="col-lg-4 col-md-4 col-xs-12">
                     <p>
                         <%-- <img class="img-fluid float-right" src="assets/img/about/img1.jpg" alt="">--%>
-                        <asp:ImageButton class="img-fluid float-right" ID="btnProfilePic" runat="server" ImageUrl="assets/img/about/img1.jpg" />
+                        <asp:ImageButton class="img-fluid float-right" ID="btnProfilePic" runat="server" ImageUrl="assets/img/about/img1.jpg"
+                                         style="border-radius:15px"/>
                     </p>
 
                     <%--<div class="col-12 text-center mt-4">

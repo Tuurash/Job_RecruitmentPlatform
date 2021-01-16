@@ -7,14 +7,9 @@ using System.Web.UI.WebControls;
 
 namespace PGI_JobPortal.Views
 {
-    public partial class PGI_DashboardMaster : System.Web.UI.MasterPage
+    public partial class Index : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        protected void btnLogout_ServerClick(object sender, EventArgs e)
         {
 
         }
