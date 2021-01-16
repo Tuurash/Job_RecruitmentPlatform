@@ -3,9 +3,6 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 
-
-
-
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
     <!-- Page Header Start -->
@@ -48,9 +45,16 @@
                                 <label class="form-check-label" for="exampleCheck1">Keep Me Signed In</label>
                             </div>
                             <button class="btn btn-common log-btn">Submit</button>
+                            <div align="center">
+
+                                <asp:ImageButton ID="gLogin" runat="server" ImageUrl="~/Views/assets/img/google-logo.png" Style="border-radius: 40px"
+                                    ImageAlign="AbsMiddle" OnClick="gLogin_Click" CssClass="btn btn-rm btn-border-filled" />
+
+                            </div>
                         </div>
+                        <br />
                         <ul class="form-links">
-                            <li class="text-center"><a href="register.html">Don't have an account?</a></li>
+                            <li class="text-center"><a href="RegistrationPage.aspx">Don't have an account?</a></li>
                         </ul>
                     </div>
                 </div>
