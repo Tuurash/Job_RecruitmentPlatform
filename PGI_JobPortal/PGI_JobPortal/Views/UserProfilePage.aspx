@@ -1,15 +1,14 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Views/PGI_DashboardMaster.Master" AutoEventWireup="true" CodeBehind="UserProfilePage.aspx.cs" Inherits="PGI_JobPortal.Views.UserProfilePage" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
-
-    
-
 </asp:Content>
 
 
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
-    <div align="center"><h3>User Profile</h3></div>
+    <div align="center">
+        <h3>User Profile</h3>
+    </div>
     <!-- Main container Start -->
     <div class="about section">
         <div class="container">
@@ -20,6 +19,10 @@
                         <%-- <img class="img-fluid float-right" src="assets/img/about/img1.jpg" alt="">--%>
                         <asp:ImageButton class="img-fluid float-right" ID="btnProfilePic" runat="server" ImageUrl="assets/img/about/img1.jpg" />
                     </p>
+
+                    <%--<div class="col-12 text-center mt-4">
+                        <a href="job-page.html" class="btn btn-common">Browse All Jobs</a>
+                    </div>--%>
                 </div>
 
                 <div class="col-lg-8 col-md-8 col-xs-12">

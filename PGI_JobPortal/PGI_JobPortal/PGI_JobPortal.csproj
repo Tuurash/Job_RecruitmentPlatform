@@ -382,6 +382,7 @@
     <Content Include="Views\assets\js\popper.min.js" />
     <Content Include="Views\assets\js\waypoints.min.js" />
     <Content Include="Views\assets\js\wow.js" />
+    <Content Include="Views\AvailableJobsPage.aspx" />
     <Content Include="Views\JobDetailsPage.aspx" />
     <Content Include="Views\LoginPage.aspx" />
     <Content Include="Views\RegistrationPage.aspx" />
@@ -398,6 +399,13 @@
     </Compile>
     <Compile Include="Views\AppliedJobsPage.aspx.designer.cs">
       <DependentUpon>AppliedJobsPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\AvailableJobsPage.aspx.cs">
+      <DependentUpon>AvailableJobsPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\AvailableJobsPage.aspx.designer.cs">
+      <DependentUpon>AvailableJobsPage.aspx</DependentUpon>
     </Compile>
     <Compile Include="Views\JobDetailsPage.aspx.cs">
       <DependentUpon>JobDetailsPage.aspx</DependentUpon>
