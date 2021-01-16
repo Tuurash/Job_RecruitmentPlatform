@@ -1,10 +1,15 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Views/PGI_DashboardMaster.Master" AutoEventWireup="true" CodeBehind="UserProfilePage.aspx.cs" Inherits="PGI_JobPortal.Views.UserProfilePage" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+
+    
+
 </asp:Content>
+
+
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
-
+    <div align="center"><h3>User Profile</h3></div>
     <!-- Main container Start -->
     <div class="about section">
         <div class="container">
@@ -16,32 +21,11 @@
                         <asp:ImageButton class="img-fluid float-right" ID="btnProfilePic" runat="server" ImageUrl="assets/img/about/img1.jpg" />
                     </p>
                 </div>
-                <br />
+
                 <div class="col-lg-8 col-md-8 col-xs-12">
 
-
-
                     <div class="about-content">
-                        <%--for listing in mobileview--%>
-                        <style>
-                            @media screen and (max-width: 480px) {
-                                .nav {
-                                    padding-left: 2px;
-                                    padding-right: 2px;
-                                }
 
-                                    .nav li {
-                                        display: block !important;
-                                        width: 100%;
-                                        margin: 0px;
-                                    }
-
-                                        .nav li.active {
-                                            border-bottom: 1px solid #ddd !important;
-                                            margin: 0px;
-                                        }
-                            }
-                        </style>
 
                         <%--Tabs--%>
                         <div>
@@ -135,6 +119,7 @@
 
 
                     </div>
+
                 </div>
 
             </div>

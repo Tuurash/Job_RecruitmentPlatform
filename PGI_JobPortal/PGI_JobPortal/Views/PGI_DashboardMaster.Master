@@ -13,7 +13,7 @@
     <title>PGI Job Portal</title>
 
     <%--Bootstrap--%>
-    
+
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
@@ -29,6 +29,32 @@
     <link rel="stylesheet" href="assets/css/animate.css">
     <link rel="stylesheet" href="assets/css/main.css">
     <link rel="stylesheet" href="assets/css/responsive.css">
+
+    <%--for listing in mobileview--%>
+    <style>
+        h3 {
+            font-size: 30px;
+        }
+
+        @media screen and (max-width: 480px) {
+            .nav {
+                padding-left: 2px;
+                padding-right: 2px;
+            }
+
+                .nav li {
+                    display: block !important;
+                    width: 100%;
+                    margin: 0px;
+                }
+
+                    .nav li.active {
+                        border-bottom: 1px solid #ddd !important;
+                        margin: 0px;
+                    }
+        }
+    </style>
+
 
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
@@ -150,15 +176,13 @@
                                         <div class="contact-icon">
                                             <i class="fas fa-id-card"></i>
                                         </div>
-                                        <p>
-                                            My Profile
-                                        </p>
+                                        <a href="UserProfilePage.aspx">My Profile</a>
                                     </div>
                                     <div class="single-contact">
                                         <div class="contact-icon">
                                             <i class="lni-envelope"></i>
                                         </div>
-                                        <p>Applied Jobs</p>
+                                        <a href="AppliedJobsPage.aspx">Applied Jobs</a>
 
                                     </div>
                                     <div class="single-contact">
@@ -177,6 +201,7 @@
                                     </div>
                                 </div>
                             </div>
+                            <br />
                         </div>
                         <!-- menu Section End -->
 

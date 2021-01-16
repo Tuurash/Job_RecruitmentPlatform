@@ -42,3 +42,5 @@ D:\DevOPS_PGI_Portal\PGI_JobPortal\PGI_JobPortal\bin\roslyn\System.Buffers.dll
 D:\DevOPS_PGI_Portal\PGI_JobPortal\PGI_JobPortal\bin\roslyn\System.Memory.dll
 D:\DevOPS_PGI_Portal\PGI_JobPortal\PGI_JobPortal\bin\roslyn\System.Numerics.Vectors.dll
 D:\DevOPS_PGI_Portal\PGI_JobPortal\PGI_JobPortal\bin\roslyn\System.Runtime.CompilerServices.Unsafe.dll
+D:\DevOPS_PGI_Portal\PGI_JobPortal\PGI_JobPortal\bin\NUglify.dll
+D:\DevOPS_PGI_Portal\PGI_JobPortal\PGI_JobPortal\bin\NUglify.xml
