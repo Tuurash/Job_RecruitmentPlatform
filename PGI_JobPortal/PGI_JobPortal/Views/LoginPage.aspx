@@ -31,7 +31,7 @@
                             <div class="form-group">
                                 <div class="input-icon">
                                     <i class="lni-user"></i>
-                                    <input type="text" id="sender-email" class="form-control" name="email" placeholder="Username">
+                                    <input type="text" id="sender-email" class="form-control" name="email" placeholder="Email">
                                 </div>
                             </div>
                             <div class="form-group">
@@ -44,7 +44,7 @@
                                 <input type="checkbox" class="form-check-input" id="exampleCheck1">
                                 <label class="form-check-label" for="exampleCheck1">Keep Me Signed In</label>
                             </div>
-                            <button class="btn btn-common log-btn">Submit</button>
+                            <button class="btn btn-common log-btn">login</button>
                             <div align="center">
 
                                 <asp:ImageButton ID="gLogin" runat="server" ImageUrl="~/Views/assets/img/google-logo.png" Style="border-radius: 40px"

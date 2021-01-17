@@ -22,6 +22,34 @@
     <link rel="stylesheet" href="assets/css/responsive.css">
 
     <style>
+        .parallax {
+            /* The image used */
+            background-image: url("assets/img/steelmills.jpg");
+            /* Set a specific height */
+            height: 340px;
+            /* Create the parallax scrolling effect */
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+    </style>
+
+    <style>
+        .parallax_howiw {
+            /* The image used */
+            background-image: url("assets/img/spinning-1.jpg");
+            /* Set a specific height */
+            height: 400px;
+            /* Create the parallax scrolling effect */
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+    </style>
+
+    <style>
         html {
             scroll-behavior: smooth;
         }
@@ -90,7 +118,7 @@
         <div class="container">
             <div class="section-header">
                 <h2 class="section-title">Browse Categories</h2>
-                
+
             </div>
             <div class="row">
                 <div class="col-lg-3 col-md-6 col-xs-12 f-category">
@@ -180,12 +208,13 @@
     </section>
     <!-- Register Section End -->
 
-    <!-- How It Work Section Start -->
-    <section class="how-it-works section">
+    <!-- How It Work Section Start  class="how-it-works section" -->
+    <section class="parallax_howiw">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title">How It Works?</h2>
-                <p>
+                <br />
+                <h2 class="section-title"  style="color:white;">How It Works?</h2>
+                <p style="color:white;">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit ellentesque dignissim quam et
                     <br>
                     metus effici turac fringilla lorem facilisis.
@@ -197,8 +226,8 @@
                         <span class="process-icon">
                             <i class="lni-user"></i>
                         </span>
-                        <h4>Create an Account</h4>
-                        <p>Post a job to tell us about your project. We'll quickly match you with the right freelancers find place best.</p>
+                        <h4  style="color:white;">Create an Account</h4>
+                        <p  style="color:white;">Post a job to tell us about your project. We'll quickly match you with the right freelancers find place best.</p>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
@@ -206,8 +235,8 @@
                         <span class="process-icon">
                             <i class="lni-search"></i>
                         </span>
-                        <h4>Search Jobs</h4>
-                        <p>Post a job to tell us about your project. We'll quickly match you with the right freelancers find place best.</p>
+                        <h4  style="color:white;">Search Jobs</h4>
+                        <p  style="color:white;">Post a job to tell us about your project. We'll quickly match you with the right freelancers find place best.</p>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
@@ -215,8 +244,8 @@
                         <span class="process-icon">
                             <i class="lni-cup"></i>
                         </span>
-                        <h4>Apply</h4>
-                        <p>Post a job to tell us about your project. We'll quickly match you with the right freelancers find place best.</p>
+                        <h4  style="color:white;">Apply</h4>
+                        <p  style="color:white;">Post a job to tell us about your project. We'll quickly match you with the right freelancers find place best.</p>
                     </div>
                 </div>
             </div>
@@ -416,53 +445,25 @@
     <!-- Footer Section Start -->
     <footer>
         <!-- Footer Area Start -->
-        <section class="footer-Content">
+        <section class="parallax">
             <div class="container">
                 <div class="row">
-                    <div class="col-lg-3 col-md-3 col-xs-12">
+                    <div class="col-lg-6 col-md-6 col-xs-12">
                         <div class="widget">
                             <div class="footer-logo">
-                                <img src="assets/img/logo-footer.png" alt="">
+                                <img src="assets/img/logo_footer.gif" height="90" width="300" alt="">
                             </div>
                             <div class="textwidget">
-                                <p>Sed consequat sapien faus quam bibendum convallis quis in nulla. Pellentesque volutpat odio eget diam cursus semper.</p>
+                                <p style="color: white">Prime Group of Industries is a notable Industrial House in Bangladesh. Spinning, Steel, Real state, Trading, Clearing & Forwarding, Agro Product, Nutrition Industry, Banking, Insurance, Financial & Securities, Information Technology, Ship Breaking and Education is the latest area of its operation. </p>
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-6 col-md-4 col-xs-12">
+                    <div class="col-lg-2 col-md-2 col-xs-12"></div>
+                    <div class="col-lg-4 col-md-4 col-xs-12">
                         <div class="widget">
-                            <h3 class="block-title">Quick Links</h3>
-                            <ul class="menu">
-                                <li><a href="#">About Us</a></li>
-                                <li><a href="#">Support</a></li>
-                                <li><a href="#">License</a></li>
-                                <li><a href="#">Contact</a></li>
-                            </ul>
-                            <ul class="menu">
-                                <li><a href="#">Terms & Conditions</a></li>
-                                <li><a href="#">Privacy</a></li>
-                                <li><a href="#">Refferal Terms</a></li>
-                                <li><a href="#">Product License</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-4 col-xs-12">
-                        <div class="widget">
-                            <h3 class="block-title">Subscribe Now</h3>
-                            <p>Sed consequat sapien faus quam bibendum convallis.</p>
-                            <form method="post" id="subscribe-form" name="subscribe-form" class="validate">
-                                <div class="form-group is-empty">
-                                    <input type="email" value="" name="Email" class="form-control" id="EMAIL" placeholder="Enter Email..." required="">
-                                    <button type="submit" name="subscribe" id="subscribes" class="btn btn-common sub-btn"><i class="lni-envelope"></i></button>
-                                    <div class="clearfix"></div>
-                                </div>
-                            </form>
-                            <ul class="mt-3 footer-social">
-                                <li><a class="facebook" href="#"><i class="lni-facebook-filled"></i></a></li>
-                                <li><a class="twitter" href="#"><i class="lni-twitter-filled"></i></a></li>
-                                <li><a class="linkedin" href="#"><i class="lni-linkedin-fill"></i></a></li>
-                                <li><a class="google-plus" href="#"><i class="lni-google-plus"></i></a></li>
-                            </ul>
+                            <h3 class="block-title">We are here</h3>
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14610.290462178576!2d90.4226075!3d23.7269516!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x147ec32ea73d5208!2sPrime+Group+of+Industries!5e0!3m2!1sen!2sbd!4v1560851673583!5m2!1sen!2sbd"
+                                style="border: 0px none; pointer-events: none;" allowfullscreen="true" frameborder="0"></iframe>
                         </div>
                     </div>
                 </div>
@@ -470,17 +471,17 @@
         </section>
         <!-- Footer area End -->
         <!-- Copyright Start  -->
-        <div id="copyright">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-12">
-                        <div class="site-info text-center">
-                            <p>Designed and Developed by <a href="https://uideck.com" rel="nofollow">UIdeck</a></p>
-                        </div>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="site-info text-center">
+                        <p>Copyright © Prime Group of Industries ™   developed by<a href="https://github.com/Tuurash" rel="nofollow"> prime</a></p>
                     </div>
                 </div>
             </div>
         </div>
+
         <!-- Copyright End -->
     </footer>
     <!-- Footer Section End -->

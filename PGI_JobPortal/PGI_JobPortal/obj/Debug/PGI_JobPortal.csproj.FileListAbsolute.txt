@@ -44,3 +44,7 @@ D:\DevOPS_PGI_Portal\PGI_JobPortal\PGI_JobPortal\bin\roslyn\System.Numerics.Vect
 D:\DevOPS_PGI_Portal\PGI_JobPortal\PGI_JobPortal\bin\roslyn\System.Runtime.CompilerServices.Unsafe.dll
 D:\DevOPS_PGI_Portal\PGI_JobPortal\PGI_JobPortal\bin\NUglify.dll
 D:\DevOPS_PGI_Portal\PGI_JobPortal\PGI_JobPortal\bin\NUglify.xml
+D:\DevOPS_PGI_Portal\PGI_JobPortal\PGI_JobPortal\bin\EntityFramework.dll
+D:\DevOPS_PGI_Portal\PGI_JobPortal\PGI_JobPortal\bin\EntityFramework.SqlServer.dll
+D:\DevOPS_PGI_Portal\PGI_JobPortal\PGI_JobPortal\bin\EntityFramework.xml
+D:\DevOPS_PGI_Portal\PGI_JobPortal\PGI_JobPortal\bin\EntityFramework.SqlServer.xml
