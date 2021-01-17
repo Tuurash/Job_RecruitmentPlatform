@@ -13,5 +13,20 @@ namespace PGI_JobPortal.Views
         {
 
         }
+
+        protected void btnSubmitPersonalInfo_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void btnAddEducationInfo_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void btnAddEmployment_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

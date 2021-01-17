@@ -14,13 +14,19 @@ namespace PGI_JobPortal.Gateway
 
         internal int InsertCandidate(PGI_CandidateInfo obj_Candidate)
         {
-            query = @"INSERT INTO PGI_CandidateInfo (UserCode,UserFirstName,UserLastName,UserEmail,UserPhoneNo,UserPassword) VALUES ('" + obj_Candidate.UserCode + "','" + obj_Candidate.UserFirstName + "','" + obj_Candidate.UserLastName + "','" + obj_Candidate.UserEmail + "','" + obj_Candidate.UserPhoneNo + "','" + obj_Candidate.UserPassword + "')";
+            query = @"INSERT INTO PGI_CandidateInfo (UserCode,UserFirstName,UserLastName,UserEmail,UserPhoneNo,UserPassword,role) VALUES ('" + obj_Candidate.UserCode + "','" + obj_Candidate.UserFirstName + "','" + obj_Candidate.UserLastName + "','" + obj_Candidate.UserEmail + "','" + obj_Candidate.UserPhoneNo + "','" + obj_Candidate.UserPassword + "','" + obj_Candidate.role + "')";
             return ExecuteNonQuery(query);
         }
 
         internal DataTable EmailExist(string email)
         {
             query = "select * from PGI_CandidateInfo where UserEmail='" + email + "'";
+            return ExecuteQuery(query);
+        }
+
+        internal DataTable getCandidate(string getEmail, string getPassword)
+        {
+            query = "select * from PGI_CandidateInfo where UserEmail='" + getEmail + "' and UserPassword='" + getPassword + "'";
             return ExecuteQuery(query);
         }
 

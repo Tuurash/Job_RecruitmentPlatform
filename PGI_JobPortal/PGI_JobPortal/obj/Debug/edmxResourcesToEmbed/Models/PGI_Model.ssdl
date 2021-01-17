@@ -12,6 +12,7 @@
     <Property Name="UserPhoneNo" Type="varchar" MaxLength="50" />
     <Property Name="UserPassword" Type="varchar" MaxLength="50" />
     <Property Name="UserPhoto" Type="varchar" MaxLength="50" />
+    <Property Name="role" Type="varchar" MaxLength="50" />
   </EntityType>
   <EntityContainer Name="PgiWebPortalDBModelStoreContainer">
     <EntitySet Name="PGI_CandidateInfo" EntityType="Self.PGI_CandidateInfo" Schema="dbo" store:Type="Tables" />

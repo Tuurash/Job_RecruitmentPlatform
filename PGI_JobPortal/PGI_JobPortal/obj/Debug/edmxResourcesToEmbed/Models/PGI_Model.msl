@@ -4,6 +4,7 @@
     <EntitySetMapping Name="PGI_CandidateInfo">
       <EntityTypeMapping TypeName="PgiWebPortalDBModel.PGI_CandidateInfo">
         <MappingFragment StoreEntitySet="PGI_CandidateInfo">
+          <ScalarProperty Name="role" ColumnName="role" />
           <ScalarProperty Name="ID" ColumnName="ID" />
           <ScalarProperty Name="UserCode" ColumnName="UserCode" />
           <ScalarProperty Name="UserFirstName" ColumnName="UserFirstName" />

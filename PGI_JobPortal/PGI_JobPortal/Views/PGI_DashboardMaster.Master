@@ -148,7 +148,8 @@
                         <!-- menu Section End -->
                         <div class="col-md-4 col-lg-4 col-sm-12">
                             <div class="contact-right-area wow fadeIn">
-                                <h2>Hello, Mr. Something</h2>
+                                <h2>Hello,
+                                    <asp:Label ID="lblUserName" runat="server"></asp:Label></h2>
                                 <div class="contact-info">
                                     <div class="single-contact">
                                         <div class="contact-icon">

@@ -18,12 +18,10 @@
                     <p>
                         <%-- <img class="img-fluid float-right" src="assets/img/about/img1.jpg" alt="">--%>
                         <asp:ImageButton class="img-fluid float-right" ID="btnProfilePic" runat="server" ImageUrl="assets/img/about/img1.jpg"
-                                         style="border-radius:15px"/>
+                            Style="border-radius: 15px" />
                     </p>
 
-                    <%--<div class="col-12 text-center mt-4">
-                        <a href="job-page.html" class="btn btn-common">Browse All Jobs</a>
-                    </div>--%>
+
                 </div>
 
                 <div class="col-lg-8 col-md-8 col-xs-12">
@@ -33,6 +31,7 @@
 
                         <%--Tabs--%>
                         <div>
+
                             <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
                                 <li class="nav-item">
                                     <a class="nav-link active" id="pills-home-tab" data-toggle="pill" href="#pills-home" role="tab" aria-controls="pills-home" aria-selected="true">Personal Info</a>
@@ -45,76 +44,192 @@
                                 </li>
                             </ul>
 
-
                             <div class="tab-content" id="pills-tabContent">
 
                                 <%--Personal Info Tab--%>
                                 <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
-                                    <p>
-                                        <label>Name:</label>
-                                        <asp:TextBox ID="txtName" runat="server" CssClass="form-control"></asp:TextBox>
 
-                                        <label>Name:</label>
-                                        <asp:TextBox ID="TextBox1" runat="server" CssClass="form-control"></asp:TextBox>
+                                    <div class="form-group" style="display: flex; flex-direction: row; justify-content: center; align-items: center">
 
-                                        <label>Name:</label>
-                                        <asp:TextBox ID="TextBox2" runat="server" CssClass="form-control"></asp:TextBox>
+                                        <asp:TextBox ID="txtFirstName" runat="server" placeholder="First Name" CssClass="form-control" Width="50%"></asp:TextBox>
+                                        &nbsp&nbsp                                      
+                                        <asp:TextBox ID="txtLastName" placeholder="Last Name" runat="server" CssClass="form-control" Width="50%"></asp:TextBox>
+                                    </div>
 
-                                        <label>Name:</label>
-                                        <asp:TextBox ID="TextBox3" runat="server" CssClass="form-control"></asp:TextBox>
+                                    <div class="form-group" style="display: flex; flex-direction: row; justify-content: center; align-items: center">
 
-                                        <label>Name:</label>
-                                        <asp:TextBox ID="TextBox4" runat="server" CssClass="form-control"></asp:TextBox>
-                                    </p>
+                                        <asp:DropDownList ID="GenderDropdown" runat="server" CssClass="form-control" Width="50%">
+                                            <asp:ListItem Text="select Gender" Value="" />
+                                            <asp:ListItem Text="Male" Value="Male" />
+                                            <asp:ListItem Text="Female" Value="Female" />
+                                            <asp:ListItem Text="other" Value="other" />
+                                        </asp:DropDownList>
+                                        &nbsp&nbsp                                      
+                                        <asp:DropDownList ID="DropDownMaritalStatus" runat="server" CssClass="form-control" Width="50%">
+                                            <asp:ListItem Text="Marital Status" Value="" />
+                                            <asp:ListItem Text="Unmarried" Value="Male" />
+                                            <asp:ListItem Text="Married" Value="Female" />
+                                            <asp:ListItem Text="Widowed" Value="other" />
+                                        </asp:DropDownList>
+
+                                    </div>
+
+
+                                    <label style="font-size: small;">Date Of Birth</label>
+                                    <asp:TextBox ID="txtDOB" runat="server" CssClass="form-control" TextMode="Date"></asp:TextBox>
+
+                                    <label style="font-size: small;">NID</label>
+                                    <asp:TextBox ID="txtNID" runat="server" CssClass="form-control"></asp:TextBox>
+
+                                    <label style="font-size: small;">Passport No:</label>
+                                    <asp:TextBox ID="txtPassportNo" runat="server" CssClass="form-control"></asp:TextBox>
+
+                                    <label style="font-size: small;">Mobile No:</label>
+                                    <asp:TextBox ID="txtPhoneNo" runat="server" CssClass="form-control" MaxLength="11"></asp:TextBox>
+
+                                    <label style="font-size: small;">Present Address:</label>
+                                    <asp:TextBox ID="txtPresentAddress" runat="server" CssClass="form-control" TextMode="MultiLine"></asp:TextBox>
+
+                                    <label style="font-size: small;">Permanent Address:</label>
+                                    <asp:TextBox ID="txtPermanentAddress" runat="server" CssClass="form-control" TextMode="MultiLine"></asp:TextBox>
+
                                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni delectus soluta adipisci beatae ullam quisquam, quia recusandae rem assumenda, praesentium porro sequi eaque doloremque tenetur incidunt officiis explicabo optio perferendis.</p>
-                                    <p><a href="#" class="btn btn-common">Change</a></p>
+                                    <p>
+                                        <asp:Button ID="btnSubmitPersonalInfo" Text="Apply" runat="server" CssClass="btn btn-info" OnClick="btnSubmitPersonalInfo_Click" />
+                                    </p>
                                 </div>
 
                                 <%--Academic--%>
                                 <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
 
+                                    <%--Education List--%>
+                                    <div class="row">
+                                        <div class="col-lg-12 col-md-12 col-xs-12">
+                                            <a class="job-listings-featured" href="#">
+                                                <div class="row">
+                                                    <div class="col-lg-6 col-md-6 col-xs-12">
+                                                        <div class="job-details">
+                                                            <h2>Masters</h2>
+                                                            <span class="company-neme">Computer Science</span>
+                                                            <div class="tags">
+                                                                <span><i class="lni-map-marker"></i>MizTech University</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-6 col-md-6 col-xs-12 text-right">
+                                                        <div class="tag-type">
+                                                            <span class="part-time">4.00</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
+
+                                    </div>
+                                    <%-- End Education List--%>
+
+                                    <div class="form-group" style="display: flex; flex-direction: row; justify-content: center; align-items: center">
+
+                                        <asp:DropDownList ID="DropDownEducationLevel" runat="server" CssClass="form-control" Width="50%">
+                                            <asp:ListItem Text="Education Level" Value="" />
+                                            <asp:ListItem Text="PHD" Value="PHD" />
+                                            <asp:ListItem Text="Bachelors" Value="Bachelors" />
+                                            <asp:ListItem Text="Masters" Value="Masters" />
+                                            <asp:ListItem Text="HSC" Value="HSC" />
+                                            <asp:ListItem Text="SSC" Value="SSC" />
+                                            <asp:ListItem Text="Training" Value="Training" />
+                                            <asp:ListItem Text="Other" Value="Other" />
+                                        </asp:DropDownList>
+                                        &nbsp&nbsp                                      
+                                        <asp:TextBox ID="txtResult" placeholder="Result" runat="server" Width="50%" CssClass="form-control"></asp:TextBox>
+                                    </div>
+
+                                    <div class="form-group" style="display: flex; flex-direction: row; justify-content: center; align-items: center">
+
+                                        <asp:TextBox ID="txtMajor" placeholder="Group/Major" runat="server" Width="50%" CssClass="form-control"></asp:TextBox>
+                                        &nbsp&nbsp                                      
+                                        <asp:TextBox ID="txtPassingYear" placeholder="Result" runat="server" Width="50%" TextMode="Date" CssClass="form-control"></asp:TextBox>
+                                    </div>
+
+                                    <label style="font-size: small;">Institute Name:</label>
+                                    <asp:TextBox ID="txtInstituteName" runat="server" CssClass="form-control"></asp:TextBox>
+
+                                    <label style="font-size: small;">Duration:</label>
+                                    <asp:TextBox ID="txtDuration" runat="server" CssClass="form-control"></asp:TextBox>
+
+                                    <label style="font-size: small;">Achievement:</label>
+                                    <asp:TextBox ID="txtAchievement" runat="server" CssClass="form-control" TextMode="MultiLine"></asp:TextBox>
+
+
+
+                                    <p></p>
                                     <p>
-                                        <label>Name:</label>
-                                        <asp:TextBox ID="TextBox5" runat="server" CssClass="form-control"></asp:TextBox>
-
-                                        <label>Name:</label>
-                                        <asp:TextBox ID="TextBox6" runat="server" CssClass="form-control"></asp:TextBox>
-
-                                        <label>Name:</label>
-                                        <asp:TextBox ID="TextBox7" runat="server" CssClass="form-control"></asp:TextBox>
-
-                                        <label>Name:</label>
-                                        <asp:TextBox ID="TextBox8" runat="server" CssClass="form-control"></asp:TextBox>
-
-                                        <label>Name:</label>
-                                        <asp:TextBox ID="TextBox9" runat="server" CssClass="form-control"></asp:TextBox>
+                                        <asp:Button ID="btnAddEducationInfo" Text="Apply" runat="server" CssClass="btn btn-info" OnClick="btnAddEducationInfo_Click" />
                                     </p>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni delectus soluta adipisci beatae ullam quisquam, quia recusandae rem assumenda, praesentium porro sequi eaque doloremque tenetur incidunt officiis explicabo optio perferendis.</p>
-                                    <p><a href="#" class="btn btn-common">Change</a></p>
 
                                 </div>
 
                                 <%--Employment--%>
                                 <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab">
 
+                                    <%--Emplyment List--%>
+                                    <div class="row">
+                                        <div class="col-lg-12 col-md-12 col-xs-12">
+                                            <a class="job-listings-featured" href="#">
+                                                <div class="row">
+                                                    <div class="col-lg-6 col-md-6 col-xs-12">
+                                                        <div class="job-details">
+                                                            <h2>Jr.Developer</h2>
+                                                            <span class="company-neme">2000-2015</span>
+                                                            <div class="tags">
+                                                                <span><i class="lni-map-marker"></i>Google</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-6 col-md-6 col-xs-12 text-right">
+                                                        <div class="tag-type">
+                                                            <span class="part-time">15 years</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
+
+                                    </div>
+                                    <%-- End Emplyment List--%>
+
+                                    <label style="font-size: small;">Company Name:</label>
+                                    <asp:TextBox ID="txtCompanyName" runat="server" CssClass="form-control"></asp:TextBox>
+
+                                    <label style="font-size: small;">Company Location:</label>
+                                    <asp:TextBox ID="txtCompanyLocation" runat="server" CssClass="form-control"></asp:TextBox>
+
+                                    <label style="font-size: small;">Company Type:</label>
+                                    <asp:TextBox ID="txtCompanyType" runat="server" CssClass="form-control"></asp:TextBox>
+                                    <br />
+
+                                    <div class="form-group" style="display: flex; flex-direction: row; justify-content: center; align-items: center">
+
+                                        <asp:TextBox ID="txtDepartment" placeholder="Department" runat="server" Width="50%" CssClass="form-control"></asp:TextBox>
+                                        &nbsp&nbsp                                      
+                                        <asp:TextBox ID="txtDesignation" placeholder="Designation" runat="server" Width="50%" CssClass="form-control"></asp:TextBox>
+                                    </div>
+
+                                    <label style="font-size: small;">Responsibilities:</label>
+                                    <asp:TextBox ID="txtResponsibilities" runat="server" TextMode="MultiLine" CssClass="form-control"></asp:TextBox>
+
+                                    <label style="font-size: small;">Employment Period:</label>
+                                    <div class="form-group" style="display: flex; flex-direction: row; justify-content: center; align-items: center">
+
+                                        <asp:TextBox ID="txtEmpFrom" placeholder=" From" runat="server" Width="50%" CssClass="form-control" TextMode="Date"></asp:TextBox>
+                                        &nbsp&nbsp                                      
+                                        <asp:TextBox ID="txtEmpTo" placeholder=" To" runat="server" Width="50%" CssClass="form-control" TextMode="Date"></asp:TextBox>
+                                    </div>
+
+                                    <p></p>
                                     <p>
-                                        <label>Name:</label>
-                                        <asp:TextBox ID="TextBox10" runat="server" CssClass="form-control"></asp:TextBox>
-
-                                        <label>Name:</label>
-                                        <asp:TextBox ID="TextBox11" runat="server" CssClass="form-control"></asp:TextBox>
-
-                                        <label>Name:</label>
-                                        <asp:TextBox ID="TextBox12" runat="server" CssClass="form-control"></asp:TextBox>
-
-                                        <label>Name:</label>
-                                        <asp:TextBox ID="TextBox13" runat="server" CssClass="form-control"></asp:TextBox>
-
-                                        <label>Name:</label>
-                                        <asp:TextBox ID="TextBox14" runat="server" CssClass="form-control"></asp:TextBox>
+                                        <asp:Button ID="btnAddEmployment" Text="Apply" runat="server" CssClass="btn btn-info" OnClick="btnAddEmployment_Click" />
                                     </p>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni delectus soluta adipisci beatae ullam quisquam, quia recusandae rem assumenda, praesentium porro sequi eaque doloremque tenetur incidunt officiis explicabo optio perferendis.</p>
-                                    <p><a href="#" class="btn btn-common">Change</a></p>
 
                                 </div>
                             </div>

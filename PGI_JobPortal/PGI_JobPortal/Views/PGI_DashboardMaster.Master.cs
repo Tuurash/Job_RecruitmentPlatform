@@ -9,9 +9,18 @@ namespace PGI_JobPortal.Views
 {
     public partial class PGI_DashboardMaster : System.Web.UI.MasterPage
     {
+        string userName = "";
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            if (Session["Name"] != null && Session["UserCode"] != null)
+            {
+                userName = Session["Name"].ToString();
+                lblUserName.Text = userName;
+            }
+            else
+            {
+                Response.Redirect("LoginPage.aspx");
+            }
         }
 
         protected void btnLogout_ServerClick(object sender, EventArgs e)

@@ -31,20 +31,21 @@
                             <div class="form-group">
                                 <div class="input-icon">
                                     <i class="lni-user"></i>
-                                    <input type="text" id="sender-email" class="form-control" name="email" placeholder="Email">
+                                    <input type="text" id="txtEmail" runat="server" class="form-control" name="email" placeholder="Email">
                                 </div>
                             </div>
                             <div class="form-group">
                                 <div class="input-icon">
                                     <i class="lni-lock"></i>
-                                    <input type="password" class="form-control" placeholder="Password">
+                                    <input type="password" runat="server" id="txtPassword" class="form-control" placeholder="Password">
                                 </div>
                             </div>
                             <div class="form-group form-check">
                                 <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                                <label class="form-check-label" for="exampleCheck1">Keep Me Signed In</label>
+                                <label class="form-check-label" for="exampleCheck1">Remember Me</label>
                             </div>
-                            <button class="btn btn-common log-btn">login</button>
+
+                            <asp:Button ID="btnlogin" runat="server" CssClass="btn btn-common log-btn" Text="log in" OnClick="btnlogin_Click" />
                             <div align="center">
 
                                 <asp:ImageButton ID="gLogin" runat="server" ImageUrl="~/Views/assets/img/google-logo.png" Style="border-radius: 40px"

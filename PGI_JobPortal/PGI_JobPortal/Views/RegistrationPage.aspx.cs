@@ -45,6 +45,7 @@ namespace PGI_JobPortal.Views
                     obj_Candidate.UserEmail = txtEmail.Value;
                     obj_Candidate.UserPassword = txtPassword.Value;
                     obj_Candidate.UserPhoneNo = txtMobileNo.Value;
+                    obj_Candidate.role = "Candidate";
                 }
             }
             else
