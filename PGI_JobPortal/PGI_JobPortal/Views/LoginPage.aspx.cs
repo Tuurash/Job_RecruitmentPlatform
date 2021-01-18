@@ -40,21 +40,21 @@ namespace PGI_JobPortal.Views
 
                 if (dt.Rows.Count > 0)
                 {
+                    Session["userEmail"] = getEmail;
+                    Session["Name"] = dt.Rows[0]["UserFirstName"].ToString() + " " + dt.Rows[0]["UserLastName"].ToString();
+                    Session["UserPhoneNo"] = dt.Rows[0]["UserPhoneNo"].ToString();
+                    Session["UserProfileImage"] = dt.Rows[0]["UserPhoto"].ToString();
+                    Session["UserCode"] = dt.Rows[0]["UserCode"].ToString();
+
                     getRole = dt.Rows[0]["role"].ToString();
 
                     if (getRole == "Candidate")
                     {
-                        Session["userEmail"] = getEmail;
-                        Session["Name"] = dt.Rows[0]["UserFirstName"].ToString() +" "+ dt.Rows[0]["UserLastName"].ToString();
-                        Session["UserPhoneNo"] = dt.Rows[0]["UserPhoneNo"].ToString();
-                        Session["UserProfileImage"] = dt.Rows[0]["UserPhoto"].ToString();
-                        Session["UserCode"] = dt.Rows[0]["UserCode"].ToString();
-
                         Response.Redirect("UserProfilePage.aspx");
                     }
-                    else
+                    else if (getRole == "Admin")
                     {
-                        //Others
+                        Response.Redirect("JobPostingPage.aspx");
                     }
                 }
                 else
