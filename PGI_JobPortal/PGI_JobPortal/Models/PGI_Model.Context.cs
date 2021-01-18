@@ -26,5 +26,11 @@ namespace PGI_JobPortal.Models
         }
     
         public virtual DbSet<PGI_CandidateInfo> PGI_CandidateInfo { get; set; }
+        public virtual DbSet<PGI_Candidate_EducationDetails> PGI_Candidate_EducationDetails { get; set; }
+        public virtual DbSet<PGI_Candidate_EmploymentDetails> PGI_Candidate_EmploymentDetails { get; set; }
+        public virtual DbSet<PGI_Candidate_PersonalDetails> PGI_Candidate_PersonalDetails { get; set; }
+        public virtual DbSet<PGI_JobDetails> PGI_JobDetails { get; set; }
+        public virtual DbSet<PGI_JobInfo> PGI_JobInfo { get; set; }
+        public virtual DbSet<SKode_NumberSeries_T> SKode_NumberSeries_T { get; set; }
     }
 }

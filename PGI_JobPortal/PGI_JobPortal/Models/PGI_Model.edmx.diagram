@@ -5,7 +5,13 @@
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
       <Diagram DiagramId="c68254cc2e4c4a2e91a7523b6e4a2371" Name="Diagram1">
-        <EntityTypeShape EntityType="PgiWebPortalDBModel.PGI_CandidateInfo" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="PgiWebPortalDBModel.PGI_CandidateInfo" Width="1.625" PointX="0.5" PointY="0.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="PgiWebPortalDBModel.PGI_Candidate_EducationDetails" Width="2.125" PointX="2.25" PointY="0.5" />
+        <EntityTypeShape EntityType="PgiWebPortalDBModel.PGI_Candidate_EmploymentDetails" Width="2.125" PointX="2.25" PointY="3.375" />
+        <EntityTypeShape EntityType="PgiWebPortalDBModel.PGI_Candidate_PersonalDetails" Width="2.125" PointX="4.5" PointY="0.5" />
+        <EntityTypeShape EntityType="PgiWebPortalDBModel.PGI_JobDetails" Width="1.5" PointX="8.375" PointY="0.5" />
+        <EntityTypeShape EntityType="PgiWebPortalDBModel.PGI_JobInfo" Width="1.5" PointX="6.75" PointY="0.5" />
+        <EntityTypeShape EntityType="PgiWebPortalDBModel.SKode_NumberSeries_T" Width="1.5" PointX="11.375" PointY="3.375" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

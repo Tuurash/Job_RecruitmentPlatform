@@ -33,6 +33,15 @@ namespace PGI_JobPortal.Views
         protected global::System.Web.UI.WebControls.HiddenField SKcurNoHF;
 
         /// <summary>
+        /// lblJobCode control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblJobCode;
+
+        /// <summary>
         /// dropdownJobCatagory control.
         /// </summary>
         /// <remarks>
@@ -51,13 +60,13 @@ namespace PGI_JobPortal.Views
         protected global::System.Web.UI.WebControls.TextBox txtNwCatagory;
 
         /// <summary>
-        /// btnNewCatagory control.
+        /// btnNwCat control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnNewCatagory;
+        protected global::System.Web.UI.HtmlControls.HtmlAnchor btnNwCat;
 
         /// <summary>
         /// txtJobName control.
@@ -132,22 +141,22 @@ namespace PGI_JobPortal.Views
         protected global::System.Web.UI.WebControls.TextBox txtJobLocation;
 
         /// <summary>
-        /// TextBox1 control.
+        /// txtVacancy control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox1;
+        protected global::System.Web.UI.WebControls.TextBox txtVacancy;
 
         /// <summary>
-        /// TextBox4 control.
+        /// txtExperienceYrs control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox4;
+        protected global::System.Web.UI.WebControls.TextBox txtExperienceYrs;
 
         /// <summary>
         /// TextBox3 control.
@@ -175,5 +184,23 @@ namespace PGI_JobPortal.Views
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtSalary;
+
+        /// <summary>
+        /// txtDeadline control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtDeadline;
+
+        /// <summary>
+        /// btnSubmit control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnSubmit;
     }
 }
