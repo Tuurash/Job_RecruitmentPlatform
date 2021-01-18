@@ -80,11 +80,17 @@
                 <div class="sideber">
                     <div class="widghet">
                         <h3>Job Summary Section</h3>
-                        <p>
-                            location:
+                        <div class="form-group" style="display: flex; flex-direction: row; align-items: center">
+                            <p>
+                                location:
                                 <asp:TextBox ID="txtJobLocation" Width="40%" runat="server" CssClass="form-control" required></asp:TextBox>
-                        </p>
-
+                            </p>
+                            &nbsp
+                            <p>
+                                Workplace:
+                                <asp:TextBox ID="txtWorkPlace" Width="40%" runat="server" CssClass="form-control" required></asp:TextBox>
+                            </p>
+                        </div>
                         <div class="form-group" style="display: flex; flex-direction: row; align-items: center">
                             <p>
                                 Vacancy:
@@ -100,7 +106,7 @@
 
                         <p>
                             Employment Status:
-                                <asp:TextBox ID="TextBox3" Width="40%" runat="server" CssClass="form-control" required></asp:TextBox>
+                                <asp:TextBox ID="txtEmpStatus" Width="40%" runat="server" CssClass="form-control" required></asp:TextBox>
                         </p>
 
                         <p>
@@ -117,7 +123,7 @@
                         </p>
                         <p style="color: navy">
                             Deadline:
-                                <asp:TextBox ID="txtDeadline" TextMode="DateTime" Width="40%" runat="server" CssClass="form-control"></asp:TextBox>
+                                <asp:TextBox ID="txtDeadline" TextMode="Date" Width="40%" runat="server" CssClass="form-control"></asp:TextBox>
                         </p>
                         <br />
 

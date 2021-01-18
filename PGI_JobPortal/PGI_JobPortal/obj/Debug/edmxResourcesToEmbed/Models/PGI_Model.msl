@@ -16,5 +16,100 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
+    <EntitySetMapping Name="PGI_Candidate_EducationDetails">
+      <EntityTypeMapping TypeName="PgiWebPortalDBModel.PGI_Candidate_EducationDetails">
+        <MappingFragment StoreEntitySet="PGI_Candidate_EducationDetails">
+          <ScalarProperty Name="Achievement" ColumnName="Achievement" />
+          <ScalarProperty Name="InstituteName" ColumnName="InstituteName" />
+          <ScalarProperty Name="Duration" ColumnName="Duration" />
+          <ScalarProperty Name="Major" ColumnName="Major" />
+          <ScalarProperty Name="PassingYear" ColumnName="PassingYear" />
+          <ScalarProperty Name="Result" ColumnName="Result" />
+          <ScalarProperty Name="EducationLevel" ColumnName="EducationLevel" />
+          <ScalarProperty Name="UserCode" ColumnName="UserCode" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PGI_Candidate_EmploymentDetails">
+      <EntityTypeMapping TypeName="PgiWebPortalDBModel.PGI_Candidate_EmploymentDetails">
+        <MappingFragment StoreEntitySet="PGI_Candidate_EmploymentDetails">
+          <ScalarProperty Name="EmployeeEnd" ColumnName="EmployeeEnd" />
+          <ScalarProperty Name="EmployeeFrom" ColumnName="EmployeeFrom" />
+          <ScalarProperty Name="Responsibilities" ColumnName="Responsibilities" />
+          <ScalarProperty Name="Designation" ColumnName="Designation" />
+          <ScalarProperty Name="Department" ColumnName="Department" />
+          <ScalarProperty Name="CompanyLocation" ColumnName="CompanyLocation" />
+          <ScalarProperty Name="CompanyType" ColumnName="CompanyType" />
+          <ScalarProperty Name="CompanyName" ColumnName="CompanyName" />
+          <ScalarProperty Name="UserCode" ColumnName="UserCode" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PGI_Candidate_PersonalDetails">
+      <EntityTypeMapping TypeName="PgiWebPortalDBModel.PGI_Candidate_PersonalDetails">
+        <MappingFragment StoreEntitySet="PGI_Candidate_PersonalDetails">
+          <ScalarProperty Name="LinkedinProfile" ColumnName="LinkedinProfile" />
+          <ScalarProperty Name="PermanentAddress" ColumnName="PermanentAddress" />
+          <ScalarProperty Name="PresentAddress" ColumnName="PresentAddress" />
+          <ScalarProperty Name="MobileNo" ColumnName="MobileNo" />
+          <ScalarProperty Name="PassportNo" ColumnName="PassportNo" />
+          <ScalarProperty Name="NID" ColumnName="NID" />
+          <ScalarProperty Name="MaritalStatus" ColumnName="MaritalStatus" />
+          <ScalarProperty Name="DateOfBirth" ColumnName="DateOfBirth" />
+          <ScalarProperty Name="Gender" ColumnName="Gender" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="UserCode" ColumnName="UserCode" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PGI_JobDetails">
+      <EntityTypeMapping TypeName="PgiWebPortalDBModel.PGI_JobDetails">
+        <MappingFragment StoreEntitySet="PGI_JobDetails">
+          <ScalarProperty Name="Benifits" ColumnName="Benifits" />
+          <ScalarProperty Name="AdditionalReq" ColumnName="AdditionalReq" />
+          <ScalarProperty Name="ExperienceReq" ColumnName="ExperienceReq" />
+          <ScalarProperty Name="EducationalReq" ColumnName="EducationalReq" />
+          <ScalarProperty Name="Responsibilities" ColumnName="Responsibilities" />
+          <ScalarProperty Name="JobDescription" ColumnName="JobDescription" />
+          <ScalarProperty Name="JobCode" ColumnName="JobCode" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PGI_JobInfo">
+      <EntityTypeMapping TypeName="PgiWebPortalDBModel.PGI_JobInfo">
+        <MappingFragment StoreEntitySet="PGI_JobInfo">
+          <ScalarProperty Name="GenderPreference" ColumnName="GenderPreference" />
+          <ScalarProperty Name="Salary" ColumnName="Salary" />
+          <ScalarProperty Name="Experience" ColumnName="Experience" />
+          <ScalarProperty Name="Vacancy" ColumnName="Vacancy" />
+          <ScalarProperty Name="Deadline" ColumnName="Deadline" />
+          <ScalarProperty Name="PostDate" ColumnName="PostDate" />
+          <ScalarProperty Name="Workplace" ColumnName="Workplace" />
+          <ScalarProperty Name="EmploymentStatus" ColumnName="EmploymentStatus" />
+          <ScalarProperty Name="Catagory" ColumnName="Catagory" />
+          <ScalarProperty Name="Location" ColumnName="Location" />
+          <ScalarProperty Name="JobName" ColumnName="JobName" />
+          <ScalarProperty Name="JobCode" ColumnName="JobCode" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SKode_NumberSeries_T">
+      <EntityTypeMapping TypeName="PgiWebPortalDBModel.SKode_NumberSeries_T">
+        <MappingFragment StoreEntitySet="SKode_NumberSeries_T">
+          <ScalarProperty Name="CompanyID" ColumnName="CompanyID" />
+          <ScalarProperty Name="LastGeneratedNo" ColumnName="LastGeneratedNo" />
+          <ScalarProperty Name="Prefix" ColumnName="Prefix" />
+          <ScalarProperty Name="SeriesLength" ColumnName="SeriesLength" />
+          <ScalarProperty Name="SeriesName" ColumnName="SeriesName" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
   </EntityContainerMapping>
 </Mapping>

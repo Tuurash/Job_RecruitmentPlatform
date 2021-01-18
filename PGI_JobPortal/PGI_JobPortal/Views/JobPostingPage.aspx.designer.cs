@@ -141,6 +141,15 @@ namespace PGI_JobPortal.Views
         protected global::System.Web.UI.WebControls.TextBox txtJobLocation;
 
         /// <summary>
+        /// txtWorkPlace control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtWorkPlace;
+
+        /// <summary>
         /// txtVacancy control.
         /// </summary>
         /// <remarks>
@@ -159,13 +168,13 @@ namespace PGI_JobPortal.Views
         protected global::System.Web.UI.WebControls.TextBox txtExperienceYrs;
 
         /// <summary>
-        /// TextBox3 control.
+        /// txtEmpStatus control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox3;
+        protected global::System.Web.UI.WebControls.TextBox txtEmpStatus;
 
         /// <summary>
         /// dropdownGnderPref control.

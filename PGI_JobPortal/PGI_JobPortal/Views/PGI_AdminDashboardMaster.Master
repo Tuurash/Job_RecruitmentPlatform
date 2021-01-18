@@ -161,7 +161,7 @@
                                         <div class="contact-icon">
                                             <i class="lni-envelope"></i>
                                         </div>
-                                        <a href="AppliedJobsPage.aspx">Applied Jobs</a>
+                                        <a href="PGI_AdminJobList.aspx">Job list</a>
 
                                     </div>
                                     <div class="single-contact">

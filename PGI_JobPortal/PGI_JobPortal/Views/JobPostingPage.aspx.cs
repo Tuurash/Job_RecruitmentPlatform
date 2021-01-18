@@ -96,16 +96,17 @@ namespace PGI_JobPortal.Views
         public void JobInfoObj()
         {
             obj_jobInfo.JobCode = lblJobCode.Text;
-            obj_jobInfo.JobName = lblJobCode.Text;
-            obj_jobInfo.Location = lblJobCode.Text;
-            obj_jobInfo.Catagory = lblJobCode.Text;
-            obj_jobInfo.EmploymentStatus = lblJobCode.Text;
+            obj_jobInfo.JobName = txtJobName.Text;
+            obj_jobInfo.Location = txtJobLocation.Text;
+            obj_jobInfo.Catagory = dropdownJobCatagory.SelectedValue;
+            obj_jobInfo.EmploymentStatus = txtEmpStatus.Text;
             obj_jobInfo.PostDate = DateTime.Now.Date;
             obj_jobInfo.Deadline = DateTime.Parse(txtDeadline.Text);
             obj_jobInfo.Vacancy = int.Parse(txtVacancy.Text);
             obj_jobInfo.Experience = int.Parse(txtExperienceYrs.Text);
             obj_jobInfo.Salary = decimal.Parse(txtSalary.Text);
             obj_jobInfo.GenderPreference = dropdownGnderPref.SelectedValue;
+            obj_jobInfo.Workplace = txtWorkPlace.Text;
         }
 
         protected void btnSubmit_Click(object sender, EventArgs e)
@@ -114,6 +115,12 @@ namespace PGI_JobPortal.Views
             JobInfoObj();
             int insertDetail = JobManager.InsertNewJob(obj_JobDetail);
             int insertInfo = JobManager.InsertNewJobInfo(obj_jobInfo);
+
+            if (insertDetail != 0 && insertInfo != 0)
+            {
+                Response.Redirect("PGI_AdminJobList.aspx");
+            }
+
         }
     }
 }

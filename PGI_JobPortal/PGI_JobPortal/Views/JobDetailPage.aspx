@@ -6,7 +6,9 @@
 
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <style>
-        p{color:black;}
+        p {
+            color: black;
+        }
     </style>
     <br />
     <br />
@@ -18,23 +20,37 @@
             <div class="row justify-content-between">
                 <div class="col-lg-8 col-md-12 col-xs-12">
                     <div class="content-area">
-                        <h4>Job Name</h4>
+                        <h4>
+                            <asp:Label ID="lblJobName" runat="server"></asp:Label>
+                        </h4>
                         <h5>Job Description</h5>
-                        <p>Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi umsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non mauris vitae erat consequat auctor eu in elit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Mauris in erat justo. Nullam ac urna eu felis dapibus condimentum sit amet a augue. Sed non neque elit</p>
+                        <p>
+                            <asp:Label ID="lblJobDescription" runat="server"></asp:Label>
+                        </p>
                         <h5>Responsibilities</h5>
-                        <p>Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi umsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non mauris vitae erat consequat auctor eu in elit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Mauris in erat justo. Nullam ac urna eu felis dapibus condimentum sit amet a augue. Sed non neque elit</p>
+                        <p>
+                            <asp:Label ID="lblResponsibilities" runat="server"></asp:Label>
+                        </p>
                         <h5>Educational Requirments</h5>
-                        <p>Proin gravida nibh vel</p>
+                        <p>
+                            <asp:Label ID="lblEducationalReq" runat="server"></asp:Label>
+                        </p>
                         <h5>Experience Requirements</h5>
-                        <p>Proin gravida nibh vel  </p>
+                        <p>
+                            <asp:Label ID="lblExperienceReq" runat="server"></asp:Label>
+                        </p>
                         <h5>Additional Requirements</h5>
-                        <p>Proin gravida nibh vel  </p>
+                        <p>
+                            <asp:Label ID="lblAdditionalReq" runat="server"></asp:Label>
+                        </p>
                         <h5>Benifits</h5>
-                        <p>Proin gravida nibh vel  </p>
-                        
-                        
-                        
-                        
+                        <p>
+                            <asp:Label ID="lblBenifits" runat="server"></asp:Label>
+                        </p>
+
+
+
+
                         <h5>How To Apply</h5>
                         <p>Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris.</p>
 
@@ -46,17 +62,47 @@
                             <h3>Job Summary</h3>
 
 
-                            <span><i class="lni-map-marker"></i> Motijheel, Dhaka</span><br />
+                            <span><i class="lni-map-marker"></i>
+                                <asp:Label ID="lblLocation" runat="server"></asp:Label></span><br />
                             <br />
-                            <p>Vacancy: 3</p>
-                            <p>Catagory: IT/Networking</p>
-                            <p>Employment Status: Fulltime</p>
-                            <p>Experience: 2 Years</p>
-                            <p>Gender Preference: Male</p>
-                            <p style="color:navy">Salary: 15000</p><br />
-                            <span><i class="lni-calendar"></i>Posted 26 June, 2020</span><br />
+                            <p>
+                                Vacancy:
+                                <asp:Label ID="lblVacancy" runat="server"></asp:Label>
+                            </p>
+                            <p>
+                                Catagory:
+                                <asp:Label ID="lblCatagory" runat="server"></asp:Label>
+                            </p>
+                            <p>
+                                Employment Status:
+                                <asp:Label ID="lblEmpStatus" runat="server"></asp:Label>
+                            </p>
+                            <p>
+                                Work Place:
+                                <asp:Label ID="lblWorkPlace" runat="server"></asp:Label>
+                            </p>
+                            <p>
+                                Experience:
+                                <asp:Label ID="lblExperiencePeriod" runat="server"></asp:Label>
+                                Years
+                            </p>
+                            <p>
+                                Gender Preference:
+                                <asp:Label ID="lblGender" runat="server"></asp:Label>
+                            </p>
+                            <p style="color: navy">
+                                Salary:
+                                <asp:Label ID="lblSalary" runat="server"></asp:Label>
+                            </p>
+                            <br />
+                            <span><i class="lni-calendar"></i>Posted
+                                <asp:Label ID="lblPostDate" runat="server"></asp:Label>
+                            </span>
+                            <br />
 
-                            <span><i class="lni-calendar"></i>Last Date 29 June, 2020</span>
+                            <span><i class="lni-calendar"></i>Last Date
+                                <asp:Label ID="lblDeadLine" runat="server"></asp:Label>
+                            </span>
 
                         </div>
                         <div class="widget">

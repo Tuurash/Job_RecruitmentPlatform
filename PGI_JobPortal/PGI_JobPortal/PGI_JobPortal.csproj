@@ -417,6 +417,7 @@
     <Content Include="Views\JobDetailsPage.aspx" />
     <Content Include="Views\JobPostingPage.aspx" />
     <Content Include="Views\LoginPage.aspx" />
+    <Content Include="Views\PGI_AdminJobList.aspx" />
     <Content Include="Views\RegistrationPage.aspx" />
     <Content Include="Views\ResumePage.aspx" />
     <Content Include="Views\UserProfilePage.aspx" />
@@ -425,10 +426,27 @@
   <ItemGroup>
     <Compile Include="Gateway\CandidateGateway.cs" />
     <Compile Include="Gateway\DBConnector.cs" />
+    <Compile Include="Gateway\JobGateway.cs" />
     <Compile Include="Gateway\NumberSeriesGateway.cs" />
     <Compile Include="Manager\CandidateManager.cs" />
+    <Compile Include="Manager\JobManager.cs" />
     <Compile Include="Manager\NumberSeriesManager.cs" />
     <Compile Include="Models\PGI_CandidateInfo.cs">
+      <DependentUpon>PGI_Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PGI_Candidate_EducationDetails.cs">
+      <DependentUpon>PGI_Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PGI_Candidate_EmploymentDetails.cs">
+      <DependentUpon>PGI_Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PGI_Candidate_PersonalDetails.cs">
+      <DependentUpon>PGI_Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PGI_JobDetails.cs">
+      <DependentUpon>PGI_Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PGI_JobInfo.cs">
       <DependentUpon>PGI_Model.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\PGI_Model.Context.cs">
@@ -445,6 +463,9 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>PGI_Model.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Models\SKode_NumberSeries_T.cs">
+      <DependentUpon>PGI_Model.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\TokenModel.cs" />
     <Compile Include="Models\UserModel.cs" />
@@ -498,6 +519,13 @@
     </Compile>
     <Compile Include="Views\PGI_AdminDashboardMaster.Master.designer.cs">
       <DependentUpon>PGI_AdminDashboardMaster.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Views\PGI_AdminJobList.aspx.cs">
+      <DependentUpon>PGI_AdminJobList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\PGI_AdminJobList.aspx.designer.cs">
+      <DependentUpon>PGI_AdminJobList.aspx</DependentUpon>
     </Compile>
     <Compile Include="Views\PGI_DashboardMaster.Master.cs">
       <DependentUpon>PGI_DashboardMaster.Master</DependentUpon>
