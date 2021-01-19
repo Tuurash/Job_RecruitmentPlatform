@@ -4,3 +4,5 @@ Client ID
 Client Secret
 
 xeg-PxUNKbVAAWAVNoQT31CP
+
+smt.Credentials = new NetworkCredential(@"help.primeapps@gmail.com", "pLuy67n123VBO3h9op1Tr3");

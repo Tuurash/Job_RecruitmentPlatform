@@ -30,6 +30,11 @@ namespace PGI_JobPortal.Manager
             return new JobGateway().GetJobDetailByCode(getjobCode);
         }
 
+        internal static DataTable getAllJobListByCatagory(string getJobCatagory)
+        {
+            return new JobGateway().getAllJobListByCatagory(getJobCatagory);
+        }
+
         internal static DataTable GetJobInfoByCode(string getjobCode)
         {
             return new JobGateway().GetJobInfoByCode(getjobCode);

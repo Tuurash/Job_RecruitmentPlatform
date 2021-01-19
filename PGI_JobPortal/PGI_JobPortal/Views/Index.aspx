@@ -128,9 +128,9 @@
 
                 <asp:Repeater runat="server" ID="repeaterCatagory">
                     <ItemTemplate>
-
+                        
                         <div class="col-lg-3 col-md-6 col-xs-12 f-category">
-                            <a href="browse-jobs.html">
+                            <a href="JobListIndex.aspx?JobCatagory=<%# Eval("SeriesName") %>" >
                                 <div class="icon bg-color-1">
                                     <%--lni-home--%>
                                     <i class="<%# Eval("CatagoryIcon")%>"></i>

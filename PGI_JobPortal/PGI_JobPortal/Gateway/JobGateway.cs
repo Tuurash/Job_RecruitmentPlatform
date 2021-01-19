@@ -23,6 +23,12 @@ namespace PGI_JobPortal.Gateway
             return ExecuteQuery(query);
         }
 
+        internal DataTable getAllJobListByCatagory(string getJobCatagory)
+        {
+            query = @"select * from PGI_JobInfo where Catagory='" + getJobCatagory + "'";
+            return ExecuteQuery(query);
+        }
+
         internal DataTable GetJobDetailByCode(string getjobCode)
         {
             query = @"select * from PGI_JobDetails where JobCode='" + getjobCode + "'";
