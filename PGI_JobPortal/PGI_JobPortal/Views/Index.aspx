@@ -123,61 +123,25 @@
 
             </div>
             <div class="row">
-                <div class="col-lg-3 col-md-6 col-xs-12 f-category">
-                    <a href="browse-jobs.html">
-                        <div class="icon bg-color-1">
-                            <%--lni-home--%>
-                            <i class="ln">bal</i>
+
+
+
+                <asp:Repeater runat="server" ID="repeaterCatagory">
+                    <ItemTemplate>
+
+                        <div class="col-lg-3 col-md-6 col-xs-12 f-category">
+                            <a href="browse-jobs.html">
+                                <div class="icon bg-color-1">
+                                    <%--lni-home--%>
+                                    <i class="<%# Eval("CatagoryIcon")%>"></i>
+                                </div>
+                                <h3>(<%# Eval("SeriesName")%>)</h3>
+                                <p>(<%# Eval("LastGeneratedNo")%>)</p>
+                            </a>
                         </div>
-                        <h3>Finance</h3>
-                        <p>(4286 jobs)</p>
-                    </a>
-                </div>
-                <div class="col-lg-3 col-md-6 col-xs-12 f-category">
-                    <a href="browse-jobs.html">
-                        <div class="icon bg-color-2">
-                            <i class="lni-world"></i>
-                        </div>
-                        <h3>Sale/Markting</h3>
-                        <p>(2000 jobs)</p>
-                    </a>
-                </div>
-                <div class="col-lg-3 col-md-6 col-xs-12 f-category">
-                    <a href="browse-jobs.html">
-                        <div class="icon bg-color-3">
-                            <i class="lni-book"></i>
-                        </div>
-                        <h3>Education/Training</h3>
-                        <p>(1450 jobs)</p>
-                    </a>
-                </div>
-                <div class="col-lg-3 col-md-6 col-xs-12 f-category">
-                    <a href="browse-jobs.html">
-                        <div class="icon bg-color-1">
-                            <i class="lni-home"></i>
-                        </div>
-                        <h3>Finance</h3>
-                        <p>(4286 jobs)</p>
-                    </a>
-                </div>
-                <div class="col-lg-3 col-md-6 col-xs-12 f-category">
-                    <a href="browse-jobs.html">
-                        <div class="icon bg-color-2">
-                            <i class="lni-world"></i>
-                        </div>
-                        <h3>Sale/Markting</h3>
-                        <p>(2000 jobs)</p>
-                    </a>
-                </div>
-                <div class="col-lg-3 col-md-6 col-xs-12 f-category">
-                    <a href="browse-jobs.html">
-                        <div class="icon bg-color-3">
-                            <i class="lni-book"></i>
-                        </div>
-                        <h3>Education/Training</h3>
-                        <p>(1450 jobs)</p>
-                    </a>
-                </div>
+
+                    </ItemTemplate>
+                </asp:Repeater>
 
 
 

@@ -13,7 +13,15 @@ namespace PGI_JobPortal.Views
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            FillCatagoryRepeater();
             FillJobRepeater();
+        }
+
+        private void FillCatagoryRepeater()
+        {
+            DataTable dt = NumberSeriesManager.getAllCatagory();
+            repeaterCatagory.DataSource = dt;
+            repeaterCatagory.DataBind();
         }
 
         private void FillJobRepeater()
