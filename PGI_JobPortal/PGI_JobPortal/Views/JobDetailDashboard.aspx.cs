@@ -12,6 +12,7 @@ namespace PGI_JobPortal.Views
     public partial class JobDetailDashboard : System.Web.UI.Page
     {
         string getjobCode = "";
+        string setStatus = "";
         protected void Page_Load(object sender, EventArgs e)
         {
             if (Request.QueryString["JobCode"] != null)
@@ -28,7 +29,8 @@ namespace PGI_JobPortal.Views
             if (Session["UserRole"].ToString() == "Admin")
             {
                 btnApply.Visible = false;
-                btnDelete.Visible = true;
+                btnDeactive.Visible = true;
+                lbljobStatus.Visible = true;
             }
         }
 
@@ -48,6 +50,11 @@ namespace PGI_JobPortal.Views
                 lblExperiencePeriod.Text = dt.Rows[0]["Experience"].ToString();
                 lblSalary.Text = dt.Rows[0]["Salary"].ToString();
                 lblGender.Text = dt.Rows[0]["GenderPreference"].ToString();
+                lblJobCode.Text = dt.Rows[0]["JobCode"].ToString();
+                if (Session["UserRole"].ToString() == "Admin")
+                {
+                    lbljobStatus.Text = dt.Rows[0]["JobStatus"].ToString();
+                }
             }
         }
 
@@ -65,14 +72,18 @@ namespace PGI_JobPortal.Views
             }
         }
 
-        protected void btnDelete_ServerClick(object sender, EventArgs e)
+        protected void btnApply_ServerClick(object sender, EventArgs e)
         {
 
         }
 
-        protected void btnApply_ServerClick(object sender, EventArgs e)
+        protected void btnDeactive_ServerClick(object sender, EventArgs e)
         {
+            setStatus = "Deactivated";
+            getjobCode = lblJobCode.Text;
 
+            int updateStatus = JobManager.UpdateJobStatus(setStatus, getjobCode);
+            FillJobDetails();
         }
     }
 }

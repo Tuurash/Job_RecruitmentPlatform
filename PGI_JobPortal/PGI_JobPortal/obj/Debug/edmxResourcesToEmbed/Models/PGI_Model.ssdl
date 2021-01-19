@@ -60,6 +60,8 @@
     <Property Name="UserPassword" Type="varchar" MaxLength="50" />
     <Property Name="UserPhoto" Type="varchar" MaxLength="50" />
     <Property Name="role" Type="varchar" MaxLength="50" />
+    <Property Name="GoogleConnected" Type="varchar" MaxLength="50" />
+    <Property Name="GoogleID" Type="varchar" MaxLength="50" />
   </EntityType>
   <EntityType Name="PGI_JobDetails">
     <Key>
@@ -91,6 +93,7 @@
     <Property Name="Experience" Type="int" />
     <Property Name="Salary" Type="decimal" Precision="18" Scale="2" />
     <Property Name="GenderPreference" Type="varchar" MaxLength="50" />
+    <Property Name="JobStatus" Type="varchar" MaxLength="50" />
   </EntityType>
   <EntityType Name="SKode_NumberSeries_T">
     <Key>

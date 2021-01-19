@@ -21,6 +21,8 @@ namespace PGI_JobPortal.Views
             DataTable dt = JobManager.getAllJobList();
             RptrJobList.DataSource = dt;
             RptrJobList.DataBind();
+
+
         }
     }
 }

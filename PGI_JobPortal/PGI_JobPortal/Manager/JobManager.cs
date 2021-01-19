@@ -34,5 +34,10 @@ namespace PGI_JobPortal.Manager
         {
             return new JobGateway().GetJobInfoByCode(getjobCode);
         }
+
+        internal static int UpdateJobStatus(string setStatus, string getjobCode)
+        {
+            return new JobGateway().UpdateJobStatus(setStatus, getjobCode);
+        }
     }
 }

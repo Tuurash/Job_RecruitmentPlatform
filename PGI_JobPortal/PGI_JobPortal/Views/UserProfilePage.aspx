@@ -5,6 +5,11 @@
 
 
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+    <script>
+        function clk() {
+            document.getElementById("FileUpload1").click();
+        }
+    </script>
 
     <div align="center">
         <h3>User Profile</h3>
@@ -17,10 +22,24 @@
                 <div class="col-lg-4 col-md-4 col-xs-12">
                     <p>
                         <%-- <img class="img-fluid float-right" src="assets/img/about/img1.jpg" alt="">--%>
-                        <asp:ImageButton class="img-fluid float-right" ID="btnProfilePic" runat="server" ImageUrl="assets/img/about/img1.jpg"
-                            Style="border-radius: 15px" />
+                        <asp:Image Height="250px" Width="220px" ID="ProfilePic" runat="server" ImageUrl="assets/img/about/img1.jpg" Style="border-radius: 15px" />
                     </p>
+                    <p>
+                        <asp:FileUpload ID="FileUpload1" CssClass="form-control" Width="220px" runat="server" />
 
+                        <asp:Button ID="btnUpload" runat="server" Width="220px" CssClass="link" Text="change" />
+
+                    </p>
+                    <div align="center"></div>
+                    <p>
+                        <br />
+                        <br />
+
+                        <a id="btnCnctGoogle" class="btn" style="background-color: dodgerblue; height: 40px; width: 220px" onserverclick="btnCnctGoogle_ServerClick" runat="server">
+                            <asp:Image ImageUrl="~/Views/assets/img/google-logo.png" runat="server" />
+                            connect Google</a>
+
+                    </p>
 
                 </div>
 

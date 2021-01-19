@@ -19,7 +19,7 @@ namespace PGI_JobPortal.Gateway
 
         internal DataTable getAllJobList()
         {
-            query = @"select * from PGI_JobInfo";
+            query = @"select * from PGI_JobInfo where JobStatus='Active' ";
             return ExecuteQuery(query);
         }
 
@@ -27,6 +27,12 @@ namespace PGI_JobPortal.Gateway
         {
             query = @"select * from PGI_JobDetails where JobCode='" + getjobCode + "'";
             return ExecuteQuery(query);
+        }
+
+        internal int UpdateJobStatus(string setStatus, string getjobCode)
+        {
+            query = @"update PGI_JobInfo set JobStatus='" + setStatus + "' where JobCode='" + getjobCode + "'";
+            return ExecuteNonQuery(query);
         }
 
         internal DataTable GetJobInfoByCode(string getjobCode)
@@ -37,8 +43,8 @@ namespace PGI_JobPortal.Gateway
 
         internal int InsertNewJobInfo(PGI_JobInfo obj_jobInfo)
         {
-            query = @"INSERT INTO PGI_JobInfo(JobCode,JobName,Location,Catagory,EmploymentStatus,Workplace,PostDate,Deadline,Vacancy,Experience,Salary,GenderPreference)
-                      VALUES ('" + obj_jobInfo.JobCode + "','" + obj_jobInfo.JobName + "','" + obj_jobInfo.Location + "','" + obj_jobInfo.Catagory + "','" + obj_jobInfo.EmploymentStatus + "','" + obj_jobInfo.Workplace + "','" + obj_jobInfo.PostDate + "','" + obj_jobInfo.Deadline + "'," + obj_jobInfo.Vacancy + "," + obj_jobInfo.Experience + "," + obj_jobInfo.Salary + ",'" + obj_jobInfo.GenderPreference + "') ";
+            query = @"INSERT INTO PGI_JobInfo(JobCode,JobName,Location,Catagory,EmploymentStatus,Workplace,PostDate,Deadline,Vacancy,Experience,Salary,GenderPreference,JobStatus)
+                      VALUES ('" + obj_jobInfo.JobCode + "','" + obj_jobInfo.JobName + "','" + obj_jobInfo.Location + "','" + obj_jobInfo.Catagory + "','" + obj_jobInfo.EmploymentStatus + "','" + obj_jobInfo.Workplace + "','" + obj_jobInfo.PostDate + "','" + obj_jobInfo.Deadline + "'," + obj_jobInfo.Vacancy + "," + obj_jobInfo.Experience + "," + obj_jobInfo.Salary + ",'" + obj_jobInfo.GenderPreference + "','" + obj_jobInfo.JobStatus + "') ";
             return ExecuteNonQuery(query);
         }
     }

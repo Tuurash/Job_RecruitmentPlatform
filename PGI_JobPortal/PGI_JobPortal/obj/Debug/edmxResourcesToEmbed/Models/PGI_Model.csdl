@@ -13,6 +13,8 @@
     <Property Name="UserPassword" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
     <Property Name="UserPhoto" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
     <Property Name="role" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="GoogleConnected" Type="Boolean" />
+    <Property Name="GoogleID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
   </EntityType>
   <EntityContainer Name="PgiWebPortalDBEntities" annotation:LazyLoadingEnabled="true">
     <EntitySet Name="PGI_CandidateInfo" EntityType="Self.PGI_CandidateInfo" />
@@ -100,6 +102,7 @@
     <Property Name="Experience" Type="Int32" />
     <Property Name="Salary" Type="Decimal" Precision="18" Scale="2" />
     <Property Name="GenderPreference" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="JobStatus" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
   </EntityType>
   <EntityType Name="SKode_NumberSeries_T">
     <Key>

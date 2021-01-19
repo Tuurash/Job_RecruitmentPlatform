@@ -29,5 +29,15 @@ namespace PGI_JobPortal.Manager
         {
             return new CandidateGateway().getCandidate(getEmail, getPassword);
         }
+
+        internal static int UpdateCandidateInfo(PGI_CandidateInfo obj_candidate, string getUserCode)
+        {
+            return new CandidateGateway().UpdateCandidateInfo(obj_candidate, getUserCode);
+        }
+
+        internal static DataTable getCandidateByCode(string getUserCode)
+        {
+            return new CandidateGateway().getCandidateByCode(getUserCode);
+        }
     }
 }

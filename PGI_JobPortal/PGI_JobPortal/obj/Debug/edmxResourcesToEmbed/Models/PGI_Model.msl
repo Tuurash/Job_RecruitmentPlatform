@@ -4,6 +4,8 @@
     <EntitySetMapping Name="PGI_CandidateInfo">
       <EntityTypeMapping TypeName="PgiWebPortalDBModel.PGI_CandidateInfo">
         <MappingFragment StoreEntitySet="PGI_CandidateInfo">
+          <ScalarProperty Name="GoogleID" ColumnName="GoogleID" />
+          <ScalarProperty Name="GoogleConnected" ColumnName="GoogleConnected" />
           <ScalarProperty Name="role" ColumnName="role" />
           <ScalarProperty Name="ID" ColumnName="ID" />
           <ScalarProperty Name="UserCode" ColumnName="UserCode" />
@@ -83,6 +85,7 @@
     <EntitySetMapping Name="PGI_JobInfo">
       <EntityTypeMapping TypeName="PgiWebPortalDBModel.PGI_JobInfo">
         <MappingFragment StoreEntitySet="PGI_JobInfo">
+          <ScalarProperty Name="JobStatus" ColumnName="JobStatus" />
           <ScalarProperty Name="GenderPreference" ColumnName="GenderPreference" />
           <ScalarProperty Name="Salary" ColumnName="Salary" />
           <ScalarProperty Name="Experience" ColumnName="Experience" />

@@ -112,6 +112,7 @@ namespace PGI_JobPortal.Views
             obj_jobInfo.Salary = decimal.Parse(txtSalary.Text);
             obj_jobInfo.GenderPreference = dropdownGnderPref.SelectedValue;
             obj_jobInfo.Workplace = txtWorkPlace.Text;
+            obj_jobInfo.JobStatus = "Active";
         }
 
         protected void btnSubmit_Click(object sender, EventArgs e)

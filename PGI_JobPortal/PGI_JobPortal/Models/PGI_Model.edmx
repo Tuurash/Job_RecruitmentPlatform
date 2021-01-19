@@ -65,6 +65,8 @@
           <Property Name="UserPassword" Type="varchar" MaxLength="50" />
           <Property Name="UserPhoto" Type="varchar" MaxLength="50" />
           <Property Name="role" Type="varchar" MaxLength="50" />
+          <Property Name="GoogleConnected" Type="varchar" MaxLength="50" />
+          <Property Name="GoogleID" Type="varchar" MaxLength="50" />
         </EntityType>
         <EntityType Name="PGI_JobDetails">
           <Key>
@@ -96,6 +98,7 @@
           <Property Name="Experience" Type="int" />
           <Property Name="Salary" Type="decimal" Precision="18" Scale="2" />
           <Property Name="GenderPreference" Type="varchar" MaxLength="50" />
+          <Property Name="JobStatus" Type="varchar" MaxLength="50" />
         </EntityType>
         <EntityType Name="SKode_NumberSeries_T">
           <Key>
@@ -134,6 +137,8 @@
           <Property Name="UserPassword" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="UserPhoto" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="role" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="GoogleConnected" Type="Boolean" />
+          <Property Name="GoogleID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
         </EntityType>
         <EntityContainer Name="PgiWebPortalDBEntities" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="PGI_CandidateInfo" EntityType="Self.PGI_CandidateInfo" />
@@ -221,6 +226,7 @@
           <Property Name="Experience" Type="Int32" />
           <Property Name="Salary" Type="Decimal" Precision="18" Scale="2" />
           <Property Name="GenderPreference" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="JobStatus" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
         </EntityType>
         <EntityType Name="SKode_NumberSeries_T">
           <Key>
@@ -242,6 +248,8 @@
           <EntitySetMapping Name="PGI_CandidateInfo">
             <EntityTypeMapping TypeName="PgiWebPortalDBModel.PGI_CandidateInfo">
               <MappingFragment StoreEntitySet="PGI_CandidateInfo">
+                <ScalarProperty Name="GoogleID" ColumnName="GoogleID" />
+                <ScalarProperty Name="GoogleConnected" ColumnName="GoogleConnected" />
                 <ScalarProperty Name="role" ColumnName="role" />
                 <ScalarProperty Name="ID" ColumnName="ID" />
                 <ScalarProperty Name="UserCode" ColumnName="UserCode" />
@@ -321,6 +329,7 @@
           <EntitySetMapping Name="PGI_JobInfo">
             <EntityTypeMapping TypeName="PgiWebPortalDBModel.PGI_JobInfo">
               <MappingFragment StoreEntitySet="PGI_JobInfo">
+                <ScalarProperty Name="JobStatus" ColumnName="JobStatus" />
                 <ScalarProperty Name="GenderPreference" ColumnName="GenderPreference" />
                 <ScalarProperty Name="Salary" ColumnName="Salary" />
                 <ScalarProperty Name="Experience" ColumnName="Experience" />

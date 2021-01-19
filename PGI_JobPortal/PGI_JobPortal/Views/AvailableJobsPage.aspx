@@ -29,6 +29,9 @@
                         <div class="col-lg-6 col-md-12 col-xs-12">
                             <a href="JobDetailDashboard.aspx?JobCode=<%# Eval("JobCode") %>">
                                 <div class="jobs-latest">
+                                    <%--<div class="img-thumb">
+                                        <asp:Label ID="lblJobStatus" runat="server" Visible="false" Text="<%# Eval("JobStatus")%>"></asp:Label>
+                                    </div>--%>
                                     <div class="content">
                                         <h3><%# Eval("JobName")%></h3>
                                         <p class="brand"><%# Eval("Catagory")%></p>

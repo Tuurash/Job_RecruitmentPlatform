@@ -27,5 +27,6 @@ namespace PGI_JobPortal.Models
         public Nullable<int> Experience { get; set; }
         public Nullable<decimal> Salary { get; set; }
         public string GenderPreference { get; set; }
+        public string JobStatus { get; set; }
     }
 }

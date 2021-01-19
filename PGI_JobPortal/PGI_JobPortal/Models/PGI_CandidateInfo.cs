@@ -11,7 +11,7 @@ namespace PGI_JobPortal.Models
 {
     using System;
     using System.Collections.Generic;
-    
+
     public partial class PGI_CandidateInfo
     {
         public int ID { get; set; }
@@ -23,5 +23,7 @@ namespace PGI_JobPortal.Models
         public string UserPassword { get; set; }
         public string UserPhoto { get; set; }
         public string role { get; set; }
+        public string GoogleConnected { get; set; }
+        public string GoogleID { get; set; }
     }
 }
