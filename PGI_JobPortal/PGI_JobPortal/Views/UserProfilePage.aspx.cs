@@ -66,7 +66,13 @@ namespace PGI_JobPortal.Views
             }
         }
 
-        #region GoogleAccount
+        #region GoogleAccount_Connect
+
+        protected void btnCnctGoogle_ServerClick(object sender, EventArgs e)
+        {
+            string uri = "https://accounts.google.com/o/oauth2/v2/auth?scope=profile&include_granted_scopes=true&redirect_uri=" + redirection_url + "&response_type=code&client_id=" + clientid + "";
+            Response.Redirect(uri);
+        }
 
         public void GetToken(string code)
         {
@@ -147,15 +153,7 @@ namespace PGI_JobPortal.Views
 
         }
 
-        protected void btnProfilePic_Click1(object sender, ImageClickEventArgs e)
-        {
 
-        }
 
-        protected void btnCnctGoogle_ServerClick(object sender, EventArgs e)
-        {
-            string uri = "https://accounts.google.com/o/oauth2/v2/auth?scope=profile&include_granted_scopes=true&redirect_uri=" + redirection_url + "&response_type=code&client_id=" + clientid + "";
-            Response.Redirect(uri);
-        }
     }
 }

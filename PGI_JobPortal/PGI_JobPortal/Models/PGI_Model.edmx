@@ -137,7 +137,7 @@
           <Property Name="UserPassword" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="UserPhoto" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="role" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Name="GoogleConnected" Type="Boolean" />
+          <Property Name="GoogleConnected" Type="String" />
           <Property Name="GoogleID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
         </EntityType>
         <EntityContainer Name="PgiWebPortalDBEntities" annotation:LazyLoadingEnabled="true">

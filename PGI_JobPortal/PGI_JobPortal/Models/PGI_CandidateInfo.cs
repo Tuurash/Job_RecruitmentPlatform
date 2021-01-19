@@ -11,7 +11,7 @@ namespace PGI_JobPortal.Models
 {
     using System;
     using System.Collections.Generic;
-
+    
     public partial class PGI_CandidateInfo
     {
         public int ID { get; set; }

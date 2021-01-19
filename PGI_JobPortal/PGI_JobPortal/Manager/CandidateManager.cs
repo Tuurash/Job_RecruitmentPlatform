@@ -39,5 +39,10 @@ namespace PGI_JobPortal.Manager
         {
             return new CandidateGateway().getCandidateByCode(getUserCode);
         }
+
+        internal static DataTable getCandidateByGoogleID(string googleID)
+        {
+            return new CandidateGateway().getCandidateByGoogleID(googleID);
+        }
     }
 }

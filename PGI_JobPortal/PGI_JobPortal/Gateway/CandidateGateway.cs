@@ -36,6 +36,12 @@ namespace PGI_JobPortal.Gateway
             return ExecuteQuery(query);
         }
 
+        internal DataTable getCandidateByGoogleID(string googleID)
+        {
+            query = "select * from PGI_CandidateInfo where GoogleID='" + googleID + "'";
+            return ExecuteQuery(query);
+        }
+
         internal int UpdateCandidateInfo(PGI_CandidateInfo obj_candidate, string getUserCode)
         {
             query = "UPDATE PGI_CandidateInfo SET UserFirstName ='" + obj_candidate.UserFirstName + "',UserLastName ='" + obj_candidate.UserLastName + "',UserPhoto= '" + obj_candidate.UserPhoto + "',GoogleConnected= '" + obj_candidate.GoogleConnected + "' ,GoogleID= '" + obj_candidate.GoogleID + "' WHERE UserCode='" + getUserCode + "'";
