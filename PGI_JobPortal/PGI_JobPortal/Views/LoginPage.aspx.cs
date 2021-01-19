@@ -45,6 +45,7 @@ namespace PGI_JobPortal.Views
                     Session["UserPhoneNo"] = dt.Rows[0]["UserPhoneNo"].ToString();
                     Session["UserProfileImage"] = dt.Rows[0]["UserPhoto"].ToString();
                     Session["UserCode"] = dt.Rows[0]["UserCode"].ToString();
+                    Session["UserRole"] = dt.Rows[0]["role"].ToString();
 
                     getRole = dt.Rows[0]["role"].ToString();
 

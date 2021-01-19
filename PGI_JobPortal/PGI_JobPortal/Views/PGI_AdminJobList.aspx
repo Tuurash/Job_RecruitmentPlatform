@@ -26,7 +26,7 @@
 
                                         <div class="job-details">
                                             <h3>
-                                                <%# Eval("JobName")%></asp:Label></h3>
+                                                <%# Eval("JobName")%></h3>
                                             <span class="company-neme">
                                                 <%# Eval("Catagory")%></span>
 

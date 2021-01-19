@@ -18,6 +18,8 @@ namespace PGI_JobPortal.Views
         string preFix = "";
         int currentNo;
 
+        char[] charsToTrim = { '*', ' ', '\'', };
+
         PGI_JobDetails obj_JobDetail = new PGI_JobDetails();
         PGI_JobInfo obj_jobInfo = new PGI_JobInfo();
 
@@ -37,11 +39,13 @@ namespace PGI_JobPortal.Views
             dropdownJobCatagory.DataValueField = "SeriesName";
             dropdownJobCatagory.DataBind();
         }
+
         protected void dropdownJobCatagory_SelectedIndexChanged(object sender, EventArgs e)
         {
             seriesName = dropdownJobCatagory.SelectedValue;
             GenerateCode();
         }
+
         protected void btnNewCatagory_Click(object sender, EventArgs e)
         {
             string SeriesName = txtNwCatagory.Text;
@@ -73,8 +77,9 @@ namespace PGI_JobPortal.Views
             lblJobCode.Text = NumberSeriesManager.GenerateNumberSeries(companyName, seriesName, preFix, prefixHF, curNoHF);
         }
 
-        private void UpdateTaskNo()
+        private void UpdateCode()
         {
+            seriesName = dropdownJobCatagory.SelectedValue;
             string companyName = "";
             DataTable seriesDT = NumberSeriesManager.GetDataBySeriesName(seriesName, companyName);
             int lastGenNumber = int.Parse(seriesDT.Rows[0]["LastGeneratedNo"].ToString());
@@ -85,21 +90,21 @@ namespace PGI_JobPortal.Views
         public void JobDetailObject()
         {
             obj_JobDetail.JobCode = lblJobCode.Text;
-            obj_JobDetail.JobDescription = txtJobDescription.Text;
-            obj_JobDetail.Responsibilities = txtResponsibilities.Text;
-            obj_JobDetail.EducationalReq = txtEducationReq.Text;
-            obj_JobDetail.ExperienceReq = txtExpRequirements.Text;
-            obj_JobDetail.AdditionalReq = txtAdditionalReq.Text;
-            obj_JobDetail.Benifits = txtBenifits.Text;
+            obj_JobDetail.JobDescription = (txtJobDescription.Text.Trim(charsToTrim)).Replace("'", "");
+            obj_JobDetail.Responsibilities = (txtResponsibilities.Text.Trim(charsToTrim)).Replace("'", "");
+            obj_JobDetail.EducationalReq = (txtEducationReq.Text.Trim(charsToTrim)).Replace("'", "");
+            obj_JobDetail.ExperienceReq = (txtExpRequirements.Text.Trim(charsToTrim)).Replace("'", "");
+            obj_JobDetail.AdditionalReq = (txtAdditionalReq.Text.Trim(charsToTrim)).Replace("'", "");
+            obj_JobDetail.Benifits = (txtBenifits.Text.Trim(charsToTrim)).Replace("'", "");
         }
 
         public void JobInfoObj()
         {
             obj_jobInfo.JobCode = lblJobCode.Text;
             obj_jobInfo.JobName = txtJobName.Text;
-            obj_jobInfo.Location = txtJobLocation.Text;
+            obj_jobInfo.Location = (txtJobLocation.Text.Trim(charsToTrim)).Replace("'", "");
             obj_jobInfo.Catagory = dropdownJobCatagory.SelectedValue;
-            obj_jobInfo.EmploymentStatus = txtEmpStatus.Text;
+            obj_jobInfo.EmploymentStatus = (txtEmpStatus.Text.Trim(charsToTrim)).Replace("'", "");
             obj_jobInfo.PostDate = DateTime.Now.Date;
             obj_jobInfo.Deadline = DateTime.Parse(txtDeadline.Text);
             obj_jobInfo.Vacancy = int.Parse(txtVacancy.Text);
@@ -118,9 +123,12 @@ namespace PGI_JobPortal.Views
 
             if (insertDetail != 0 && insertInfo != 0)
             {
-                Response.Redirect("PGI_AdminJobList.aspx");
+                UpdateCode();
+                GenerateCode();
+                Response.Redirect("AvailableJobsPage.aspx");
             }
 
         }
+
     }
 }

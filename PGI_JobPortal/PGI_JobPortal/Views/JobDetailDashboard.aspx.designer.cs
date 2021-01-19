@@ -10,7 +10,7 @@
 
 namespace PGI_JobPortal.Views
 {
-    public partial class JobDetailsPage
+    public partial class JobDetailDashboard
     {
     }
 }

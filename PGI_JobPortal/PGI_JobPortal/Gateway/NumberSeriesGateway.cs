@@ -25,7 +25,7 @@ namespace PGI_JobPortal.Gateway
 
         internal System.Data.DataTable GetDataBySeriesName(string seriesName, string companyId)
         {
-            query = "Select * from SKode_NumberSeries_T Where CompanyID='" + companyId + "' and SeriesName='" + seriesName + "'";
+            query = "Select * from SKode_NumberSeries_T Where SeriesName='" + seriesName + "'";
             return ExecuteQuery(query);
         }
 

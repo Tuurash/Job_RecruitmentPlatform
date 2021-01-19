@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Views/PGI_AdminDashboardMaster.Master" AutoEventWireup="true" CodeBehind="JobPostingPage.aspx.cs" Inherits="PGI_JobPortal.Views.JobPostingPage" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Views/PGI_DashboardMaster.Master" AutoEventWireup="true" CodeBehind="JobPostingPage.aspx.cs" Inherits="PGI_JobPortal.Views.JobPostingPage" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <style>

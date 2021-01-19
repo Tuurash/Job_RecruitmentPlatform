@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using System.Web.SessionState;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
@@ -21,11 +22,24 @@ namespace PGI_JobPortal.Views
             {
                 Response.Redirect("LoginPage.aspx");
             }
+
+            if (Session["UserRole"].ToString() == "Candidate")
+            {
+                divJobPosting.Visible = false;
+
+            }
+            else if (Session["UserRole"].ToString() == "Admin")
+            {
+                divProfile.Visible = false;
+                divAppliedJobs.Visible = false;
+                divResume.Visible = false;
+            }
         }
 
         protected void btnLogout_ServerClick(object sender, EventArgs e)
         {
-
+            Session.Clear();
+            Response.Redirect("LoginPage.aspx");
         }
     }
 }

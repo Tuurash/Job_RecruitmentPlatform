@@ -10,87 +10,47 @@
         <div class="container">
             <div class="section-header">
                 <h2 class="section-title">Latest Jobs</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit ellentesque dignissim quam et
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit ellentesque dignissim quam et
                     <br>
-                    metus effici turac fringilla lorem facilisis.</p>
+                    metus effici turac fringilla lorem facilisis.
+                </p>
             </div>
 
             <div class="row">
 
-                <div class="col-lg-6 col-md-12 col-xs-12">
-                    
-                        <div class="jobs-latest">
-                            <div class="content">
-                                <h3><a href="job-details.html">UX Designer</a></h3>
-                                <p class="brand">MagNews</p>
-                                <div class="tags">
-                                    <span><i class="lni-map-marker"></i>New York</span>
+                <asp:Repeater ID="RptrJobList" runat="server">
+                    <ItemTemplate>
+                        <%--JOBCARD START--%>
 
+
+                        <%--class="job-listings-featured"--%>
+
+                        <div class="col-lg-6 col-md-12 col-xs-12">
+                            <a href="JobDetailPage.aspx?JobCode=<%# Eval("JobCode") %>">
+                                <div class="jobs-latest">
+                                    <div class="content">
+                                        <h3><%# Eval("JobName")%></h3>
+                                        <p class="brand"><%# Eval("Catagory")%></p>
+                                        <div class="tags">
+                                            <span><i class="lni-map-marker"></i><%# Eval("Location")%></span>
+                                            <span><%# Eval("Salary")%></span>
+                                        </div>
+
+                                        <span class="full-time"><%# Eval("EmploymentStatus")%></span>
+                                    </div>
                                 </div>
-                                <div class="tag mb-3"><i class="lni-tag"></i>#Html</div>
-                                <span class="full-time">Full Time</span>
-                            </div>
+                            </a>
                         </div>
-                    
-                </div>
-                
-                <div class="col-lg-6 col-md-12 col-xs-12">
-                    
-                        <div class="jobs-latest">
-                            <div class="content">
-                                <h3><a href="job-details.html">UX Designer</a></h3>
-                                <p class="brand">MagNews</p>
-                                <div class="tags">
-                                    <span><i class="lni-map-marker"></i>New York</span>
 
-                                </div>
-                                <div class="tag mb-3"><i class="lni-tag"></i>#Html</div>
-                                <span class="full-time">Full Time</span>
-                            </div>
-                        </div>
-                    
-                </div>
-
-                <div class="col-lg-6 col-md-12 col-xs-12">
-                    
-                        <div class="jobs-latest">
-                            <div class="content">
-                                <h3><a href="job-details.html">UX Designer</a></h3>
-                                <p class="brand">MagNews</p>
-                                <div class="tags">
-                                    <span><i class="lni-map-marker"></i>New York</span>
-
-                                </div>
-                                <div class="tag mb-3"><i class="lni-tag"></i>#Html</div>
-                                <span class="full-time">Full Time</span>
-                            </div>
-                        </div>
-                    
-                </div>
-
-                <div class="col-lg-6 col-md-12 col-xs-12">
-                    
-                        <div class="jobs-latest">
-                            <div class="content">
-                                <h3><a href="job-details.html">UX Designer</a></h3>
-                                <p class="brand">MagNews</p>
-                                <div class="tags">
-                                    <span><i class="lni-map-marker"></i>New York</span>
-
-                                </div>
-                                <div class="tag mb-3"><i class="lni-tag"></i>#Html</div>
-                                <span class="full-time">Full Time</span>
-                            </div>
-                        </div>
-                    
-                </div>
+                        <%--JOBCARD END--%>
+                    </ItemTemplate>
+                </asp:Repeater>
 
             </div>
 
-           
-
         </div>
-     
+
     </section>
 
 </asp:Content>

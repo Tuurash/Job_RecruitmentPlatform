@@ -7,7 +7,7 @@ using System.Web.UI.WebControls;
 
 namespace PGI_JobPortal.Views
 {
-    public partial class JobDetailsPage : System.Web.UI.Page
+    public partial class JobDetailDashboard : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {

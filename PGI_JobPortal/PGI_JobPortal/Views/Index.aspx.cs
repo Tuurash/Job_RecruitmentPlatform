@@ -1,5 +1,7 @@
-﻿using System;
+﻿using PGI_JobPortal.Manager;
+using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
@@ -11,7 +13,14 @@ namespace PGI_JobPortal.Views
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            FillJobRepeater();
+        }
 
+        private void FillJobRepeater()
+        {
+            DataTable dt = JobManager.getAllJobList();
+            repeaterJoblistIndex.DataSource = dt;
+            repeaterJoblistIndex.DataBind();
         }
     }
 }

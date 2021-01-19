@@ -18,6 +18,7 @@
     <section class="job-detail section">
         <div class="container">
             <div class="row justify-content-between">
+
                 <div class="col-lg-8 col-md-12 col-xs-12">
                     <div class="content-area">
                         <h4>
@@ -126,6 +127,7 @@
                         </div>
                     </div>
                 </div>
+
             </div>
         </div>
     </section>

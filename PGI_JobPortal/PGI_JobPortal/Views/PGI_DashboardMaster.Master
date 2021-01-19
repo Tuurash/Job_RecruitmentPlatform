@@ -97,26 +97,33 @@
                             <a href="Index.aspx" class="navbar-brand">
                                 <img src="assets/img/logo.png" alt=""></a>
                         </div>
+                        <%--NavBar links--%>
                         <div class="collapse navbar-collapse" id="main-navbar">
                             <ul class="navbar-nav mr-auto w-100 justify-content-end">
 
                                 <li class="nav-item dropdown">
-                                    <a class="nav-link dropdown-toggle" href="UserProfilePage.aspx" aria-expanded="false">MY PROFILE
-                                    </a>
+                                    <%--<p>
+                                        <a class="nav-link dropdown-toggle" href="UserProfilePage.aspx" aria-expanded="false">MY PROFILE
+                                        </a>
+                                    </p>--%>
 
                                 </li>
                                 <li class="nav-item dropdown">
-                                    <a class="nav-link dropdown-toggle" href="AvailableJobsPage.aspx" aria-expanded="false">JOBS
-                                    </a>
+                                    <p>
+                                        <a class="nav-link dropdown-toggle" href="AvailableJobsPage.aspx" aria-expanded="false">JOBS
+                                        </a>
+                                    </p>
                                 </li>
 
                                 <li class="nav-item dropdown">
-                                    <a class="nav-link dropdown-toggle" href="ResumePage.aspx" aria-expanded="false">MY RESUME
-                                    </a>
+                                    <%--<p>
+                                        <a class="nav-link dropdown-toggle" runat="server" visible="false" href="ResumePage.aspx" aria-expanded="false">MY RESUME
+                                        </a>
+                                    </p>--%>
                                 </li>
 
                                 <li class="button-group">
-                                    <a href="RegistrationPage.aspx" class="button btn btn-common" id="btnLogout" runat="server" onserverclick="btnLogout_ServerClick">log out</a>
+                                    <a href="#" class="button btn btn-common" id="btnLogout" runat="server" onserverclick="btnLogout_ServerClick">log out</a>
                                 </li>
                             </ul>
                         </div>
@@ -151,33 +158,46 @@
                                 <h2>Hello,
                                     <asp:Label ID="lblUserName" runat="server"></asp:Label></h2>
                                 <div class="contact-info">
-                                    <div class="single-contact">
+
+                                    <div class="single-contact" runat="server" id="divProfile">
                                         <div class="contact-icon">
                                             <i class="fas fa-id-card"></i>
                                         </div>
-                                        <a href="UserProfilePage.aspx">My Profile</a>
+                                        <p><a href="UserProfilePage.aspx" id="LinkProfileMenu" runat="server">My Profile</a></p>
                                     </div>
-                                    <div class="single-contact">
+
+                                    <div class="single-contact" runat="server" id="divAppliedJobs">
                                         <div class="contact-icon">
                                             <i class="lni-envelope"></i>
                                         </div>
-                                        <a href="AppliedJobsPage.aspx">Applied Jobs</a>
+                                        <p><a href="AppliedJobsPage.aspx" id="LinkAppliedJobs" runat="server">Applied Jobs</a></p>
 
                                     </div>
-                                    <div class="single-contact">
+
+                                    <div class="single-contact" runat="server" id="divResume">
                                         <div class="contact-icon">
                                             <i class="fas fa-file-upload"></i>
                                         </div>
-                                        <a href="ResumePage.aspx">Upload Resume</a>
+                                        <p><a href="ResumePage.aspx" id="LinkResume" runat="server">Upload Resume</a></p>
 
                                     </div>
-                                    <div class="single-contact">
+
+                                    <div class="single-contact" runat="server" id="divJobPosting">
+                                        <div class="contact-icon">
+                                            <i class="fas fa-file-upload"></i>
+                                        </div>
+                                        <p><a href="JobPostingPage.aspx" id="LinkjobPostingMenu" runat="server">Post a Job</a></p>
+
+                                    </div>
+
+                                    <div class="single-contact" runat="server" id="Joblist">
                                         <div class="contact-icon">
                                             <i class="fas fa-envelope-open-text"></i>
                                         </div>
-                                        <a href="AvailableJobsPage.aspx">Available Jobs</a>
+                                        <p><a href="AvailableJobsPage.aspx" runat="server">Available Jobs</a></p>
 
                                     </div>
+
                                 </div>
                             </div>
                             <br />
