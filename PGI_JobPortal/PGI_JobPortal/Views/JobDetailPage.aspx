@@ -5,11 +5,7 @@
 
 
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <style>
-        p {
-            color: black;
-        }
-    </style>
+
     <br />
     <br />
     <br />
@@ -123,7 +119,8 @@
                             <br />
                             <br />
 
-                            <a href="#" class="btn btn-common">Apply job</a>
+                            <a id="btnDelete" runat="server" href="#" class="btn btn-danger" onserverclick="btnDelete_ServerClick" visible="false">Delete Post</a>
+                            <a id="btnApply" runat="server" href="#" class="btn btn-success" onserverclick="btnApply_ServerClick">Apply job</a>
                         </div>
                     </div>
                 </div>

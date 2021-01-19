@@ -83,12 +83,12 @@
                         <div class="form-group" style="display: flex; flex-direction: row; align-items: center">
                             <p>
                                 location:
-                                <asp:TextBox ID="txtJobLocation" Width="40%" runat="server" CssClass="form-control" required></asp:TextBox>
+                                <asp:TextBox ID="txtJobLocation" Width="60%" runat="server" CssClass="form-control" required></asp:TextBox>
                             </p>
                             &nbsp
                             <p>
                                 Workplace:
-                                <asp:TextBox ID="txtWorkPlace" Width="40%" runat="server" CssClass="form-control" required></asp:TextBox>
+                                <asp:TextBox ID="txtWorkPlace" Width="60%" runat="server" CssClass="form-control" required></asp:TextBox>
                             </p>
                         </div>
                         <div class="form-group" style="display: flex; flex-direction: row; align-items: center">

@@ -25,6 +25,16 @@ namespace PGI_JobPortal.Views
                 FillJobInfo();
                 FillJobDetails();
             }
+            if (Session["UserRole"] != null)
+            {
+                if (Session["UserRole"].ToString() == "Admin")
+                {
+                    btnApply.Visible = false;
+                    btnDelete.Visible = true;
+                }
+            }
+
+
         }
 
         private void FillJobInfo()
@@ -58,6 +68,16 @@ namespace PGI_JobPortal.Views
                 lblAdditionalReq.Text = dt.Rows[0]["AdditionalReq"].ToString();
                 lblBenifits.Text = dt.Rows[0]["Benifits"].ToString();
             }
+        }
+
+        protected void btnDelete_ServerClick(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void btnApply_ServerClick(object sender, EventArgs e)
+        {
+
         }
     }
 }

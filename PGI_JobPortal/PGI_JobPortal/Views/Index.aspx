@@ -268,12 +268,10 @@
 
                     <ItemTemplate>
 
-                        <div class="col-lg-6 col-md-12 col-xs-12">
+                        <div class="col-lg-4 col-md-12 col-xs-12">
                             <div class="jobs-latest">
-
                                 <div class="content">
-                                    <h3><a class="job-listings-featured" href="JobDetailPage.aspx?JobCode=<%# Eval("JobCode") %>"> <%# Eval("JobName")%></h3>
-                                    </a></h3>
+                                    <h3><a href="JobDetailPage.aspx?JobCode=<%# Eval("JobCode") %>"><%# Eval("JobName")%></a></h3>
                                     <p class="brand"><%# Eval("Catagory")%></p>
                                     <div class="tags">
                                         <span><i class="lni-map-marker"></i><%# Eval("Location")%></span>
@@ -285,17 +283,13 @@
                             </div>
                         </div>
 
-
-
-
-
                     </ItemTemplate>
 
                 </asp:Repeater>
 
 
                 <div class="col-12 text-center mt-4">
-                    <a href="job-page.html" class="btn btn-common">Browse All Jobs</a>
+                    <a href="JobListIndex.aspx" class="btn btn-common">Browse All Jobs</a>
                 </div>
             </div>
         </div>

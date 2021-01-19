@@ -415,6 +415,7 @@
     <Content Include="Views\AvailableJobsPage.aspx" />
     <Content Include="Views\JobDetailDashboard.aspx" />
     <Content Include="Views\JobDetailPage.aspx" />
+    <Content Include="Views\JobListIndex.aspx" />
     <Content Include="Views\JobPostingPage.aspx" />
     <Content Include="Views\LoginPage.aspx" />
     <Content Include="Views\PGI_AdminJobList.aspx" />
@@ -504,6 +505,13 @@
     </Compile>
     <Compile Include="Views\JobDetailPage.aspx.designer.cs">
       <DependentUpon>JobDetailPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\JobListIndex.aspx.cs">
+      <DependentUpon>JobListIndex.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\JobListIndex.aspx.designer.cs">
+      <DependentUpon>JobListIndex.aspx</DependentUpon>
     </Compile>
     <Compile Include="Views\JobPostingPage.aspx.cs">
       <DependentUpon>JobPostingPage.aspx</DependentUpon>

@@ -27,7 +27,7 @@
                         <%--class="job-listings-featured"--%>
 
                         <div class="col-lg-6 col-md-12 col-xs-12">
-                            <a href="JobDetailPage.aspx?JobCode=<%# Eval("JobCode") %>">
+                            <a href="JobDetailDashboard.aspx?JobCode=<%# Eval("JobCode") %>">
                                 <div class="jobs-latest">
                                     <div class="content">
                                         <h3><%# Eval("JobName")%></h3>

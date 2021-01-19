@@ -79,7 +79,11 @@
 
 <body>
     <form id="form1" runat="server">
-
+        <style>
+            p {
+                color: black;
+            }
+        </style>
         <!-- Header Section Start -->
         <header id="home" class="hero-area">
             <!-- Navbar Start -->
@@ -197,6 +201,7 @@
                                         <p><a href="AvailableJobsPage.aspx" runat="server">Available Jobs</a></p>
 
                                     </div>
+
 
                                 </div>
                             </div>
