@@ -20,7 +20,7 @@ namespace PGI_JobPortal.Views
         string redirection_url = "http://localhost:58350/Views/LoginPage.aspx";
 
         string getEmail = "";
-        string getPassword = "";
+        string getPhoneNumber = "";
         string getRole = "";
 
         protected void Page_Load(object sender, EventArgs e)
@@ -104,11 +104,11 @@ namespace PGI_JobPortal.Views
 
         protected void btnlogin_Click(object sender, EventArgs e)
         {
-            if (txtEmail.Value != "" && txtPassword.Value != "")
+            if (txtEmail.Value != "" && txtPhoneNumber.Value != "")
             {
-                getEmail = txtEmail.Value; getPassword = txtPassword.Value;
+                getEmail = txtEmail.Value; getPhoneNumber = txtPhoneNumber.Value;
 
-                DataTable dt = CandidateManager.getCandidate(getEmail, getPassword);
+                DataTable dt = CandidateManager.getCandidate(getEmail, getPhoneNumber);
 
                 if (dt.Rows.Count > 0)
                 {

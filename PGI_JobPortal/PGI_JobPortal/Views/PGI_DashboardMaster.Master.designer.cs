@@ -123,6 +123,24 @@ namespace PGI_JobPortal.Views
         protected global::System.Web.UI.HtmlControls.HtmlAnchor LinkjobPostingMenu;
 
         /// <summary>
+        /// divApplicationList control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl divApplicationList;
+
+        /// <summary>
+        /// A1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlAnchor A1;
+
+        /// <summary>
         /// Joblist control.
         /// </summary>
         /// <remarks>

@@ -44,9 +44,10 @@ namespace PGI_JobPortal.Views
                     obj_Candidate.UserFirstName = txtFirstName.Value;
                     obj_Candidate.UserLastName = txtLastName.Value;
                     obj_Candidate.UserEmail = txtEmail.Value;
-                    obj_Candidate.UserPassword = txtPassword.Value;
+                    obj_Candidate.UserPassword = "";
                     obj_Candidate.UserPhoneNo = txtMobileNo.Value;
                     obj_Candidate.role = "Candidate";
+                    obj_Candidate.UserResume = "";
                 }
             }
             else
@@ -57,7 +58,8 @@ namespace PGI_JobPortal.Views
 
         protected void btnRegister_Click(object sender, EventArgs e)
         {
-            if (txtPassword.Value == txtPasswordConfirm.Value)
+
+            if (txtMobileNo.Value != "" && txtEmail.Value != "")
             {
                 CandidateObject();
                 int InsertCandidate = CandidateManager.InsertCandidate(obj_Candidate);
@@ -74,6 +76,7 @@ namespace PGI_JobPortal.Views
             {
                 //something wrong}
             }
+
         }
     }
 }

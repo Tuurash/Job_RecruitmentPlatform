@@ -3,6 +3,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -192,6 +193,15 @@
                                             <i class="fas fa-file-upload"></i>
                                         </div>
                                         <p><a href="JobPostingPage.aspx" id="LinkjobPostingMenu" runat="server">Post a Job</a></p>
+
+                                    </div>
+
+                                    <div class="single-contact" runat="server" id="divApplicationList">
+
+                                        <div class="contact-icon">
+                                            <i class="fas fa-file-upload"></i>
+                                        </div>
+                                        <p><a href="ApplicationListPage.aspx" id="A1" runat="server">Application List</a></p>
 
                                     </div>
 

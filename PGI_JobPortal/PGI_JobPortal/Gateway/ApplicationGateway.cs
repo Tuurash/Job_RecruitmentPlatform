@@ -25,6 +25,14 @@ namespace PGI_JobPortal.Gateway
             return ExecuteNonQuery(query);
         }
 
+        internal DataTable GetAllApplication()
+        {
+            query = @"select t1.* from (select Catagory,JobName,t.* from (select * from PGI_ApplicationInfo) as t
+                      left outer join(select * from PGI_JobInfo) PGI_JobInfo on t.JobCode=PGI_JobInfo.JobCode)as t1";
+
+            return ExecuteQuery(query);
+        }
+
         internal DataTable CheckExistAnonymous(string getjobCode, string phoneNo, string email)
         {
             query = @"select * from PGI_ApplicationInfo where JobCode='" + getjobCode + "' and PhoneNumber='" + phoneNo + "' and Email='" + email + "'";

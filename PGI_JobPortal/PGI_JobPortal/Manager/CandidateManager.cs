@@ -25,9 +25,9 @@ namespace PGI_JobPortal.Manager
             return new CandidateGateway().EmailExist(email);
         }
 
-        internal static DataTable getCandidate(string getEmail, string getPassword)
+        internal static DataTable getCandidate(string getEmail, string getPhoneNumber)
         {
-            return new CandidateGateway().getCandidate(getEmail, getPassword);
+            return new CandidateGateway().getCandidate(getEmail, getPhoneNumber);
         }
 
         internal static int UpdateCandidateInfo(PGI_CandidateInfo obj_candidate, string getUserCode)

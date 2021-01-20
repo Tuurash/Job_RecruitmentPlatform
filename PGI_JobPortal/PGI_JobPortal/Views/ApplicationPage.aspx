@@ -22,7 +22,7 @@
                 <div class="row contact-form-area">
                     <div class="col-md-12 col-lg-8 col-sm-12">
                         <div class="contact-block">
-
+                            <asp:Label ID="lblCandidateCode" runat="server" Visible="false"></asp:Label>
                             <h2>Applicant Information</h2>
                             <br />
                             <br />

@@ -14,7 +14,7 @@ namespace PGI_JobPortal.Gateway
 
         internal int InsertCandidate(PGI_CandidateInfo obj_Candidate)
         {
-            query = @"INSERT INTO PGI_CandidateInfo (UserCode,UserFirstName,UserLastName,UserEmail,UserPhoneNo,UserPassword,role) VALUES ('" + obj_Candidate.UserCode + "','" + obj_Candidate.UserFirstName + "','" + obj_Candidate.UserLastName + "','" + obj_Candidate.UserEmail + "','" + obj_Candidate.UserPhoneNo + "','" + obj_Candidate.UserPassword + "','" + obj_Candidate.role + "')";
+            query = @"INSERT INTO PGI_CandidateInfo (UserCode,UserFirstName,UserLastName,UserEmail,UserPhoneNo,UserPassword,role,UserResume) VALUES ('" + obj_Candidate.UserCode + "','" + obj_Candidate.UserFirstName + "','" + obj_Candidate.UserLastName + "','" + obj_Candidate.UserEmail + "','" + obj_Candidate.UserPhoneNo + "','" + obj_Candidate.UserPassword + "','" + obj_Candidate.role + "','" + obj_Candidate.UserResume + "')";
             return ExecuteNonQuery(query);
         }
 
@@ -24,9 +24,9 @@ namespace PGI_JobPortal.Gateway
             return ExecuteQuery(query);
         }
 
-        internal DataTable getCandidate(string getEmail, string getPassword)
+        internal DataTable getCandidate(string getEmail, string getPhoneNumber)
         {
-            query = "select * from PGI_CandidateInfo where UserEmail='" + getEmail + "' and UserPassword='" + getPassword + "'";
+            query = "select * from PGI_CandidateInfo where UserEmail='" + getEmail + "' and UserPhoneNo='" + getPhoneNumber + "'";
             return ExecuteQuery(query);
         }
 

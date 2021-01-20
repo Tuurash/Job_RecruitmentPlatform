@@ -20,6 +20,11 @@ namespace PGI_JobPortal.Manager
             return new ApplicationGateway().InsertData(obj_Application);
         }
 
+        internal static DataTable GetAllApplication()
+        {
+            return new ApplicationGateway().GetAllApplication();
+        }
+
         internal static DataTable CheckExistAnonymous(string getjobCode, string phoneNo, string email)
         {
             return new ApplicationGateway().CheckExistAnonymous(getjobCode, phoneNo, email);

@@ -42,11 +42,11 @@
                                 <input id="txtMobileNo" runat="server" class="form-control" style="width: 380px" placeholder="Your Phone number" required>
                             </div>
 
-                            <div class="form-group">
+                            <%--<div class="form-group">
 
                                 <input type="password" runat="server" id="txtPassword" class="form-control" style="width: 380px" placeholder="Password " required><br />
                                 <input type="password" runat="server" id="txtPasswordConfirm" class="form-control" style="width: 380px" placeholder="Confirm Password" required>
-                            </div>
+                            </div>--%>
                             
                             <asp:Button CssClass="btn btn-common log-btn" ID="btnRegister" runat="server" Text="sign up" OnClick="btnRegister_Click" />
 

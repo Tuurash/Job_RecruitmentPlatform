@@ -18,6 +18,7 @@ namespace PGI_JobPortal.Views
                 userName = Session["Name"].ToString();
                 lblUserName.Text = userName;
             }
+
             else
             {
                 Response.Redirect("LoginPage.aspx");
@@ -26,6 +27,7 @@ namespace PGI_JobPortal.Views
             if (Session["UserRole"].ToString() == "Candidate")
             {
                 divJobPosting.Visible = false;
+                divApplicationList.Visible = false;
 
             }
             else if (Session["UserRole"].ToString() == "Admin")

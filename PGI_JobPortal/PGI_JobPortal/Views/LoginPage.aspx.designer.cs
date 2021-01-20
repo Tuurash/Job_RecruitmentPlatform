@@ -24,13 +24,13 @@ namespace PGI_JobPortal.Views
         protected global::System.Web.UI.HtmlControls.HtmlInputText txtEmail;
 
         /// <summary>
-        /// txtPassword control.
+        /// txtPhoneNumber control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputPassword txtPassword;
+        protected global::System.Web.UI.HtmlControls.HtmlInputText txtPhoneNumber;
 
         /// <summary>
         /// btnlogin control.

@@ -31,13 +31,13 @@
                             <div class="form-group">
                                 <div class="input-icon">
                                     <i class="lni-user"></i>
-                                    <input type="text" id="txtEmail" runat="server" class="form-control" name="email" placeholder="Email">
+                                    <input type="text" id="txtEmail" runat="server" class="form-control" name="email" placeholder="Email" required>
                                 </div>
                             </div>
                             <div class="form-group">
                                 <div class="input-icon">
                                     <i class="lni-lock"></i>
-                                    <input type="password" runat="server" id="txtPassword" class="form-control" placeholder="Password">
+                                    <input type="text" runat="server" id="txtPhoneNumber" class="form-control" placeholder="Your Phone Number" required>
                                 </div>
                             </div>
                             <div class="form-group form-check">

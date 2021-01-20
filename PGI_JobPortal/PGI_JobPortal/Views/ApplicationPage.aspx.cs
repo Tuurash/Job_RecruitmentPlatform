@@ -14,6 +14,7 @@ namespace PGI_JobPortal.Views
 {
     public partial class ApplicationPage : System.Web.UI.Page
     {
+
         string getjobCode = "";
         string getUserCode = "";
         string file = "";
@@ -21,6 +22,7 @@ namespace PGI_JobPortal.Views
 
 
         PGI_ApplicationInfo obj_Application = new PGI_ApplicationInfo();
+        PGI_CandidateInfo obj_Candidate = new PGI_CandidateInfo();
 
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -39,6 +41,7 @@ namespace PGI_JobPortal.Views
             }
         }
 
+        #region Filling_Form_Data
         private void FillAnonymousData(DataTable dt)
         {
             lblHeader.Text = "Already Applied";
@@ -83,7 +86,9 @@ namespace PGI_JobPortal.Views
             }
 
         }
+        #endregion
 
+        #region ResumeUpload_section
         public void ResumeUpload()
         {
             string path = Path.GetFileName(FileResume.FileName);
@@ -115,6 +120,47 @@ namespace PGI_JobPortal.Views
             divResumeUpload.Visible = true;
             btnChange.Visible = false;
         }
+        #endregion
+
+        #region Object_AssignSection
+
+        public void CandidateObject()
+        {
+            string FullName = txtName.Value;
+            Random generator = new Random();
+            String r = generator.Next(0, 1000000).ToString("D6");
+
+            lblCandidateCode.Text = r;
+
+            DataTable dt = CandidateManager.CodeExist(r);
+            DataTable edt = CandidateManager.EmailExist(txtEmail.Value);
+
+            var results = FullName.Split(' ');
+
+            if (edt.Rows.Count == 0)
+            {
+                if (dt.Rows.Count != 0)
+                {
+                    CandidateObject();
+                }
+                else
+                {
+                    obj_Candidate.UserCode = lblCandidateCode.Text;
+                    obj_Candidate.UserFirstName = results[0];
+                    obj_Candidate.UserLastName = results[1];
+                    obj_Candidate.UserEmail = txtEmail.Value;
+                    obj_Candidate.UserPassword = "";
+                    obj_Candidate.UserPhoneNo = txtPhoneNumber.Value;
+                    obj_Candidate.role = "Candidate";
+                    obj_Candidate.UserResume = lblFilePath.Text;
+                }
+            }
+
+            else
+            {
+                //Email Exists;
+            }
+        }
 
         public void ApplicationObject()
         {
@@ -123,20 +169,24 @@ namespace PGI_JobPortal.Views
             {
                 obj_Application.ApplicantCode = getUserCode;
             }
-            else { obj_Application.ApplicantCode = "Anonymous"; }
+            else { obj_Application.ApplicantCode = lblCandidateCode.Text; }
             obj_Application.JobCode = getjobCode;
             obj_Application.FullName = txtName.Value;
             obj_Application.Email = txtEmail.Value;
             obj_Application.PhoneNumber = txtPhoneNumber.Value;
             obj_Application.CoverLetter = (txtCoverLetter.Value.Trim(charsToTrim)).Replace("'", "");
             obj_Application.ApplyDate = DateTime.Now;
+            obj_Application.Resume = lblFilePath.Text;
 
         }
 
+        #endregion
+
+        #region Insertion_operation
         private void ApplicationInsertOperation()
         {
             ApplicationObject();
-            obj_Application.Resume = lblFilePath.Text;
+
 
             int insert = ApplicationManager.InsertData(obj_Application);
             if (insert > 0)
@@ -146,12 +196,25 @@ namespace PGI_JobPortal.Views
             }
         }
 
+        private void CandidateInsertOperation()
+        {
+            if (txtPhoneNumber.Value != "" && txtEmail.Value != "")
+            {
+                CandidateObject();
+                int InsertCandidate = CandidateManager.InsertCandidate(obj_Candidate);
+            }
+            else
+            {
+                //something wrong}
+            }
+        }
+
+        #endregion
+
         protected void btnApply_Click(object sender, EventArgs e)
         {
             if (EmbedResume.Src != "" && EmbedResume.Src != null)
             {
-
-
                 string phoneNo = txtPhoneNumber.Value;
                 string Email = txtEmail.Value;
 
@@ -162,6 +225,7 @@ namespace PGI_JobPortal.Views
                 }
                 else
                 {
+                    CandidateInsertOperation();
                     ApplicationInsertOperation();
                 }
             }
@@ -171,7 +235,6 @@ namespace PGI_JobPortal.Views
                 lblHeader.Text = "You need to Upload Resume/CV";
             }
         }
-
 
     }
 }
