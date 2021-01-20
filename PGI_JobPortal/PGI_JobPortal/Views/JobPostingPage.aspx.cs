@@ -52,8 +52,9 @@ namespace PGI_JobPortal.Views
             int SeriesLength = 5;
             string Prefix = SeriesName.Substring(0, 2);
             int LastGeneratedNo = 0;
+            string CatIcon = txtCatagoryIcon.Text;
 
-            int insert = NumberSeriesManager.InsertNewCatagory(SeriesName, SeriesLength, Prefix, LastGeneratedNo);
+            int insert = NumberSeriesManager.InsertNewCatagory(SeriesName, SeriesLength, Prefix, LastGeneratedNo, CatIcon);
             if (insert != 0)
             {
                 txtNwCatagory.Text = "";

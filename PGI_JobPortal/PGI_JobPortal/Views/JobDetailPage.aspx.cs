@@ -13,8 +13,15 @@ namespace PGI_JobPortal.Views
     public partial class JobDetailPage : System.Web.UI.Page
     {
         string getjobCode = "";
+        string getUserCode = "";
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (Session["UserCode"] != null)
+            {
+                getUserCode = Session["UserCode"].ToString();
+            }
+
+
             if (Request.QueryString["JobCode"] != null)
             {
                 getjobCode = Request.QueryString["JobCode"];
@@ -25,6 +32,7 @@ namespace PGI_JobPortal.Views
                 FillJobInfo();
                 FillJobDetails();
             }
+
             if (Session["UserRole"] != null)
             {
                 if (Session["UserRole"].ToString() == "Admin")
@@ -77,7 +85,7 @@ namespace PGI_JobPortal.Views
 
         protected void btnApply_ServerClick(object sender, EventArgs e)
         {
-
+            Response.Redirect("ApplicationPage.aspx?JobCode=" + getjobCode);
         }
     }
 }

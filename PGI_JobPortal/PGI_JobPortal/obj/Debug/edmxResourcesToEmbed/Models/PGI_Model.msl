@@ -4,6 +4,7 @@
     <EntitySetMapping Name="PGI_CandidateInfo">
       <EntityTypeMapping TypeName="PgiWebPortalDBModel.PGI_CandidateInfo">
         <MappingFragment StoreEntitySet="PGI_CandidateInfo">
+          <ScalarProperty Name="UserResume" ColumnName="UserResume" />
           <ScalarProperty Name="GoogleID" ColumnName="GoogleID" />
           <ScalarProperty Name="GoogleConnected" ColumnName="GoogleConnected" />
           <ScalarProperty Name="role" ColumnName="role" />
@@ -105,11 +106,27 @@
     <EntitySetMapping Name="SKode_NumberSeries_T">
       <EntityTypeMapping TypeName="PgiWebPortalDBModel.SKode_NumberSeries_T">
         <MappingFragment StoreEntitySet="SKode_NumberSeries_T">
+          <ScalarProperty Name="CatagoryIcon" ColumnName="CatagoryIcon" />
           <ScalarProperty Name="CompanyID" ColumnName="CompanyID" />
           <ScalarProperty Name="LastGeneratedNo" ColumnName="LastGeneratedNo" />
           <ScalarProperty Name="Prefix" ColumnName="Prefix" />
           <ScalarProperty Name="SeriesLength" ColumnName="SeriesLength" />
           <ScalarProperty Name="SeriesName" ColumnName="SeriesName" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PGI_ApplicationInfo">
+      <EntityTypeMapping TypeName="PgiWebPortalDBModel.PGI_ApplicationInfo">
+        <MappingFragment StoreEntitySet="PGI_ApplicationInfo">
+          <ScalarProperty Name="CoverLetter" ColumnName="CoverLetter" />
+          <ScalarProperty Name="ApplyDate" ColumnName="ApplyDate" />
+          <ScalarProperty Name="Resume" ColumnName="Resume" />
+          <ScalarProperty Name="PhoneNumber" ColumnName="PhoneNumber" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="FullName" ColumnName="FullName" />
+          <ScalarProperty Name="ApplicantCode" ColumnName="ApplicantCode" />
+          <ScalarProperty Name="JobCode" ColumnName="JobCode" />
           <ScalarProperty Name="ID" ColumnName="ID" />
         </MappingFragment>
       </EntityTypeMapping>

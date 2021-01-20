@@ -12,6 +12,7 @@
         <EntityTypeShape EntityType="PgiWebPortalDBModel.PGI_JobDetails" Width="1.5" PointX="8.375" PointY="0.5" />
         <EntityTypeShape EntityType="PgiWebPortalDBModel.PGI_JobInfo" Width="1.5" PointX="6.75" PointY="0.5" />
         <EntityTypeShape EntityType="PgiWebPortalDBModel.SKode_NumberSeries_T" Width="1.5" PointX="11.375" PointY="3.375" />
+        <EntityTypeShape EntityType="PgiWebPortalDBModel.PGI_ApplicationInfo" Width="1.5" PointX="11.375" PointY="0.625" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

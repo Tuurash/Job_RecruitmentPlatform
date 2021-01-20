@@ -12,19 +12,16 @@ namespace PGI_JobPortal.Models
     using System;
     using System.Collections.Generic;
     
-    public partial class PGI_CandidateInfo
+    public partial class PGI_ApplicationInfo
     {
         public int ID { get; set; }
-        public string UserCode { get; set; }
-        public string UserFirstName { get; set; }
-        public string UserLastName { get; set; }
-        public string UserEmail { get; set; }
-        public string UserPhoneNo { get; set; }
-        public string UserPassword { get; set; }
-        public string UserPhoto { get; set; }
-        public string role { get; set; }
-        public string GoogleConnected { get; set; }
-        public string GoogleID { get; set; }
-        public string UserResume { get; set; }
+        public string JobCode { get; set; }
+        public string ApplicantCode { get; set; }
+        public string FullName { get; set; }
+        public string Email { get; set; }
+        public string PhoneNumber { get; set; }
+        public string Resume { get; set; }
+        public Nullable<System.DateTime> ApplyDate { get; set; }
+        public string CoverLetter { get; set; }
     }
 }

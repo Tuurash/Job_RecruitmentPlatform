@@ -20,5 +20,6 @@ namespace PGI_JobPortal.Models
         public string Prefix { get; set; }
         public Nullable<int> LastGeneratedNo { get; set; }
         public string CompanyID { get; set; }
+        public string CatagoryIcon { get; set; }
     }
 }

@@ -28,7 +28,10 @@
                         select Job Catagory * :
                             <asp:DropDownList ID="dropdownJobCatagory" runat="server" CssClass="form-control" AutoPostBack="true" OnSelectedIndexChanged="dropdownJobCatagory_SelectedIndexChanged" required></asp:DropDownList>
                         or
-                            <asp:TextBox ID="txtNwCatagory" Width="40%" runat="server" CssClass="form-control"></asp:TextBox>
+                        <div class="form-group" style="display: flex; flex-direction: row; align-items: center">
+                            <asp:TextBox ID="txtNwCatagory" placeholder="New Catagory Name" Width="40%" runat="server" CssClass="form-control"></asp:TextBox> &nbsp&nbsp <asp:TextBox ID="txtCatagoryIcon" placeholder="Catagory Icon Name (line icon)" Width="40%" runat="server" CssClass="form-control"></asp:TextBox>
+                        </div>
+                         <p> lineIcons can be found at : <a href="https://lineicons.com/icons/" target="_blank"> https://lineicons.com/icons/ </a></p>   
                         <br />
                         <a id="btnNwCat" runat="server" class="btn btn-dark" onserverclick="btnNewCatagory_Click">Add New Catagory</a>
                         <%--<asp:Button ID="btnNewCatagory" runat="server" Text="Add New Catagory" CssClass="btn btn-dark" OnClick="btnNewCatagory_Click" />--%>

@@ -160,6 +160,7 @@
       <DependentUpon>PGI_Model.edmx</DependentUpon>
       <LastGenOutput>PGI_Model.cs</LastGenOutput>
     </Content>
+    <Content Include="Views\ApplicationPage.aspx" />
     <Content Include="Views\assets\img\banner-2.jpg" />
     <Content Include="Views\assets\img\logo_footer.gif" />
     <Content Include="Views\assets\img\spinning-1.jpg" />
@@ -196,6 +197,7 @@
     <Content Include="Models\PGI_Model.edmx.diagram">
       <DependentUpon>PGI_Model.edmx</DependentUpon>
     </Content>
+    <Content Include="FIle\other\Sample.pdf" />
     <None Include="Scripts\jquery-3.5.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.5.1.js" />
     <Content Include="Scripts\jquery-3.5.1.min.js" />
@@ -418,20 +420,27 @@
     <Content Include="Views\JobListIndex.aspx" />
     <Content Include="Views\JobPostingPage.aspx" />
     <Content Include="Views\LoginPage.aspx" />
-    <Content Include="Views\PGI_AdminJobList.aspx" />
     <Content Include="Views\RegistrationPage.aspx" />
     <Content Include="Views\ResumePage.aspx" />
     <Content Include="Views\UserProfilePage.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Gateway\ApplicationGateway.cs" />
     <Compile Include="Gateway\CandidateGateway.cs" />
     <Compile Include="Gateway\DBConnector.cs" />
     <Compile Include="Gateway\JobGateway.cs" />
     <Compile Include="Gateway\NumberSeriesGateway.cs" />
+    <Compile Include="Manager\ApplicationManager.cs" />
     <Compile Include="Manager\CandidateManager.cs" />
+    <Compile Include="Manager\CheckExistAnonymous.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Manager\JobManager.cs" />
     <Compile Include="Manager\NumberSeriesManager.cs" />
+    <Compile Include="Models\PGI_ApplicationInfo.cs">
+      <DependentUpon>PGI_Model.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\PGI_CandidateInfo.cs">
       <DependentUpon>PGI_Model.tt</DependentUpon>
     </Compile>
@@ -471,6 +480,13 @@
     <Compile Include="Models\TokenModel.cs" />
     <Compile Include="Models\UserModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Views\ApplicationPage.aspx.cs">
+      <DependentUpon>ApplicationPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\ApplicationPage.aspx.designer.cs">
+      <DependentUpon>ApplicationPage.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Views\AppliedJobsPage.aspx.cs">
       <DependentUpon>AppliedJobsPage.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -519,13 +535,6 @@
     </Compile>
     <Compile Include="Views\JobPostingPage.aspx.designer.cs">
       <DependentUpon>JobPostingPage.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Views\PGI_AdminJobList.aspx.cs">
-      <DependentUpon>PGI_AdminJobList.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Views\PGI_AdminJobList.aspx.designer.cs">
-      <DependentUpon>PGI_AdminJobList.aspx</DependentUpon>
     </Compile>
     <Compile Include="Views\PGI_DashboardMaster.Master.cs">
       <DependentUpon>PGI_DashboardMaster.Master</DependentUpon>
@@ -647,7 +656,9 @@
       <DependentUpon>Web.config</DependentUpon>
     </None>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="FIle\Images\" />
+  </ItemGroup>
   <ItemGroup>
     <TypeScriptCompile Include="Scripts\index.d.ts" />
   </ItemGroup>

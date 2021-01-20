@@ -32,5 +32,6 @@ namespace PGI_JobPortal.Models
         public virtual DbSet<PGI_JobDetails> PGI_JobDetails { get; set; }
         public virtual DbSet<PGI_JobInfo> PGI_JobInfo { get; set; }
         public virtual DbSet<SKode_NumberSeries_T> SKode_NumberSeries_T { get; set; }
+        public virtual DbSet<PGI_ApplicationInfo> PGI_ApplicationInfo { get; set; }
     }
 }

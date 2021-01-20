@@ -15,9 +15,9 @@ namespace PGI_JobPortal.Manager
             return new NumberSeriesGateway().getAllCatagory();
         }
 
-        internal static int InsertNewCatagory(string seriesName, int seriesLength, string prefix, int lastGeneratedNo)
+        internal static int InsertNewCatagory(string seriesName, int seriesLength, string prefix, int lastGeneratedNo, string catIcon)
         {
-            return new NumberSeriesGateway().InsertNewCatagory(seriesName, seriesLength, prefix, lastGeneratedNo);
+            return new NumberSeriesGateway().InsertNewCatagory(seriesName, seriesLength, prefix, lastGeneratedNo, catIcon);
         }
 
         internal static System.Data.DataTable GetDataBySeriesName(string seriesName, string companyId)

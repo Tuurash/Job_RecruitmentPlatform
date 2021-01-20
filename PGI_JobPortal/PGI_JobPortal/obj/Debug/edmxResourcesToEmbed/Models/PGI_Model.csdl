@@ -11,10 +11,11 @@
     <Property Name="UserEmail" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
     <Property Name="UserPhoneNo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
     <Property Name="UserPassword" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-    <Property Name="UserPhoto" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="UserPhoto" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
     <Property Name="role" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-    <Property Name="GoogleConnected" Type="String" />
-    <Property Name="GoogleID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="GoogleConnected" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="GoogleID" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="UserResume" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
   </EntityType>
   <EntityContainer Name="PgiWebPortalDBEntities" annotation:LazyLoadingEnabled="true">
     <EntitySet Name="PGI_CandidateInfo" EntityType="Self.PGI_CandidateInfo" />
@@ -24,6 +25,7 @@
     <EntitySet Name="PGI_JobDetails" EntityType="PgiWebPortalDBModel.PGI_JobDetails" />
     <EntitySet Name="PGI_JobInfo" EntityType="PgiWebPortalDBModel.PGI_JobInfo" />
     <EntitySet Name="SKode_NumberSeries_T" EntityType="PgiWebPortalDBModel.SKode_NumberSeries_T" />
+    <EntitySet Name="PGI_ApplicationInfo" EntityType="PgiWebPortalDBModel.PGI_ApplicationInfo" />
   </EntityContainer>
   <EntityType Name="PGI_Candidate_EducationDetails">
     <Key>
@@ -114,5 +116,20 @@
     <Property Name="Prefix" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
     <Property Name="LastGeneratedNo" Type="Int32" />
     <Property Name="CompanyID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CatagoryIcon" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="PGI_ApplicationInfo">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="JobCode" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ApplicantCode" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="FullName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="PhoneNumber" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Resume" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="ApplyDate" Type="DateTime" Precision="3" />
+    <Property Name="CoverLetter" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
   </EntityType>
 </Schema>

@@ -1,5 +1,19 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Schema Namespace="PgiWebPortalDBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="PGI_ApplicationInfo">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="JobCode" Type="varchar" MaxLength="50" />
+    <Property Name="ApplicantCode" Type="varchar" MaxLength="50" />
+    <Property Name="FullName" Type="varchar" MaxLength="50" />
+    <Property Name="Email" Type="varchar" MaxLength="50" />
+    <Property Name="PhoneNumber" Type="varchar" MaxLength="50" />
+    <Property Name="Resume" Type="varchar(max)" />
+    <Property Name="ApplyDate" Type="datetime" />
+    <Property Name="CoverLetter" Type="varchar(max)" />
+  </EntityType>
   <EntityType Name="PGI_Candidate_EducationDetails">
     <Key>
       <PropertyRef Name="ID" />
@@ -58,10 +72,11 @@
     <Property Name="UserEmail" Type="varchar" MaxLength="50" />
     <Property Name="UserPhoneNo" Type="varchar" MaxLength="50" />
     <Property Name="UserPassword" Type="varchar" MaxLength="50" />
-    <Property Name="UserPhoto" Type="varchar" MaxLength="50" />
+    <Property Name="UserPhoto" Type="varchar(max)" />
     <Property Name="role" Type="varchar" MaxLength="50" />
     <Property Name="GoogleConnected" Type="varchar" MaxLength="50" />
-    <Property Name="GoogleID" Type="varchar" MaxLength="50" />
+    <Property Name="GoogleID" Type="varchar(max)" />
+    <Property Name="UserResume" Type="varchar(max)" />
   </EntityType>
   <EntityType Name="PGI_JobDetails">
     <Key>
@@ -105,8 +120,10 @@
     <Property Name="Prefix" Type="varchar" MaxLength="50" />
     <Property Name="LastGeneratedNo" Type="int" />
     <Property Name="CompanyID" Type="varchar" MaxLength="50" />
+    <Property Name="CatagoryIcon" Type="varchar" MaxLength="50" />
   </EntityType>
   <EntityContainer Name="PgiWebPortalDBModelStoreContainer">
+    <EntitySet Name="PGI_ApplicationInfo" EntityType="Self.PGI_ApplicationInfo" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="PGI_Candidate_EducationDetails" EntityType="Self.PGI_Candidate_EducationDetails" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="PGI_Candidate_EmploymentDetails" EntityType="Self.PGI_Candidate_EmploymentDetails" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="PGI_Candidate_PersonalDetails" EntityType="Self.PGI_Candidate_PersonalDetails" Schema="dbo" store:Type="Tables" />

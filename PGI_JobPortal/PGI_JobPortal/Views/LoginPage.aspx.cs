@@ -99,26 +99,6 @@ namespace PGI_JobPortal.Views
             }
         }
 
-        private void RedirectUser(DataTable dt)
-        {
-            Session["userEmail"] = dt.Rows[0]["UserEmail"].ToString();
-            Session["Name"] = dt.Rows[0]["UserFirstName"].ToString() + " " + dt.Rows[0]["UserLastName"].ToString();
-            Session["UserPhoneNo"] = dt.Rows[0]["UserPhoneNo"].ToString();
-            Session["UserProfileImage"] = dt.Rows[0]["UserPhoto"].ToString();
-            Session["UserCode"] = dt.Rows[0]["UserCode"].ToString();
-            Session["UserRole"] = dt.Rows[0]["role"].ToString();
-
-            getRole = dt.Rows[0]["role"].ToString();
-
-            if (getRole == "Candidate")
-            {
-                Response.Redirect("UserProfilePage.aspx");
-            }
-            else if (getRole == "Admin")
-            {
-                Response.Redirect("JobPostingPage.aspx");
-            }
-        }
 
         #endregion
 
@@ -141,8 +121,26 @@ namespace PGI_JobPortal.Views
             }
         }
 
+        private void RedirectUser(DataTable dt)
+        {
+            Session["userEmail"] = dt.Rows[0]["UserEmail"].ToString();
+            Session["Name"] = dt.Rows[0]["UserFirstName"].ToString() + " " + dt.Rows[0]["UserLastName"].ToString();
+            Session["UserPhoneNo"] = dt.Rows[0]["UserPhoneNo"].ToString();
+            Session["UserProfileImage"] = dt.Rows[0]["UserPhoto"].ToString();
+            Session["UserCode"] = dt.Rows[0]["UserCode"].ToString();
+            Session["UserRole"] = dt.Rows[0]["role"].ToString();
 
+            getRole = dt.Rows[0]["role"].ToString();
 
+            if (getRole == "Candidate")
+            {
+                Response.Redirect("UserProfilePage.aspx");
+            }
+            else if (getRole == "Admin")
+            {
+                Response.Redirect("JobPostingPage.aspx");
+            }
+        }
 
     }
 }

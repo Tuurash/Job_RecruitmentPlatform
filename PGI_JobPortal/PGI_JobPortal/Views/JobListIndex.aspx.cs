@@ -25,8 +25,6 @@ namespace PGI_JobPortal.Views
             {
                 FillJobRepeater();
             }
-
-
         }
 
         private void FillJobRepeaterByCatagory(string getJobCatagory)

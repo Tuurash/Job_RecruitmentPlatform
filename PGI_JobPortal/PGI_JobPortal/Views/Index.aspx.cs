@@ -30,5 +30,6 @@ namespace PGI_JobPortal.Views
             repeaterJoblistIndex.DataSource = dt;
             repeaterJoblistIndex.DataBind();
         }
+
     }
 }

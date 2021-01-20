@@ -15,6 +15,7 @@ namespace PGI_JobPortal.Views
     {
 
         PGI_CandidateInfo obj_Candidate = new PGI_CandidateInfo();
+
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)

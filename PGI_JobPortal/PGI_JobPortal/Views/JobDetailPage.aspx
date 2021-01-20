@@ -104,18 +104,6 @@
                         </div>
                         <div class="widget">
 
-                            <%--<h3>Share This Job</h3>
-                            <div class="share-job">
-
-                                <ul class="mt-4 footer-social">
-                                    <li><a class="facebook" href="#"><i class="lni-facebook-filled"></i></a></li>
-                                    <li><a class="twitter" href="#"><i class="lni-twitter-filled"></i></a></li>
-                                    <li><a class="linkedin" href="#"><i class="lni-linkedin-fill"></i></a></li>
-                                    <li><a class="google-plus" href="#"><i class="lni-google-plus"></i></a></li>
-                                </ul>
-                                
-                            </div>--%>
-
                             <br />
                             <br />
 

@@ -17,9 +17,9 @@ namespace PGI_JobPortal.Gateway
             return ExecuteQuery(query);
         }
 
-        internal int InsertNewCatagory(string seriesName, int seriesLength, string prefix, int lastGeneratedNo)
+        internal int InsertNewCatagory(string seriesName, int seriesLength, string prefix, int lastGeneratedNo, string catIcon)
         {
-            query = @"INSERT INTO SKode_NumberSeries_T (SeriesName ,SeriesLength ,Prefix ,LastGeneratedNo ,CompanyID) VALUES ('" + seriesName + "'," + seriesLength + ",'" + prefix + "'," + lastGeneratedNo + ",'') ";
+            query = @"INSERT INTO SKode_NumberSeries_T (SeriesName ,SeriesLength ,Prefix ,LastGeneratedNo ,CompanyID,CatagoryIcon) VALUES ('" + seriesName + "'," + seriesLength + ",'" + prefix + "'," + lastGeneratedNo + ",'','" + catIcon + "') ";
             return ExecuteNonQuery(query);
         }
 
