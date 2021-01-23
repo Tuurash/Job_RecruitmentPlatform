@@ -31,7 +31,8 @@ namespace PGI_JobPortal.Views
             Button btn = (Button)sender;
             string ResumePath = btn.CommandArgument.ToString();
 
-            Response.Write("<script>window.open ('"+ResumePath + "','_blank');</script>");
+            Response.Write("<script>window.open ('" + ResumePath + "','_blank');</script>");
         }
+
     }
 }

@@ -424,6 +424,7 @@
     <Content Include="Views\ResumePage.aspx" />
     <Content Include="Views\UserProfilePage.aspx" />
     <Content Include="Web.config" />
+    <Content Include="Web.sitemap" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Gateway\ApplicationGateway.cs" />

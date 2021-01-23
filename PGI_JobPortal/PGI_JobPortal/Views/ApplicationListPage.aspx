@@ -1,6 +1,22 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Views/PGI_DashboardMaster.Master" AutoEventWireup="true" CodeBehind="ApplicationListPage.aspx.cs" Inherits="PGI_JobPortal.Views.ApplicationListPage" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+
+    <script type="text/javascript">
+
+
+        function ShowCoverLetterPopup(coverLetter) {
+
+            var letter = coverLetter;
+
+            iziToast.success({
+                title: 'Cover Letter',
+                message: letter,
+                timeout: false,
+            });
+        }
+    </script>
+
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
@@ -59,7 +75,7 @@
 
             <asp:TemplateField HeaderText="CLetter">
                 <ItemTemplate>
-                    <asp:Button ID="btnShowCoverLetter" runat="server" CssClass="link" ForeColor="BlueViolet" Text="View" />
+                    <asp:Button ID="btnShowCoverLetter" ToolTip='<%# Bind("CoverLetter")%>'  runat="server" CommandArgument='<%# Bind("CoverLetter")%>' CssClass="link" ForeColor="BlueViolet" Text="View" />
                 </ItemTemplate>
             </asp:TemplateField>
 

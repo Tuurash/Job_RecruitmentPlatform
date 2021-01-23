@@ -31,6 +31,11 @@
     <link rel="stylesheet" href="assets/css/main.css">
     <link rel="stylesheet" href="assets/css/responsive.css">
 
+    <%--SweetAlert--%>
+    <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10.0.2/dist/sweetalert2.all.min.js"></script>
+
     <%--for listing in mobileview--%>
 
     <style>
@@ -147,7 +152,14 @@
         <br />
         <br />
         <br />
-        <br />
+        <asp:SiteMapDataSource ID="SiteMapDataSource1" runat="server" ShowStartingNode="true" />
+        <div align="center">
+            <p style="font-size: 12px">
+                <asp:SiteMapPath ID="SiteMapPath1" runat="server" PathSeparator="  > " RenderCurrentNodeAsLink="true">
+                </asp:SiteMapPath>
+            </p>
+        </div>
+        
 
         <section id="contact" class="section">
             <div class="contact-form">
