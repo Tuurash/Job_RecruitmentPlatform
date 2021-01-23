@@ -30,7 +30,9 @@
     <div class="form-group" style="display: flex; flex-direction: row; align-items: center">
         <p>
             Filter By Department :  
-            <asp:DropDownList ID="DeptDorpDown" runat="server" CssClass="dropdown dropdown-toggle" AutoPostBack="true" OnSelectedIndexChanged="DeptDorpDown_SelectedIndexChanged"></asp:DropDownList>
+            <asp:DropDownList ID="DeptDorpDown" runat="server" CssClass="dropdown dropdown-toggle" AutoPostBack="true" OnSelectedIndexChanged="DeptDorpDown_SelectedIndexChanged">
+                
+            </asp:DropDownList>
         </p>
         &nbsp &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
         <p>
@@ -183,7 +185,7 @@
                     </ItemTemplate>
                 </asp:TemplateField>
 
-                <asp:TemplateField HeaderText="ApplyDate" Visible="true">
+                <asp:TemplateField HeaderText="ApplyDate">
                     <ItemTemplate>
                         <asp:Label ID="lblApplyDate" runat="server" Text='<%# Eval("ApplyDate","{0:MMM d, yy}")%>'></asp:Label>
                     </ItemTemplate>

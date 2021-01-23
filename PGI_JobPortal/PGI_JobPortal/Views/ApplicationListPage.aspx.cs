@@ -39,8 +39,8 @@ namespace PGI_JobPortal.Views
             DeptDorpDown.DataSource = dt;
             DeptDorpDown.DataTextField = "SeriesName";
             DeptDorpDown.DataValueField = "SeriesName";
-            DeptDorpDown.Items.Insert(0, "All");
             DeptDorpDown.DataBind();
+            DeptDorpDown.Items.Insert(0, "All");
         }
 
         protected void DeptDorpDown_SelectedIndexChanged(object sender, EventArgs e)
