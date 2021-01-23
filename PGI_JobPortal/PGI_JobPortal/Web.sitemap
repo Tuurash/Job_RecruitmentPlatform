@@ -3,11 +3,13 @@
 
 	<siteMapNode url="~/Views/Index.aspx" title="Home"  description="Enhance your Career with Prime Group and Industries">
 
-		<siteMapNode url="~/Views/LoginPage.aspx" title="user login"  description="login page">
+		<siteMapNode url="~/Views/LoginPage.aspx" title="login"  description="login page">
 
 			<siteMapNode url="~/Views/UserProfilePage.aspx" title="User Profile"  description="" />
 			<siteMapNode url="~/Views/JobPostingPage.aspx" title="Post Job"  description="" />
-			<siteMapNode url="~/Views/JobDetailDashboard.aspx" title="Job Details"  description="" />
+			<siteMapNode url="~/Views/JobDetailDashboard.aspx" title="Job Details"  description="">
+				<siteMapNode url="~/Views/ApplicationDashboard.aspx" title="Apply"  description="" />
+			</siteMapNode>
 			<siteMapNode url="~/Views/AppliedJobsPage.aspx" title="Applied Jobs"  description="" />
 			<siteMapNode url="~/Views/ResumePage.aspx" title="Resume"  description="" />
 			<siteMapNode url="~/Views/AvailableJobsPage.aspx" title="Available Jobs"  description="" />
@@ -24,5 +26,5 @@
 		<siteMapNode url="~/Views/ApplicationPage.aspx" title="Application"  description="" />
 
 	</siteMapNode>
-	
+
 </siteMap>

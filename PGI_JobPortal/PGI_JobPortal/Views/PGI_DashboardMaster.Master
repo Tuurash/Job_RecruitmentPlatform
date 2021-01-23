@@ -50,7 +50,8 @@
         body {
             margin: 0;
             font: 1rem/1.5 "PT Sans", Arial, sans-serif;
-            color: #5a5a5a;
+            font-display:block;
+            color: black;
         }
     </style>
 
@@ -87,6 +88,11 @@
     <form id="form1" runat="server">
         <style>
             p {
+                color: black;
+            }
+            a{
+                font-size:15px;
+                font-family:Arial, Helvetica, sans-serif;
                 color: black;
             }
         </style>
@@ -172,7 +178,7 @@
                     <div class="row contact-form-area">
                         <!-- menu Section End -->
                         <div class="col-md-4 col-lg-4 col-sm-12">
-                            <div class="contact-right-area wow fadeIn">
+                            <div class="contact-right-area wow fadeIn animated">
                                 <h2>Hello,
                                     <asp:Label ID="lblUserName" runat="server"></asp:Label></h2>
                                 <div class="contact-info">
@@ -181,14 +187,14 @@
                                         <div class="contact-icon">
                                             <i class="fas fa-id-card"></i>
                                         </div>
-                                        <p><a href="UserProfilePage.aspx" id="LinkProfileMenu" runat="server">My Profile</a></p>
+                                        <a href="UserProfilePage.aspx" id="LinkProfileMenu" runat="server">My Profile</a>
                                     </div>
 
-                                    <div class="single-contact" runat="server" id="divAppliedJobs">
+                                    <div class="single-contact animated" runat="server"  id="divAppliedJobs">
                                         <div class="contact-icon">
                                             <i class="lni-envelope"></i>
                                         </div>
-                                        <p><a href="AppliedJobsPage.aspx" id="LinkAppliedJobs" runat="server">Applied Jobs</a></p>
+                                        <a href="AppliedJobsPage.aspx" id="LinkAppliedJobs" runat="server" >Applied Jobs</a>
 
                                     </div>
 
@@ -196,7 +202,7 @@
                                         <div class="contact-icon">
                                             <i class="fas fa-file-upload"></i>
                                         </div>
-                                        <p><a href="ResumePage.aspx" id="LinkResume" runat="server">Upload Resume</a></p>
+                                        <a href="ResumePage.aspx" id="LinkResume" runat="server">Upload Resume</a>
 
                                     </div>
 
@@ -204,7 +210,7 @@
                                         <div class="contact-icon">
                                             <i class="fas fa-file-upload"></i>
                                         </div>
-                                        <p><a href="JobPostingPage.aspx" id="LinkjobPostingMenu" runat="server">Post a Job</a></p>
+                                        <a href="JobPostingPage.aspx" id="LinkjobPostingMenu" runat="server" class="animated">Post a Job</a>
 
                                     </div>
 
@@ -213,7 +219,7 @@
                                         <div class="contact-icon">
                                             <i class="fas fa-file-upload"></i>
                                         </div>
-                                        <p><a href="ApplicationListPage.aspx" id="A1" runat="server">Application List</a></p>
+                                        <a href="ApplicationListPage.aspx" id="A1" runat="server">Application List</a>
 
                                     </div>
 
@@ -221,7 +227,7 @@
                                         <div class="contact-icon">
                                             <i class="fas fa-envelope-open-text"></i>
                                         </div>
-                                        <p><a href="AvailableJobsPage.aspx" runat="server">Available Jobs</a></p>
+                                        <a href="AvailableJobsPage.aspx" runat="server">Available Jobs</a>
 
                                     </div>
 
