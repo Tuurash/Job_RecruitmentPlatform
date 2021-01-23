@@ -131,5 +131,8 @@
     <Property Name="Resume" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
     <Property Name="ApplyDate" Type="DateTime" Precision="3" />
     <Property Name="CoverLetter" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="isShortListed" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="SentMail" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="SentMessage" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
   </EntityType>
 </Schema>

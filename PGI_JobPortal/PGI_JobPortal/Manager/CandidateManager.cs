@@ -15,6 +15,16 @@ namespace PGI_JobPortal.Manager
             return new CandidateGateway().InsertCandidate(obj_Candidate);
         }
 
+        internal static DataTable ApplicationPhoneNoExistByID(int iD)
+        {
+            return new CandidateGateway().ApplicationPhoneNoExistByID(iD);
+        }
+
+        internal static DataTable ApplicationEmailExist(string email)
+        {
+            return new CandidateGateway().ApplicationEmailExist(email);
+        }
+
         internal static DataTable CodeExist(string r)
         {
             return new CandidateGateway().CodeExist(r);

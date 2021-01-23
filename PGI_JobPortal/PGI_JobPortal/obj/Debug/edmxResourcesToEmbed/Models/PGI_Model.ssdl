@@ -13,6 +13,9 @@
     <Property Name="Resume" Type="varchar(max)" />
     <Property Name="ApplyDate" Type="datetime" />
     <Property Name="CoverLetter" Type="varchar(max)" />
+    <Property Name="isShortListed" Type="varchar" MaxLength="50" />
+    <Property Name="SentMail" Type="varchar" MaxLength="50" />
+    <Property Name="SentMessage" Type="varchar" MaxLength="50" />
   </EntityType>
   <EntityType Name="PGI_Candidate_EducationDetails">
     <Key>

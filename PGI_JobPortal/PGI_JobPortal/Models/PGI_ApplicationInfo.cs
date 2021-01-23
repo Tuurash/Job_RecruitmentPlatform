@@ -23,5 +23,8 @@ namespace PGI_JobPortal.Models
         public string Resume { get; set; }
         public Nullable<System.DateTime> ApplyDate { get; set; }
         public string CoverLetter { get; set; }
+        public string isShortListed { get; set; }
+        public string SentMail { get; set; }
+        public string SentMessage { get; set; }
     }
 }

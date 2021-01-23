@@ -18,6 +18,9 @@
           <Property Name="Resume" Type="varchar(max)" />
           <Property Name="ApplyDate" Type="datetime" />
           <Property Name="CoverLetter" Type="varchar(max)" />
+          <Property Name="isShortListed" Type="varchar" MaxLength="50" />
+          <Property Name="SentMail" Type="varchar" MaxLength="50" />
+          <Property Name="SentMessage" Type="varchar" MaxLength="50" />
         </EntityType>
         <EntityType Name="PGI_Candidate_EducationDetails">
           <Key>
@@ -272,6 +275,9 @@
           <Property Name="Resume" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
           <Property Name="ApplyDate" Type="DateTime" Precision="3" />
           <Property Name="CoverLetter" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="isShortListed" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="SentMail" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="SentMessage" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
         </EntityType>
       </Schema>
     </edmx:ConceptualModels>
@@ -397,6 +403,9 @@
           <EntitySetMapping Name="PGI_ApplicationInfo">
             <EntityTypeMapping TypeName="PgiWebPortalDBModel.PGI_ApplicationInfo">
               <MappingFragment StoreEntitySet="PGI_ApplicationInfo">
+                <ScalarProperty Name="SentMessage" ColumnName="SentMessage" />
+                <ScalarProperty Name="SentMail" ColumnName="SentMail" />
+                <ScalarProperty Name="isShortListed" ColumnName="isShortListed" />
                 <ScalarProperty Name="CoverLetter" ColumnName="CoverLetter" />
                 <ScalarProperty Name="ApplyDate" ColumnName="ApplyDate" />
                 <ScalarProperty Name="Resume" ColumnName="Resume" />

@@ -119,6 +119,9 @@
     <EntitySetMapping Name="PGI_ApplicationInfo">
       <EntityTypeMapping TypeName="PgiWebPortalDBModel.PGI_ApplicationInfo">
         <MappingFragment StoreEntitySet="PGI_ApplicationInfo">
+          <ScalarProperty Name="SentMessage" ColumnName="SentMessage" />
+          <ScalarProperty Name="SentMail" ColumnName="SentMail" />
+          <ScalarProperty Name="isShortListed" ColumnName="isShortListed" />
           <ScalarProperty Name="CoverLetter" ColumnName="CoverLetter" />
           <ScalarProperty Name="ApplyDate" ColumnName="ApplyDate" />
           <ScalarProperty Name="Resume" ColumnName="Resume" />

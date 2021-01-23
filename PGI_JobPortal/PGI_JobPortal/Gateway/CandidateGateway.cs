@@ -18,6 +18,18 @@ namespace PGI_JobPortal.Gateway
             return ExecuteNonQuery(query);
         }
 
+        internal DataTable ApplicationPhoneNoExistByID(int iD)
+        {
+            query = "select * from PGI_ApplicationInfo where ID=" + iD;
+            return ExecuteQuery(query);
+        }
+
+        internal DataTable ApplicationEmailExist(string email)
+        {
+            query = "select * from PGI_ApplicationInfo where Email='" + email + "'";
+            return ExecuteQuery(query);
+        }
+
         internal DataTable EmailExist(string email)
         {
             query = "select * from PGI_CandidateInfo where UserEmail='" + email + "'";

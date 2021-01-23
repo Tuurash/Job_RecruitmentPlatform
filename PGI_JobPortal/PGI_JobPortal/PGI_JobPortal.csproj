@@ -166,6 +166,7 @@
     <Content Include="Views\assets\img\logo_footer.gif" />
     <Content Include="Views\assets\img\spinning-1.jpg" />
     <Content Include="Views\assets\img\steelmills.jpg" />
+    <Content Include="Views\assets\misc.css" />
     <Content Include="Views\Index.aspx" />
     <Content Include="Scripts\bootstrap.bundle.js" />
     <Content Include="Scripts\bootstrap.bundle.min.js" />
@@ -437,8 +438,10 @@
     <Compile Include="Manager\CheckExistAnonymous.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="Manager\EmailManager.cs" />
     <Compile Include="Manager\JobManager.cs" />
     <Compile Include="Manager\NumberSeriesManager.cs" />
+    <Compile Include="Manager\SMSManager.cs" />
     <Compile Include="Models\PGI_ApplicationInfo.cs">
       <DependentUpon>PGI_Model.tt</DependentUpon>
     </Compile>

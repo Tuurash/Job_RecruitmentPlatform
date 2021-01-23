@@ -29,5 +29,25 @@ namespace PGI_JobPortal.Manager
         {
             return new ApplicationGateway().CheckExistAnonymous(getjobCode, phoneNo, email);
         }
+
+        internal static int UpdateShortlistApplication(int iD, string shortlistStatus)
+        {
+            return new ApplicationGateway().UpdateShortlistApplication(iD, shortlistStatus);
+        }
+
+        internal static DataTable getAllShortListApplication()
+        {
+            return new ApplicationGateway().getAllShortListApplication();
+        }
+
+        internal static int UpdateMailStatus(int iD)
+        {
+            return new ApplicationGateway().UpdateMailStatus(iD);
+        }
+
+        internal static int UpdateTextStatus(int iD)
+        {
+            return new ApplicationGateway().UpdateTextStatus(iD);
+        }
     }
 }
