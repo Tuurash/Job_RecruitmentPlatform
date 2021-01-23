@@ -15,7 +15,7 @@
 
                 <div class="col-lg-8 col-md-12 col-xs-12">
                     <div class="content-area">
-
+                        <a id="A1" runat="server" href="#" class="btn btn-border" visible="false">Already Applied</a>
                         <h5>Job Description</h5>
                         <p style="color: red">
                             <asp:Label runat="server" ID="lbljobStatus" Visible="false"></asp:Label>
@@ -119,7 +119,8 @@
                             <br />
                             <br />
                             <a id="btnDeactive" runat="server" href="#" class="btn btn-danger" onserverclick="btnDeactive_ServerClick" visible="false">Deactivate Post</a>
-                            <a id="btnApply" runat="server" href="#" class="btn btn-common" onserverclick="btnApply_ServerClick">Apply job</a>
+                            <a id="btnApply" runat="server" href="#" class="btn btn-success" onserverclick="btnApply_ServerClick">Apply</a>
+
                         </div>
                     </div>
                 </div>

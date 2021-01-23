@@ -13,8 +13,16 @@ namespace PGI_JobPortal.Views
     {
         string getjobCode = "";
         string setStatus = "";
+        string getUserCode = "";
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (Session["UserCode"].ToString() != null)
+            {
+                getUserCode = Session["UserCode"].ToString();
+                FillJobInfo();
+            }
+            else { Response.Redirect("LoginPage.aspx"); }
+
             if (Request.QueryString["JobCode"] != null)
             {
                 getjobCode = Request.QueryString["JobCode"];
@@ -56,6 +64,13 @@ namespace PGI_JobPortal.Views
                     lbljobStatus.Text = dt.Rows[0]["JobStatus"].ToString();
                 }
             }
+            DataTable vdt = JobManager.GetJobInfoByUserJobCode(getjobCode, getUserCode);
+            if (vdt.Rows.Count > 0)
+            {
+                A1.Visible = true;
+                btnApply.Visible = false;
+            }
+
         }
 
         private void FillJobDetails()
@@ -72,11 +87,6 @@ namespace PGI_JobPortal.Views
             }
         }
 
-        protected void btnApply_ServerClick(object sender, EventArgs e)
-        {
-
-        }
-
         protected void btnDeactive_ServerClick(object sender, EventArgs e)
         {
             setStatus = "Deactivated";
@@ -84,6 +94,11 @@ namespace PGI_JobPortal.Views
 
             int updateStatus = JobManager.UpdateJobStatus(setStatus, getjobCode);
             FillJobDetails();
+        }
+
+        protected void btnApply_ServerClick(object sender, EventArgs e)
+        {
+            Response.Redirect("~/Views/ApplicationDashboard.aspx?JobCode="+ getjobCode);
         }
     }
 }

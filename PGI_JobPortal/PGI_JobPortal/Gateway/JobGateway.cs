@@ -23,6 +23,12 @@ namespace PGI_JobPortal.Gateway
             return ExecuteQuery(query);
         }
 
+        internal DataTable getAllJobListByUserCode(string getUserCode)
+        {
+            query = @"select * from PGI_ApplicationInfo   left outer join(select * from PGI_JobInfo) PGI_JobInfo on PGI_ApplicationInfo.JobCode=PGI_JobInfo.JobCode where ApplicantCode='" + getUserCode + "'";
+            return ExecuteQuery(query);
+        }
+
         internal DataTable getAllJobListByCatagory(string getJobCatagory)
         {
             query = @"select * from PGI_JobInfo where Catagory='" + getJobCatagory + "'";
@@ -32,6 +38,12 @@ namespace PGI_JobPortal.Gateway
         internal DataTable GetJobDetailByCode(string getjobCode)
         {
             query = @"select * from PGI_JobDetails where JobCode='" + getjobCode + "'";
+            return ExecuteQuery(query);
+        }
+
+        internal DataTable GetJobInfoByUserJobCode(object getjobCode, string getUserCode)
+        {
+            query = @"select t.* from (select * from PGI_ApplicationInfo ) as t left outer join(select JobCode as jC from PGI_JobInfo ) PGI_JobInfo on t.JobCode=PGI_JobInfo.jC  where ApplicantCode='" + getUserCode + "' and JobCode='" + getjobCode + "'";
             return ExecuteQuery(query);
         }
 

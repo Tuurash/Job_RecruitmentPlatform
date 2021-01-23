@@ -160,6 +160,7 @@
       <DependentUpon>PGI_Model.edmx</DependentUpon>
       <LastGenOutput>PGI_Model.cs</LastGenOutput>
     </Content>
+    <Content Include="Views\ApplicationDashboard.aspx" />
     <Content Include="Views\ApplicationListPage.aspx" />
     <Content Include="Views\ApplicationPage.aspx" />
     <Content Include="Views\assets\img\banner-2.jpg" />
@@ -484,6 +485,13 @@
     <Compile Include="Models\TokenModel.cs" />
     <Compile Include="Models\UserModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Views\ApplicationDashboard.aspx.cs">
+      <DependentUpon>ApplicationDashboard.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\ApplicationDashboard.aspx.designer.cs">
+      <DependentUpon>ApplicationDashboard.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Views\ApplicationListPage.aspx.cs">
       <DependentUpon>ApplicationListPage.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
