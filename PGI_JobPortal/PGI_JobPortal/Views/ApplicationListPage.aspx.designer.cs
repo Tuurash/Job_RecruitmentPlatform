@@ -15,6 +15,24 @@ namespace PGI_JobPortal.Views
     {
 
         /// <summary>
+        /// DeptDorpDown control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList DeptDorpDown;
+
+        /// <summary>
+        /// DropDownDate control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList DropDownDate;
+
+        /// <summary>
         /// gridApplicationList control.
         /// </summary>
         /// <remarks>

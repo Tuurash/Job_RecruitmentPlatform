@@ -44,6 +44,12 @@ namespace PGI_JobPortal.Gateway
             return ExecuteNonQuery(query);
         }
 
+        internal DataTable GetApplicationByCatagory(string getCatagory, string dateSort)
+        {
+            query = @"select t1.* from (select Catagory,JobName,t.* from (select * from PGI_ApplicationInfo where isShortListed='False') as t left outer join(select * from PGI_JobInfo) PGI_JobInfo on t.JobCode=PGI_JobInfo.JobCode)as t1 where Catagory='" + getCatagory + "' order by ApplyDate " + dateSort;
+            return ExecuteQuery(query);
+        }
+
         internal DataTable getAllShortListApplication()
         {
 
@@ -52,9 +58,9 @@ namespace PGI_JobPortal.Gateway
             return ExecuteQuery(query);
         }
 
-        internal DataTable GetAllApplication()
+        internal DataTable GetAllApplication(string dateSort)
         {
-            query = @"select t1.* from (select Catagory,JobName,t.* from (select * from PGI_ApplicationInfo where isShortListed='False') as t left outer join(select * from PGI_JobInfo) PGI_JobInfo on t.JobCode=PGI_JobInfo.JobCode)as t1";
+            query = @"select t1.* from (select Catagory,JobName,t.* from (select * from PGI_ApplicationInfo where isShortListed='False') as t left outer join(select * from PGI_JobInfo) PGI_JobInfo on t.JobCode=PGI_JobInfo.JobCode)as t1 order by ApplyDate " + dateSort;
 
             return ExecuteQuery(query);
         }

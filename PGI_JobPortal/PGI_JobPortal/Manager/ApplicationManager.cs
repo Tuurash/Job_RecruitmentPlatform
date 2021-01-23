@@ -20,9 +20,9 @@ namespace PGI_JobPortal.Manager
             return new ApplicationGateway().InsertData(obj_Application);
         }
 
-        internal static DataTable GetAllApplication()
+        internal static DataTable GetAllApplication(string dateSort)
         {
-            return new ApplicationGateway().GetAllApplication();
+            return new ApplicationGateway().GetAllApplication(dateSort);
         }
 
         internal static DataTable CheckExistAnonymous(string getjobCode, string phoneNo, string email)
@@ -48,6 +48,11 @@ namespace PGI_JobPortal.Manager
         internal static int UpdateTextStatus(int iD)
         {
             return new ApplicationGateway().UpdateTextStatus(iD);
+        }
+
+        internal static DataTable GetApplicationByCatagory(string getCatagory, string dateSort)
+        {
+            return new ApplicationGateway().GetApplicationByCatagory(getCatagory, dateSort);
         }
     }
 }

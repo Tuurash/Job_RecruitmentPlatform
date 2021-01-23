@@ -17,20 +17,57 @@ namespace PGI_JobPortal.Views
         int UpdateTemp = 0;
         int UpdateMailStatus = 0;
         int UpdateTextStatus = 0;
+
+        string getCatagory = "";
+
         char[] charsToTrim = { '*', ' ', '\'', };
 
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)
             {
+                FillDeptDorpDown();
                 FillgridApplicationList();
                 FillShortlistGrid();
             }
         }
 
+        private void FillDeptDorpDown()
+        {
+
+            DataTable dt = NumberSeriesManager.getAllCatagory();
+            DeptDorpDown.DataSource = dt;
+            DeptDorpDown.DataTextField = "SeriesName";
+            DeptDorpDown.DataValueField = "SeriesName";
+            DeptDorpDown.Items.Insert(0, "All");
+            DeptDorpDown.DataBind();
+        }
+
+        protected void DeptDorpDown_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            FillgridApplicationList();
+        }
+
+        protected void DropDownDate_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            FillgridApplicationList();
+        }
+
         private void FillgridApplicationList()
         {
-            DataTable dt = ApplicationManager.GetAllApplication();
+            DataTable dt = new DataTable();
+            string DateSort = DropDownDate.SelectedValue;
+
+            getCatagory = DeptDorpDown.SelectedValue;
+            if (getCatagory == "All")
+            {
+                dt = ApplicationManager.GetAllApplication(DateSort);
+            }
+            else
+            {
+                dt = ApplicationManager.GetApplicationByCatagory(getCatagory, DateSort);
+            }
+
             gridApplicationList.DataSource = dt;
             gridApplicationList.DataBind();
         }
@@ -71,6 +108,7 @@ namespace PGI_JobPortal.Views
             }
             if (UpdateTemp > 0)
             {
+                divShortlist.Visible = true;
                 FillShortlistGrid();
             }
         }

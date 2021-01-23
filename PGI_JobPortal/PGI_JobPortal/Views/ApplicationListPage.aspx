@@ -27,7 +27,22 @@
     </div>
     <br />
 
-    <asp:GridView runat="server" AutoGenerateColumns="false" ID="gridApplicationList" CssClass="table table-hover table-responsive">
+    <div class="form-group" style="display: flex; flex-direction: row; align-items: center">
+        <p>
+            Filter By Department :  
+            <asp:DropDownList ID="DeptDorpDown" runat="server" CssClass="dropdown dropdown-toggle" AutoPostBack="true" OnSelectedIndexChanged="DeptDorpDown_SelectedIndexChanged"></asp:DropDownList>
+        </p>
+        &nbsp &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+        <p>
+            Date :
+            <asp:DropDownList ID="DropDownDate" runat="server" CssClass="dropdown dropdown-toggle" AutoPostBack="true" OnSelectedIndexChanged="DropDownDate_SelectedIndexChanged">
+                <asp:ListItem Text="Ascending" Value="asc" />
+                <asp:ListItem Text="Descending" Value="desc" Selected />
+            </asp:DropDownList>
+        </p>
+    </div>
+
+    <asp:GridView runat="server" AutoGenerateColumns="false" ID="gridApplicationList" CssClass="table table-hover table-responsive" Font-Size="Small">
         <Columns>
             <asp:TemplateField>
                 <ItemTemplate>
@@ -90,7 +105,7 @@
 
             <asp:TemplateField HeaderText="ApplyDate">
                 <ItemTemplate>
-                    <asp:Label ID="lblApplyDate" runat="server" Text='<%# Eval("ApplyDate","{0:yyyy/MM/dd}")%>'></asp:Label>
+                    <asp:Label ID="lblApplyDate" runat="server" Text='<%# Eval("ApplyDate","{0:MMM d, yy}")%>'></asp:Label>
                 </ItemTemplate>
             </asp:TemplateField>
         </Columns>
@@ -107,7 +122,7 @@
         </div>
         <br />
 
-        <asp:GridView runat="server" AutoGenerateColumns="false" ID="ShortlistGrid" CssClass="table table-hover table-responsive">
+        <asp:GridView runat="server" AutoGenerateColumns="false" ID="ShortlistGrid" CssClass="table table-hover table-responsive" Font-Size="Small">
             <Columns>
                 <asp:TemplateField>
                     <ItemTemplate>
@@ -168,9 +183,9 @@
                     </ItemTemplate>
                 </asp:TemplateField>
 
-                <asp:TemplateField HeaderText="ApplyDate" Visible="false">
+                <asp:TemplateField HeaderText="ApplyDate" Visible="true">
                     <ItemTemplate>
-                        <asp:Label ID="lblApplyDate" runat="server" Text='<%# Eval("ApplyDate","{0:yyyy/MM/dd}")%>'></asp:Label>
+                        <asp:Label ID="lblApplyDate" runat="server" Text='<%# Eval("ApplyDate","{0:MMM d, yy}")%>'></asp:Label>
                     </ItemTemplate>
                 </asp:TemplateField>
 
