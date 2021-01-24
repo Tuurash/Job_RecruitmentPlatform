@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<siteMap xmlns="http://schemas.microsoft.com/AspNet/SiteMap-File-1.0" >
+
+	<siteMapNode url="~/Views/Index.aspx" title="Home"  description="Enhance your Career with Prime Group and Industries">
+
+		<siteMapNode url="~/Views/LoginPage.aspx" title="login"  description="login page">
+
+			<siteMapNode url="~/Views/UserProfilePage.aspx" title="User Profile"  description="" />
+			<siteMapNode url="~/Views/JobPostingPage.aspx" title="Post Job"  description="" />
+			<siteMapNode url="~/Views/JobDetailDashboard.aspx" title="Job Details"  description="">
+				<siteMapNode url="~/Views/ApplicationDashboard.aspx" title="Application"  description="" />
+			</siteMapNode>
+			<siteMapNode url="~/Views/AppliedJobsPage.aspx" title="Applied Jobs"  description="" />
+			<siteMapNode url="~/Views/ResumePage.aspx" title="Resume"  description="" />
+			<siteMapNode url="~/Views/AvailableJobsPage.aspx" title="Available Jobs"  description="" />
+			<siteMapNode url="~/Views/ApplicationListPage.aspx" title="Application List"  description="" />
+
+		</siteMapNode>
+
+		<siteMapNode url="~/Views/RegistrationPage.aspx" title="Registration"  description="" />
+
+		<siteMapNode url="~/Views/JobListIndex.aspx" title="Job List"  description="" />
+
+		<siteMapNode url="~/Views/JobDetailPage.aspx" title="Job Detail"  description="" />
+
+		<siteMapNode url="~/Views/ApplicationPage.aspx" title="Application"  description="" />
+
+	</siteMapNode>
+
+</siteMap>

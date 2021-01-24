@@ -1,0 +1,444 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="PgiWebPortalDBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="PGI_ApplicationInfo">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="JobCode" Type="varchar" MaxLength="50" />
+          <Property Name="ApplicantCode" Type="varchar" MaxLength="50" />
+          <Property Name="FullName" Type="varchar" MaxLength="50" />
+          <Property Name="Email" Type="varchar" MaxLength="50" />
+          <Property Name="PhoneNumber" Type="varchar" MaxLength="50" />
+          <Property Name="Resume" Type="varchar(max)" />
+          <Property Name="ApplyDate" Type="datetime" />
+          <Property Name="CoverLetter" Type="varchar(max)" />
+          <Property Name="isShortListed" Type="varchar" MaxLength="50" />
+          <Property Name="SentMail" Type="varchar" MaxLength="50" />
+          <Property Name="SentMessage" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="PGI_Candidate_EducationDetails">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="UserCode" Type="varchar" MaxLength="50" />
+          <Property Name="EducationLevel" Type="varchar" MaxLength="50" />
+          <Property Name="Result" Type="varchar" MaxLength="50" />
+          <Property Name="PassingYear" Type="datetime" />
+          <Property Name="Major" Type="varchar" MaxLength="50" />
+          <Property Name="Duration" Type="int" />
+          <Property Name="InstituteName" Type="varchar" MaxLength="50" />
+          <Property Name="Achievement" Type="varchar" MaxLength="150" />
+        </EntityType>
+        <EntityType Name="PGI_Candidate_EmploymentDetails">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" />
+          <Property Name="UserCode" Type="varchar" MaxLength="50" />
+          <Property Name="CompanyName" Type="varchar" MaxLength="50" />
+          <Property Name="CompanyType" Type="varchar" MaxLength="50" />
+          <Property Name="CompanyLocation" Type="varchar" MaxLength="50" />
+          <Property Name="Department" Type="varchar" MaxLength="50" />
+          <Property Name="Designation" Type="varchar" MaxLength="50" />
+          <Property Name="Responsibilities" Type="varchar(max)" />
+          <Property Name="EmployeeFrom" Type="datetime" />
+          <Property Name="EmployeeEnd" Type="datetime" />
+        </EntityType>
+        <EntityType Name="PGI_Candidate_PersonalDetails">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="UserCode" Type="varchar" MaxLength="50" />
+          <Property Name="FirstName" Type="varchar" MaxLength="50" />
+          <Property Name="LastName" Type="varchar" MaxLength="50" />
+          <Property Name="Gender" Type="varchar" MaxLength="50" />
+          <Property Name="DateOfBirth" Type="datetime" />
+          <Property Name="MaritalStatus" Type="varchar" MaxLength="50" />
+          <Property Name="NID" Type="varchar" MaxLength="50" />
+          <Property Name="PassportNo" Type="varchar" MaxLength="50" />
+          <Property Name="MobileNo" Type="varchar" MaxLength="50" />
+          <Property Name="PresentAddress" Type="varchar" MaxLength="250" />
+          <Property Name="PermanentAddress" Type="varchar" MaxLength="250" />
+          <Property Name="LinkedinProfile" Type="varchar" MaxLength="150" />
+        </EntityType>
+        <EntityType Name="PGI_CandidateInfo">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="UserCode" Type="varchar" MaxLength="50" />
+          <Property Name="UserFirstName" Type="varchar" MaxLength="50" />
+          <Property Name="UserLastName" Type="varchar" MaxLength="50" />
+          <Property Name="UserEmail" Type="varchar" MaxLength="50" />
+          <Property Name="UserPhoneNo" Type="varchar" MaxLength="50" />
+          <Property Name="UserPassword" Type="varchar" MaxLength="50" />
+          <Property Name="UserPhoto" Type="varchar(max)" />
+          <Property Name="role" Type="varchar" MaxLength="50" />
+          <Property Name="GoogleConnected" Type="varchar" MaxLength="50" />
+          <Property Name="GoogleID" Type="varchar(max)" />
+          <Property Name="UserResume" Type="varchar(max)" />
+        </EntityType>
+        <EntityType Name="PGI_JobDetails">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="JobCode" Type="varchar" MaxLength="50" />
+          <Property Name="JobDescription" Type="varchar(max)" />
+          <Property Name="Responsibilities" Type="varchar(max)" />
+          <Property Name="EducationalReq" Type="varchar(max)" />
+          <Property Name="ExperienceReq" Type="varchar(max)" />
+          <Property Name="AdditionalReq" Type="varchar(max)" />
+          <Property Name="Benifits" Type="varchar(max)" />
+        </EntityType>
+        <EntityType Name="PGI_JobInfo">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="JobCode" Type="varchar" MaxLength="50" />
+          <Property Name="JobName" Type="varchar" MaxLength="50" />
+          <Property Name="Location" Type="varchar" MaxLength="50" />
+          <Property Name="Catagory" Type="varchar" MaxLength="50" />
+          <Property Name="EmploymentStatus" Type="varchar" MaxLength="50" />
+          <Property Name="Workplace" Type="varchar" MaxLength="50" />
+          <Property Name="PostDate" Type="datetime" />
+          <Property Name="Deadline" Type="datetime" />
+          <Property Name="Vacancy" Type="int" />
+          <Property Name="Experience" Type="int" />
+          <Property Name="Salary" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="GenderPreference" Type="varchar" MaxLength="50" />
+          <Property Name="JobStatus" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="SKode_NumberSeries_T">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="SeriesName" Type="varchar" MaxLength="50" />
+          <Property Name="SeriesLength" Type="int" />
+          <Property Name="Prefix" Type="varchar" MaxLength="50" />
+          <Property Name="LastGeneratedNo" Type="int" />
+          <Property Name="CompanyID" Type="varchar" MaxLength="50" />
+          <Property Name="CatagoryIcon" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityContainer Name="PgiWebPortalDBModelStoreContainer">
+          <EntitySet Name="PGI_ApplicationInfo" EntityType="Self.PGI_ApplicationInfo" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="PGI_Candidate_EducationDetails" EntityType="Self.PGI_Candidate_EducationDetails" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="PGI_Candidate_EmploymentDetails" EntityType="Self.PGI_Candidate_EmploymentDetails" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="PGI_Candidate_PersonalDetails" EntityType="Self.PGI_Candidate_PersonalDetails" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="PGI_CandidateInfo" EntityType="Self.PGI_CandidateInfo" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="PGI_JobDetails" EntityType="Self.PGI_JobDetails" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="PGI_JobInfo" EntityType="Self.PGI_JobInfo" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="SKode_NumberSeries_T" EntityType="Self.SKode_NumberSeries_T" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="PgiWebPortalDBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="PGI_CandidateInfo">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="UserCode" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="UserFirstName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="UserLastName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="UserEmail" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="UserPhoneNo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="UserPassword" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="UserPhoto" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="role" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="GoogleConnected" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="GoogleID" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="UserResume" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityContainer Name="PgiWebPortalDBEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="PGI_CandidateInfo" EntityType="Self.PGI_CandidateInfo" />
+          <EntitySet Name="PGI_Candidate_EducationDetails" EntityType="PgiWebPortalDBModel.PGI_Candidate_EducationDetails" />
+          <EntitySet Name="PGI_Candidate_EmploymentDetails" EntityType="PgiWebPortalDBModel.PGI_Candidate_EmploymentDetails" />
+          <EntitySet Name="PGI_Candidate_PersonalDetails" EntityType="PgiWebPortalDBModel.PGI_Candidate_PersonalDetails" />
+          <EntitySet Name="PGI_JobDetails" EntityType="PgiWebPortalDBModel.PGI_JobDetails" />
+          <EntitySet Name="PGI_JobInfo" EntityType="PgiWebPortalDBModel.PGI_JobInfo" />
+          <EntitySet Name="SKode_NumberSeries_T" EntityType="PgiWebPortalDBModel.SKode_NumberSeries_T" />
+          <EntitySet Name="PGI_ApplicationInfo" EntityType="PgiWebPortalDBModel.PGI_ApplicationInfo" />
+        </EntityContainer>
+        <EntityType Name="PGI_Candidate_EducationDetails">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="UserCode" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="EducationLevel" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Result" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="PassingYear" Type="DateTime" Precision="3" />
+          <Property Name="Major" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Duration" Type="Int32" />
+          <Property Name="InstituteName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Achievement" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="PGI_Candidate_EmploymentDetails">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" />
+          <Property Name="UserCode" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="CompanyName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="CompanyType" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="CompanyLocation" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Department" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Designation" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Responsibilities" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="EmployeeFrom" Type="DateTime" Precision="3" />
+          <Property Name="EmployeeEnd" Type="DateTime" Precision="3" />
+        </EntityType>
+        <EntityType Name="PGI_Candidate_PersonalDetails">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="UserCode" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="FirstName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="LastName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Gender" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="DateOfBirth" Type="DateTime" Precision="3" />
+          <Property Name="MaritalStatus" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="NID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="PassportNo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="MobileNo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="PresentAddress" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+          <Property Name="PermanentAddress" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+          <Property Name="LinkedinProfile" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="PGI_JobDetails">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="JobCode" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="JobDescription" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="Responsibilities" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="EducationalReq" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="ExperienceReq" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="AdditionalReq" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="Benifits" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="PGI_JobInfo">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="JobCode" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="JobName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Location" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Catagory" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="EmploymentStatus" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Workplace" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="PostDate" Type="DateTime" Precision="3" />
+          <Property Name="Deadline" Type="DateTime" Precision="3" />
+          <Property Name="Vacancy" Type="Int32" />
+          <Property Name="Experience" Type="Int32" />
+          <Property Name="Salary" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="GenderPreference" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="JobStatus" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="SKode_NumberSeries_T">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="SeriesName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="SeriesLength" Type="Int32" />
+          <Property Name="Prefix" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="LastGeneratedNo" Type="Int32" />
+          <Property Name="CompanyID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="CatagoryIcon" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="PGI_ApplicationInfo">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="JobCode" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="ApplicantCode" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="FullName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="PhoneNumber" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Resume" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="ApplyDate" Type="DateTime" Precision="3" />
+          <Property Name="CoverLetter" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="isShortListed" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="SentMail" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="SentMessage" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="PgiWebPortalDBModelStoreContainer" CdmEntityContainer="PgiWebPortalDBEntities">
+          <EntitySetMapping Name="PGI_CandidateInfo">
+            <EntityTypeMapping TypeName="PgiWebPortalDBModel.PGI_CandidateInfo">
+              <MappingFragment StoreEntitySet="PGI_CandidateInfo">
+                <ScalarProperty Name="UserResume" ColumnName="UserResume" />
+                <ScalarProperty Name="GoogleID" ColumnName="GoogleID" />
+                <ScalarProperty Name="GoogleConnected" ColumnName="GoogleConnected" />
+                <ScalarProperty Name="role" ColumnName="role" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="UserCode" ColumnName="UserCode" />
+                <ScalarProperty Name="UserFirstName" ColumnName="UserFirstName" />
+                <ScalarProperty Name="UserLastName" ColumnName="UserLastName" />
+                <ScalarProperty Name="UserEmail" ColumnName="UserEmail" />
+                <ScalarProperty Name="UserPhoneNo" ColumnName="UserPhoneNo" />
+                <ScalarProperty Name="UserPassword" ColumnName="UserPassword" />
+                <ScalarProperty Name="UserPhoto" ColumnName="UserPhoto" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="PGI_Candidate_EducationDetails">
+            <EntityTypeMapping TypeName="PgiWebPortalDBModel.PGI_Candidate_EducationDetails">
+              <MappingFragment StoreEntitySet="PGI_Candidate_EducationDetails">
+                <ScalarProperty Name="Achievement" ColumnName="Achievement" />
+                <ScalarProperty Name="InstituteName" ColumnName="InstituteName" />
+                <ScalarProperty Name="Duration" ColumnName="Duration" />
+                <ScalarProperty Name="Major" ColumnName="Major" />
+                <ScalarProperty Name="PassingYear" ColumnName="PassingYear" />
+                <ScalarProperty Name="Result" ColumnName="Result" />
+                <ScalarProperty Name="EducationLevel" ColumnName="EducationLevel" />
+                <ScalarProperty Name="UserCode" ColumnName="UserCode" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="PGI_Candidate_EmploymentDetails">
+            <EntityTypeMapping TypeName="PgiWebPortalDBModel.PGI_Candidate_EmploymentDetails">
+              <MappingFragment StoreEntitySet="PGI_Candidate_EmploymentDetails">
+                <ScalarProperty Name="EmployeeEnd" ColumnName="EmployeeEnd" />
+                <ScalarProperty Name="EmployeeFrom" ColumnName="EmployeeFrom" />
+                <ScalarProperty Name="Responsibilities" ColumnName="Responsibilities" />
+                <ScalarProperty Name="Designation" ColumnName="Designation" />
+                <ScalarProperty Name="Department" ColumnName="Department" />
+                <ScalarProperty Name="CompanyLocation" ColumnName="CompanyLocation" />
+                <ScalarProperty Name="CompanyType" ColumnName="CompanyType" />
+                <ScalarProperty Name="CompanyName" ColumnName="CompanyName" />
+                <ScalarProperty Name="UserCode" ColumnName="UserCode" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="PGI_Candidate_PersonalDetails">
+            <EntityTypeMapping TypeName="PgiWebPortalDBModel.PGI_Candidate_PersonalDetails">
+              <MappingFragment StoreEntitySet="PGI_Candidate_PersonalDetails">
+                <ScalarProperty Name="LinkedinProfile" ColumnName="LinkedinProfile" />
+                <ScalarProperty Name="PermanentAddress" ColumnName="PermanentAddress" />
+                <ScalarProperty Name="PresentAddress" ColumnName="PresentAddress" />
+                <ScalarProperty Name="MobileNo" ColumnName="MobileNo" />
+                <ScalarProperty Name="PassportNo" ColumnName="PassportNo" />
+                <ScalarProperty Name="NID" ColumnName="NID" />
+                <ScalarProperty Name="MaritalStatus" ColumnName="MaritalStatus" />
+                <ScalarProperty Name="DateOfBirth" ColumnName="DateOfBirth" />
+                <ScalarProperty Name="Gender" ColumnName="Gender" />
+                <ScalarProperty Name="LastName" ColumnName="LastName" />
+                <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+                <ScalarProperty Name="UserCode" ColumnName="UserCode" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="PGI_JobDetails">
+            <EntityTypeMapping TypeName="PgiWebPortalDBModel.PGI_JobDetails">
+              <MappingFragment StoreEntitySet="PGI_JobDetails">
+                <ScalarProperty Name="Benifits" ColumnName="Benifits" />
+                <ScalarProperty Name="AdditionalReq" ColumnName="AdditionalReq" />
+                <ScalarProperty Name="ExperienceReq" ColumnName="ExperienceReq" />
+                <ScalarProperty Name="EducationalReq" ColumnName="EducationalReq" />
+                <ScalarProperty Name="Responsibilities" ColumnName="Responsibilities" />
+                <ScalarProperty Name="JobDescription" ColumnName="JobDescription" />
+                <ScalarProperty Name="JobCode" ColumnName="JobCode" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="PGI_JobInfo">
+            <EntityTypeMapping TypeName="PgiWebPortalDBModel.PGI_JobInfo">
+              <MappingFragment StoreEntitySet="PGI_JobInfo">
+                <ScalarProperty Name="JobStatus" ColumnName="JobStatus" />
+                <ScalarProperty Name="GenderPreference" ColumnName="GenderPreference" />
+                <ScalarProperty Name="Salary" ColumnName="Salary" />
+                <ScalarProperty Name="Experience" ColumnName="Experience" />
+                <ScalarProperty Name="Vacancy" ColumnName="Vacancy" />
+                <ScalarProperty Name="Deadline" ColumnName="Deadline" />
+                <ScalarProperty Name="PostDate" ColumnName="PostDate" />
+                <ScalarProperty Name="Workplace" ColumnName="Workplace" />
+                <ScalarProperty Name="EmploymentStatus" ColumnName="EmploymentStatus" />
+                <ScalarProperty Name="Catagory" ColumnName="Catagory" />
+                <ScalarProperty Name="Location" ColumnName="Location" />
+                <ScalarProperty Name="JobName" ColumnName="JobName" />
+                <ScalarProperty Name="JobCode" ColumnName="JobCode" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SKode_NumberSeries_T">
+            <EntityTypeMapping TypeName="PgiWebPortalDBModel.SKode_NumberSeries_T">
+              <MappingFragment StoreEntitySet="SKode_NumberSeries_T">
+                <ScalarProperty Name="CatagoryIcon" ColumnName="CatagoryIcon" />
+                <ScalarProperty Name="CompanyID" ColumnName="CompanyID" />
+                <ScalarProperty Name="LastGeneratedNo" ColumnName="LastGeneratedNo" />
+                <ScalarProperty Name="Prefix" ColumnName="Prefix" />
+                <ScalarProperty Name="SeriesLength" ColumnName="SeriesLength" />
+                <ScalarProperty Name="SeriesName" ColumnName="SeriesName" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="PGI_ApplicationInfo">
+            <EntityTypeMapping TypeName="PgiWebPortalDBModel.PGI_ApplicationInfo">
+              <MappingFragment StoreEntitySet="PGI_ApplicationInfo">
+                <ScalarProperty Name="SentMessage" ColumnName="SentMessage" />
+                <ScalarProperty Name="SentMail" ColumnName="SentMail" />
+                <ScalarProperty Name="isShortListed" ColumnName="isShortListed" />
+                <ScalarProperty Name="CoverLetter" ColumnName="CoverLetter" />
+                <ScalarProperty Name="ApplyDate" ColumnName="ApplyDate" />
+                <ScalarProperty Name="Resume" ColumnName="Resume" />
+                <ScalarProperty Name="PhoneNumber" ColumnName="PhoneNumber" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="FullName" ColumnName="FullName" />
+                <ScalarProperty Name="ApplicantCode" ColumnName="ApplicantCode" />
+                <ScalarProperty Name="JobCode" ColumnName="JobCode" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
