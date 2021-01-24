@@ -85,6 +85,7 @@
           <Property Name="GoogleConnected" Type="varchar" MaxLength="50" />
           <Property Name="GoogleID" Type="varchar(max)" />
           <Property Name="UserResume" Type="varchar(max)" />
+          <Property Name="OTP" Type="varchar" MaxLength="4" />
         </EntityType>
         <EntityType Name="PGI_JobDetails">
           <Key>
@@ -160,6 +161,7 @@
           <Property Name="GoogleConnected" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
           <Property Name="GoogleID" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
           <Property Name="UserResume" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="OTP" Type="String" MaxLength="4" FixedLength="false" Unicode="false" />
         </EntityType>
         <EntityContainer Name="PgiWebPortalDBEntities" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="PGI_CandidateInfo" EntityType="Self.PGI_CandidateInfo" />
@@ -288,6 +290,7 @@
           <EntitySetMapping Name="PGI_CandidateInfo">
             <EntityTypeMapping TypeName="PgiWebPortalDBModel.PGI_CandidateInfo">
               <MappingFragment StoreEntitySet="PGI_CandidateInfo">
+                <ScalarProperty Name="OTP" ColumnName="OTP" />
                 <ScalarProperty Name="UserResume" ColumnName="UserResume" />
                 <ScalarProperty Name="GoogleID" ColumnName="GoogleID" />
                 <ScalarProperty Name="GoogleConnected" ColumnName="GoogleConnected" />

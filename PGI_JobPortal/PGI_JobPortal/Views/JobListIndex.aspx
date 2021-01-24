@@ -7,20 +7,21 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
     <div align="center">
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
         <h3>Browse All Jobs</h3>
     </div>
     <div class="about section">
         <div class="container">
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
+
 
             <asp:Repeater ID="RptrJobList" runat="server">
-                <itemtemplate>
+                <ItemTemplate>
 
                     <%--Job Card--%>
                     <div class="row">
@@ -66,7 +67,7 @@
 
                     </div>
                     <%--End Job Card--%>
-                </itemtemplate>
+                </ItemTemplate>
             </asp:Repeater>
 
 

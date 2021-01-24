@@ -16,6 +16,7 @@
     <Property Name="GoogleConnected" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
     <Property Name="GoogleID" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
     <Property Name="UserResume" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="OTP" Type="String" MaxLength="4" FixedLength="false" Unicode="false" />
   </EntityType>
   <EntityContainer Name="PgiWebPortalDBEntities" annotation:LazyLoadingEnabled="true">
     <EntitySet Name="PGI_CandidateInfo" EntityType="Self.PGI_CandidateInfo" />

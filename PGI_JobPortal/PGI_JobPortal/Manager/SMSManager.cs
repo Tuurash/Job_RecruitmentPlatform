@@ -11,15 +11,33 @@ namespace PGI_JobPortal.Manager
 {
     public class SMSManager
     {
+        string recieverName = "";
+        string rcvrNumber = "";
+        string MsgBody = "";
+        internal void SendOTP(string getPhoneNo)
+        {
+            Random generator = new Random();
+            String r = generator.Next(0, 1000000).ToString("D6");
 
-        internal static void SendToUser(int iD, string textBody)
+            int updateOTP = CandidateManager.UpdateOTPByPhoneNumber(getPhoneNo, r);
+            if (updateOTP > 0)
+            {
+                rcvrNumber = getPhoneNo;
+                MsgBody = "Your career@Prime login OTP is" + r;
+                SendSMS(rcvrNumber, MsgBody);
+            }
+            else { SendOTP(getPhoneNo); }
+
+        }
+
+        internal void SendToUser(int iD, string textBody)
         {
             DataTable dt = CandidateManager.ApplicationPhoneNoExistByID(iD);
             if (dt.Rows.Count > 0)
             {
-                string recieverName = dt.Rows[0]["FullName"].ToString();
-                string rcvrNumber = dt.Rows[0]["PhoneNumber"].ToString();
-                string MsgBody = textBody;
+                recieverName = dt.Rows[0]["FullName"].ToString();
+                rcvrNumber = dt.Rows[0]["PhoneNumber"].ToString();
+                MsgBody = textBody;
 
                 SendSMS(recieverName, MsgBody);
 

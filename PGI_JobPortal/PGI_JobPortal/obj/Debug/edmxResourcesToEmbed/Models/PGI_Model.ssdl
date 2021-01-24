@@ -80,6 +80,7 @@
     <Property Name="GoogleConnected" Type="varchar" MaxLength="50" />
     <Property Name="GoogleID" Type="varchar(max)" />
     <Property Name="UserResume" Type="varchar(max)" />
+    <Property Name="OTP" Type="varchar" MaxLength="4" />
   </EntityType>
   <EntityType Name="PGI_JobDetails">
     <Key>

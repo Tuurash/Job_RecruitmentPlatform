@@ -26,5 +26,6 @@ namespace PGI_JobPortal.Models
         public string GoogleConnected { get; set; }
         public string GoogleID { get; set; }
         public string UserResume { get; set; }
+        public string OTP { get; set; }
     }
 }

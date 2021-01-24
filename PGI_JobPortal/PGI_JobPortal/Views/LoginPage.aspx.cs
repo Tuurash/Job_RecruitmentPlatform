@@ -19,10 +19,11 @@ namespace PGI_JobPortal.Views
         string clientsecret = @"xeg-PxUNKbVAAWAVNoQT31CP";
         string redirection_url = "http://localhost:58350/Views/LoginPage.aspx";
 
-        string getEmail = "";
+        string getOTP = "";
         string getPhoneNumber = "";
         string getRole = "";
 
+        SMSManager sms = new SMSManager();
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)
@@ -104,11 +105,11 @@ namespace PGI_JobPortal.Views
 
         protected void btnlogin_Click(object sender, EventArgs e)
         {
-            if (txtEmail.Value != "" && txtPhoneNumber.Value != "")
+            if (txtPhoneNumber.Value != "" && txtOTP.Value != "")
             {
-                getEmail = txtEmail.Value; getPhoneNumber = txtPhoneNumber.Value;
+                getOTP = txtOTP.Value; getPhoneNumber = txtPhoneNumber.Value;
 
-                DataTable dt = CandidateManager.getCandidate(getEmail, getPhoneNumber);
+                DataTable dt = CandidateManager.getCandidate(getOTP, getPhoneNumber);
 
                 if (dt.Rows.Count > 0)
                 {
@@ -116,7 +117,7 @@ namespace PGI_JobPortal.Views
                 }
                 else
                 {
-                    //Something Wrong}
+                    msgErrorUser.Visible = true;
                 }
             }
         }
@@ -142,5 +143,18 @@ namespace PGI_JobPortal.Views
             }
         }
 
+        protected void btnGetOTP_ServerClick(object sender, EventArgs e)
+        {
+            string getPhoneNo = txtPhoneNumber.Value;
+            DataTable dt = CandidateManager.getCandidateByPhoneNumber(getPhoneNo);
+
+            if (dt.Rows.Count > 0)
+            {
+                sms.SendOTP(getPhoneNo);
+            }
+            else { msgErrorUser.Visible = true; }
+
+
+        }
     }
 }

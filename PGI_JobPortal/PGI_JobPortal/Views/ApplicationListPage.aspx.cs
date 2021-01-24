@@ -20,6 +20,8 @@ namespace PGI_JobPortal.Views
 
         string getCatagory = "";
 
+        SMSManager sms = new SMSManager();
+
         char[] charsToTrim = { '*', ' ', '\'', };
 
         protected void Page_Load(object sender, EventArgs e)
@@ -193,7 +195,7 @@ namespace PGI_JobPortal.Views
                 {
                     int ID = int.Parse(((Label)ShortlistGrid.Rows[x].FindControl("lblID")).Text);
 
-                    SMSManager.SendToUser(ID, TextBody);
+                    sms.SendToUser(ID, TextBody);
 
                     UpdateTextStatus = ApplicationManager.UpdateTextStatus(ID);
                     if (UpdateTextStatus != 0)

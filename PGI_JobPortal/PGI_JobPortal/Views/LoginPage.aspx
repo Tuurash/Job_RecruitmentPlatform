@@ -31,27 +31,33 @@
                             <div class="form-group">
                                 <div class="input-icon">
                                     <i class="lni-user"></i>
-                                    <input type="text" id="txtEmail" runat="server" class="form-control" name="email" placeholder="Email" required>
+                                    <input type="text" id="txtPhoneNumber" runat="server" class="form-control" name="email" width="50%" placeholder="Your Phone Number" required>
                                 </div>
+                                <div align="right"><a id="btnGetOTP" runat="server" href="#" class="btn btn-dark" style="margin-top: -5px; width: 100%" onblur="fetching" onserverclick="btnGetOTP_ServerClick" width="30%">get OTP</a></div>
                             </div>
                             <div class="form-group">
-                                <div class="input-icon">
+                                <div class="input-icon" runat="server" id="divOTP">
+                                    <p id="msgErrorUser" runat="server" visible="false">User Not Found! Please Register <a href="RegistrationPage.aspx">here,</a></p>
                                     <i class="lni-lock"></i>
-                                    <input type="text" runat="server" id="txtPhoneNumber" class="form-control" placeholder="Your Phone Number" required>
+                                    <input type="text" runat="server" id="txtOTP" maxlength="6" class="form-control" onwaiting="OTP can be save and used as a password or can be generated mutiple times" tooltip="OTP can be save and used as a password or can be generated mutiple times" placeholder="One time OTP" required>
                                 </div>
                             </div>
+
                             <div class="form-group form-check">
                                 <input type="checkbox" class="form-check-input" id="exampleCheck1">
                                 <label class="form-check-label" for="exampleCheck1">Remember Me</label>
                             </div>
 
                             <asp:Button ID="btnlogin" runat="server" CssClass="btn btn-common log-btn" Text="log in" OnClick="btnlogin_Click" />
+
                             <div align="center">
 
                                 <asp:ImageButton ID="gLogin" runat="server" ImageUrl="~/Views/assets/img/google-logo.png" Style="border-radius: 40px"
                                     ImageAlign="AbsMiddle" OnClick="gLogin_Click" CssClass="btn btn-rm btn-border-filled" />
+                                <p style="font-size:10px;"> login with google</p>
 
                             </div>
+
                         </div>
                         <br />
                         <ul class="form-links">

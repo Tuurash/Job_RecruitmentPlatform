@@ -18,6 +18,12 @@ namespace PGI_JobPortal.Gateway
             return ExecuteNonQuery(query);
         }
 
+        internal int UpdateOTPByPhoneNumber(string getPhoneNo, string r)
+        {
+            query = @"update PGI_CandidateInfo set OTP='" + r + "' where UserPhoneNo='" + getPhoneNo + "' ";
+            return ExecuteNonQuery(query);
+        }
+
         internal DataTable ApplicationPhoneNoExistByID(int iD)
         {
             query = "select * from PGI_ApplicationInfo where ID=" + iD;
@@ -36,15 +42,21 @@ namespace PGI_JobPortal.Gateway
             return ExecuteQuery(query);
         }
 
-        internal DataTable getCandidate(string getEmail, string getPhoneNumber)
+        internal DataTable getCandidate(string getOTP, string getPhoneNumber)
         {
-            query = "select * from PGI_CandidateInfo where UserEmail='" + getEmail + "' and UserPhoneNo='" + getPhoneNumber + "'";
+            query = "select * from PGI_CandidateInfo where OTP='" + getOTP + "' and UserPhoneNo='" + getPhoneNumber + "'";
             return ExecuteQuery(query);
         }
 
         internal DataTable getCandidateByCode(string getUserCode)
         {
             query = "select * from PGI_CandidateInfo where UserCode='" + getUserCode + "'";
+            return ExecuteQuery(query);
+        }
+
+        internal DataTable getCandidateByPhoneNumber(string getPhoneNo)
+        {
+            query = "select * from PGI_CandidateInfo where UserPhoneNo='" + getPhoneNo + "'";
             return ExecuteQuery(query);
         }
 

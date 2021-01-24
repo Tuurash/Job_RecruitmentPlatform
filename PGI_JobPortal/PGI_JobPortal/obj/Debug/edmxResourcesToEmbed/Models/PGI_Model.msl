@@ -4,6 +4,7 @@
     <EntitySetMapping Name="PGI_CandidateInfo">
       <EntityTypeMapping TypeName="PgiWebPortalDBModel.PGI_CandidateInfo">
         <MappingFragment StoreEntitySet="PGI_CandidateInfo">
+          <ScalarProperty Name="OTP" ColumnName="OTP" />
           <ScalarProperty Name="UserResume" ColumnName="UserResume" />
           <ScalarProperty Name="GoogleID" ColumnName="GoogleID" />
           <ScalarProperty Name="GoogleConnected" ColumnName="GoogleConnected" />

@@ -20,6 +20,11 @@ namespace PGI_JobPortal.Manager
             return new CandidateGateway().ApplicationPhoneNoExistByID(iD);
         }
 
+        internal static int UpdateOTPByPhoneNumber(string getPhoneNo, string r)
+        {
+            return new CandidateGateway().UpdateOTPByPhoneNumber(getPhoneNo, r);
+        }
+
         internal static DataTable ApplicationEmailExist(string email)
         {
             return new CandidateGateway().ApplicationEmailExist(email);
@@ -35,9 +40,9 @@ namespace PGI_JobPortal.Manager
             return new CandidateGateway().EmailExist(email);
         }
 
-        internal static DataTable getCandidate(string getEmail, string getPhoneNumber)
+        internal static DataTable getCandidate(string getOTP, string getPhoneNumber)
         {
-            return new CandidateGateway().getCandidate(getEmail, getPhoneNumber);
+            return new CandidateGateway().getCandidate(getOTP, getPhoneNumber);
         }
 
         internal static int UpdateCandidateInfo(PGI_CandidateInfo obj_candidate, string getUserCode)
@@ -53,6 +58,11 @@ namespace PGI_JobPortal.Manager
         internal static DataTable getCandidateByGoogleID(string googleID)
         {
             return new CandidateGateway().getCandidateByGoogleID(googleID);
+        }
+
+        internal static DataTable getCandidateByPhoneNumber(string getPhoneNo)
+        {
+            return new CandidateGateway().getCandidateByPhoneNumber(getPhoneNo);
         }
     }
 }
