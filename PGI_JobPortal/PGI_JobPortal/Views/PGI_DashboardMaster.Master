@@ -2,6 +2,7 @@
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 
     <!-- Required meta tags -->
@@ -50,7 +51,7 @@
         body {
             margin: 0;
             font: 1rem/1.5 "PT Sans", Arial, sans-serif;
-            font-display:block;
+            font-display: block;
             color: black;
         }
     </style>
@@ -90,9 +91,10 @@
             p {
                 color: black;
             }
-            a{
-                font-size:15px;
-                font-family:Arial, Helvetica, sans-serif;
+
+            a {
+                font-size: 15px;
+                font-family: Arial, Helvetica, sans-serif;
                 color: black;
             }
         </style>
@@ -160,27 +162,31 @@
         <br />
         <asp:SiteMapDataSource ID="SiteMapDataSource1" runat="server" ShowStartingNode="true" />
         <div align="center">
-            <p style="font-size: 13px; font-family:Sans-serif">
+            <p style="font-size: 13px; font-family: Sans-serif">
                 <asp:SiteMapPath ID="SiteMapPath1" runat="server" PathSeparator="  > " RenderCurrentNodeAsLink="true">
                 </asp:SiteMapPath>
             </p>
         </div>
-        
+
 
         <section id="contact" class="section">
             <div class="contact-form">
                 <div class="container">
+
                     <style>
                         a {
                             color: black;
                         }
                     </style>
+
                     <div class="row contact-form-area">
                         <!-- menu Section End -->
-                        <div class="col-md-4 col-lg-4 col-sm-12">
+                        <div class="col-md-12 col-lg-3 col-sm-12">
                             <div class="contact-right-area wow fadeIn animated">
+
                                 <h2>Hello,
                                     <asp:Label ID="lblUserName" runat="server"></asp:Label></h2>
+
                                 <div class="contact-info">
 
                                     <div class="single-contact" runat="server" id="divProfile">
@@ -190,11 +196,11 @@
                                         <a href="UserProfilePage.aspx" id="LinkProfileMenu" runat="server">My Profile</a>
                                     </div>
 
-                                    <div class="single-contact animated" runat="server"  id="divAppliedJobs">
+                                    <div class="single-contact animated" runat="server" id="divAppliedJobs">
                                         <div class="contact-icon">
                                             <i class="lni-envelope"></i>
                                         </div>
-                                        <a href="AppliedJobsPage.aspx" id="LinkAppliedJobs" runat="server" >Applied Jobs</a>
+                                        <a href="AppliedJobsPage.aspx" id="LinkAppliedJobs" runat="server">Applied Jobs</a>
 
                                     </div>
 
@@ -223,6 +229,15 @@
 
                                     </div>
 
+                                    <div class="single-contact" runat="server" id="divRegisteredCandidatelist">
+
+                                        <div class="contact-icon">
+                                            <i class="fas fa-file-upload"></i>
+                                        </div>
+                                        <a href="RegisteredCandidateDashboard.aspx" id="A2" runat="server">Registered Candidates</a>
+
+                                    </div>
+
                                     <div class="single-contact" runat="server" id="Joblist">
                                         <div class="contact-icon">
                                             <i class="fas fa-envelope-open-text"></i>
@@ -231,14 +246,14 @@
 
                                     </div>
 
-
                                 </div>
+
                             </div>
                             <br />
                         </div>
                         <!-- menu Section End -->
 
-                        <div class="col-md-8 col-lg-8 col-sm-12">
+                        <div class="col-md-12 col-lg-9 col-sm-12">
 
                             <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
                             </asp:ContentPlaceHolder>

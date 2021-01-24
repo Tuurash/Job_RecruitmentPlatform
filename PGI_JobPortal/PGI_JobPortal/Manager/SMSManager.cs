@@ -84,4 +84,5 @@ namespace PGI_JobPortal.Manager
 
 
     }
+
 }

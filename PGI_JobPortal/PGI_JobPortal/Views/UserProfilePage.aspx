@@ -68,6 +68,9 @@
                                 <%--Personal Info Tab--%>
                                 <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
 
+                                    Professional Skills (max 6-7) 
+                                    <asp:TextBox ID="txtSkills" runat="server" placeholder="use comma for seperation; i.e: Golang, Excel" CssClass="form-control" ></asp:TextBox>
+                                    <br />
                                     <div class="form-group" style="display: flex; flex-direction: row; justify-content: center; align-items: center">
 
                                         <asp:TextBox ID="txtFirstName" runat="server" placeholder="First Name" CssClass="form-control" Width="50%"></asp:TextBox>

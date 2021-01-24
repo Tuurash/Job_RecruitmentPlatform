@@ -20,6 +20,11 @@ namespace PGI_JobPortal.Manager
             return new CandidateGateway().ApplicationPhoneNoExistByID(iD);
         }
 
+        internal static DataTable GetAllRegisteredCandidateDetail()
+        {
+            return new CandidateGateway().GetAllRegisteredCandidateDetail();
+        }
+
         internal static int UpdateOTPByPhoneNumber(string getPhoneNo, string r)
         {
             return new CandidateGateway().UpdateOTPByPhoneNumber(getPhoneNo, r);

@@ -18,6 +18,12 @@ namespace PGI_JobPortal.Gateway
             return ExecuteNonQuery(query);
         }
 
+        internal DataTable GetAllRegisteredCandidateDetail()
+        {
+            query = @"select t3.* from (select t2.*,ISNULL(ExperienceCount,0) as ExperienceCount,isnull(DATEDIFF(MONTH,b,a),0) as Experience from (select t1.*,EducationLevel,Result,PassingYear from  (select t.*,Gender,LinkedinProfile,ProfessionalSkills from (select UserCode,UserFirstName+' '+UserLastName as FullName,UserEmail,UserPhoto,UserResume from PGI_CandidateInfo)as t left outer join ( select * from PGI_Candidate_PersonalDetails)PGI_Candidate_PersonalDetails on t.UserCode=PGI_Candidate_PersonalDetails.UserCode)as t1 left outer join ( select MAX(PassingYear) as PassingYear,EducationLevel,Result,InstituteName,UserCode from PGI_Candidate_EducationDetails group by EducationLevel,Result,UserCode,InstituteName ) PGI_Candidate_EducationDetails on t1.UserCode=PGI_Candidate_EducationDetails.UserCode) as t2 left outer join (select count(UserCode)as ExperienceCount,Min(EmployeeFrom) as a,MAX(EmployeeEnd) as b ,UserCode from PGI_Candidate_EmploymentDetails group by UserCode) PGI_Candidate_EmploymentDetails on t2.UserCode=PGI_Candidate_EmploymentDetails.UserCode)as t3";
+            return ExecuteQuery(query);
+        }
+
         internal int UpdateOTPByPhoneNumber(string getPhoneNo, string r)
         {
             query = @"update PGI_CandidateInfo set OTP='" + r + "' where UserPhoneNo='" + getPhoneNo + "' ";

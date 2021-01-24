@@ -423,6 +423,7 @@
     <Content Include="Views\JobListIndex.aspx" />
     <Content Include="Views\JobPostingPage.aspx" />
     <Content Include="Views\LoginPage.aspx" />
+    <Content Include="Views\RegisteredCandidateDashboard.aspx" />
     <Content Include="Views\RegistrationPage.aspx" />
     <Content Include="Views\ResumePage.aspx" />
     <Content Include="Views\UserProfilePage.aspx" />
@@ -576,6 +577,13 @@
     </Compile>
     <Compile Include="Views\LoginPage.aspx.designer.cs">
       <DependentUpon>LoginPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\RegisteredCandidateDashboard.aspx.cs">
+      <DependentUpon>RegisteredCandidateDashboard.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\RegisteredCandidateDashboard.aspx.designer.cs">
+      <DependentUpon>RegisteredCandidateDashboard.aspx</DependentUpon>
     </Compile>
     <Compile Include="Views\RegistrationPage.aspx.cs">
       <DependentUpon>RegistrationPage.aspx</DependentUpon>

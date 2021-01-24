@@ -24,6 +24,7 @@ namespace PGI_JobPortal.Views
         string getRole = "";
 
         SMSManager sms = new SMSManager();
+
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)
@@ -35,7 +36,6 @@ namespace PGI_JobPortal.Views
                 }
             }
         }
-
 
         #region GoogleAccount_LOGIN
 
@@ -153,8 +153,6 @@ namespace PGI_JobPortal.Views
                 sms.SendOTP(getPhoneNo);
             }
             else { msgErrorUser.Visible = true; }
-
-
         }
     }
 }

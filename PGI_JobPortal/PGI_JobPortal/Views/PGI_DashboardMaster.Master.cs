@@ -28,6 +28,7 @@ namespace PGI_JobPortal.Views
             {
                 divJobPosting.Visible = false;
                 divApplicationList.Visible = false;
+                divRegisteredCandidatelist.Visible = false;
 
             }
             else if (Session["UserRole"].ToString() == "Admin")
