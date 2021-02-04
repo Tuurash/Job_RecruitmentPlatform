@@ -7,6 +7,7 @@
 - [x] Mail , SMS confirmation 
 - [x] Dinamic Catagory & Icon
 
+- [ ] Newsettler
 - [ ] Linkedin Login
 - [ ] Import profile From Linkedin
 - [ ] Share Post
@@ -15,9 +16,3 @@
 #### Snaps [More Screenshots](https://github.com/Tuurash/JobPortal/tree/master/ScreenShots/Img)
 
 ![Landing Page](https://github.com/Tuurash/JobPortal/blob/master/ScreenShots/Landing.gif)
-
-#### Intro
-
-#### Intro
-
-#### Intro
