@@ -5,6 +5,7 @@
 - [x] OTP instead of Password
 - [x] Sorting Shortlist
 - [x] Mail , SMS confirmation 
+- [x] Dinamic Catagory & Icon
 
 - [ ] Linkedin Login
 - [ ] Import profile From Linkedin
