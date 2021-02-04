@@ -15,7 +15,7 @@
 
             <div class="row">
 
-                <asp:Repeater ID="RegisteredCandidateRepeater" runat="server">
+                <asp:Repeater ID="RegisteredCandidateRepeater" runat="server" OnItemCommand="RegisteredCandidateRepeater_ItemCommand">
                     <ItemTemplate>
                         <%--JOBCARD START--%>
 
@@ -43,7 +43,7 @@
 
                                         <asp:Repeater ID="RepeaterSkills" runat="server">
                                             <ItemTemplate>
-                                                <span class="part-time">Experience : <%# Eval("Skill")%> Months</span>
+                                                <span class="part-time">Skills : <%# Eval("Skill")%> Months</span>
                                             </ItemTemplate>
                                         </asp:Repeater>
 
