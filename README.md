@@ -13,7 +13,7 @@
 
 #### Snaps
 
-![Landing Page](https://github.com/Tuurash/JobPortal/blob/master/ScreenShots/Landing.gif=800x600)
+![Landing Page](https://github.com/Tuurash/JobPortal/blob/master/ScreenShots/Landing.gif =800x600)
 
 #### Intro
 
