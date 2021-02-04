@@ -11,8 +11,8 @@
 - [ ] Share Post
 - [ ] Instant Notification on Application Confirmation
 
-#### Snaps
-[More Screenshots](https://github.com/Tuurash/JobPortal/tree/master/ScreenShots/Img)
+#### Snaps [More Screenshots](https://github.com/Tuurash/JobPortal/tree/master/ScreenShots/Img)
+
 ![Landing Page](https://github.com/Tuurash/JobPortal/blob/master/ScreenShots/Landing.gif)
 
 #### Intro
